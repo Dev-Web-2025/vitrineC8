@@ -1,0 +1,28 @@
+body {
+  padding-top: 56px; /* Ajuster selon la hauteur du header */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+}
+
+@media (max-width: 920px) {
+  .navbar-collapse {
+    background-color: #343a40;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}
+
+/* Personnalisation de la barre secondaire */
+.sub-navbar {
+  background-color: #343a40; /* Fond gris foncé */
+}
+
+.sub-navbar .nav-link {
+  color: white;
+}
+
