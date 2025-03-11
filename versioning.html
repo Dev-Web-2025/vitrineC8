@@ -1,162 +1,287 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Le versioning</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le versioning</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="fixed-top">
+  <header class="fixed-top">
     <!-- Barre de navigation principale -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
-        <div class="container-fluid d-flex align-items-center">
-            <!-- Logo -->
-            <a class="navbar-brand" href="index.html">Vitrine C8</a>
+      <div class="container-fluid d-flex align-items-center">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">Vitrine C8</a>
 
-            <!-- Texte "INTRODUCTION" aligné à gauche avec un espace de 50px -->
-            <span class="text-white fw-bold fs-4 ms-4">VERSIONING</span>
+        <!-- Texte "INTRODUCTION" aligné à gauche avec un espace de 50px -->
+        <span class="text-white fw-bold fs-4 ms-4">VERSIONING</span>
 
-            <!-- Bouton Burger -->
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Bouton Burger -->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Menu principal -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="documentation.html">Documentation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cycle_de_vie.html">Cycle de vie</a></li>
-                    <li class="nav-item"><a class="nav-link" href="versioning.html">Versioning</a></li>
-                    <li class="nav-item"><a class="nav-link" href="deploiement.html">Déploiement</a></li>
-                    <li class="nav-item"><a class="nav-link" href="conclusion.html">Conclusion</a></li>
-                </ul>
-            </div>
+        <!-- Menu principal -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="documentation.html">Documentation</a></li>
+            <li class="nav-item"><a class="nav-link" href="cycle_de_vie.html">Cycle de vie</a></li>
+            <li class="nav-item"><a class="nav-link" href="versioning.html">Versioning</a></li>
+            <li class="nav-item"><a class="nav-link" href="deploiement.html">Déploiement</a></li>
+            <li class="nav-item"><a class="nav-link" href="conclusion.html">Conclusion</a></li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Seconde barre de navigation plus mince (fixe, sans interaction avec le burger) -->
     <nav class="sub-navbar navbar navbar-expand bg-secondary py-1">
-        <div class="container d-flex justify-content-center">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="#item1">Item 1</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#item2">Item 2</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#item3">Item 3</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#item4">Item 4</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#item5">Item 5</a></li>
-            </ul>
-        </div>
+      <div class="container d-flex justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-white" href="#Versionning">Versionning</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#Depot">Dépot</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#CI/CD">CI/CD</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#item4">Item 4</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#item5">Item 5</a></li>
+        </ul>
+      </div>
     </nav>
-</header>
+  </header>
 
-<main class="container mt-5">
+  <main class="container mt-5">
+    <article id="Versionning">
+      <h2>Le Versionning</h2>
+      <p>
+        Une fois qu'une première version du projet à été réaliser, il est désormait temps de me faire évoluer.<br>
+        Pour ce faire on vas réaliser plusieurs version d l'application ou du site.
+        Ces version peuvent majeur ou mineur. <br>
+        Elle peuvent être due à l'ajout d'une nouvelle fonction ou à une faille de sécurité, issue ausi bien d'un montée
+        de version ou d'une vulnérabilité. <br>
+        Dans tout les cas il faut maintir sont code a jour.
+        <strong>user style sheets</strong>.
+      </p>
+      <p>
+        On met ainsi en place un <strong>verionning</strong>.<br>
+        On utilisera le plus souvent <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">git</a>
+        pour enregistrer différente version du code.<br>
+        Voici la bonne pratique pour enregistrer une nouvelle version. <br>
+      </p>
+      <pre>
+            <code>
+              # Initialisation d'un repo git
+              <strong>git init</strong>
+              
+              # Ajouter les modifications
+              <strong>git add .</strong>
+              
+              # Enregistrer les modifications
+              <strong>git commit -m</strong>"Un message indiquant les modifications apportées à chaque fichier"
+            </code>
+          </pre>
 
-    <article aria-label="headings">
-        <h1>This is 1st level heading</h1>
-        <p>This is a test paragraph.</p>
-        <h2>This is 2nd level heading</h2>
-        <p>This is a test paragraph.</p>
-        <h3>This is 3rd level heading</h3>
-        <p>This is a test paragraph.</p>
-        <h4>This is 4th level heading</h4>
-        <p>This is a test paragraph.</p>
-        <h5>This is 5th level heading</h5>
-        <p>This is a test paragraph.</p>
-        <h6>This is 6th level heading</h6>
-        <p>This is a test paragraph.</p>
+      <p>
+        <strong>Attention: </strong>ces modificaion serront uniquement enregistrer localement sur la branch git active
+        <a href="https://git-scm.com/docs/git-branch" target="_blank" rel="noopener noreferrer">(voir doc)</a><br>
+        Dans le cadre d'un application ou d'un site, on poussera ces modification vers un dépot en ligne. <br>
+        De cette manière on peut non seuelement mettre en commun le travail, mais aussi publier les différentes version
+        de manière succives tout en concervant les anciennes.
+      </p>
+
+      <article id="Depot">
+        <h2>Les Dépots </h2>
+        <p>
+          Il existe plusieurs solutions pour de repos en ligne. Le plus connus sont git-hub et git lab.
+          <table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: 0.15vw solid #333; width: 90vw; max-width: 1000px;">
+            <caption style="margin-bottom: 1vw; font-size: 1.3rem; font-weight: bold;">Comparatif des solutions de dépôts Git en ligne</caption>
+            <thead>
+              <tr>
+                <th style="padding: 1.5vw; border: 1px solid #999; background-color: #f0f0f0; font-size: 1.1rem; width: 20%;">Caractéristique</th>
+                <th style="padding: 1.5vw; border: 1px solid #999; background-color: #f0f0f0; font-size: 1.1rem; width: 40%;">GitHub</th>
+                <th style="padding: 1.5vw; border: 1px solid #999; background-color: #f0f0f0; font-size: 1.1rem; width: 40%;">GitLab</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Logo</td>
+                <td style="text-align: center; padding: 2vw; border: 1px solid #999;">
+                  <a href="./img/img-version/github-logo.png">
+                    <img src="./img/img-version/github-logo.png" alt="Logo GitHub" style="max-width: 12vw; min-width: 100px; height: auto;">
+                  </a>
+                </td>
+                <td style="text-align: center; padding: 2vw; border: 1px solid #999;">
+                  <a href="./img/img-version/gitlab.png">
+                    <img src="./img/img-version/gitlab.png" alt="Logo GitLab" style="max-width: 12vw; min-width: 100px; height: auto;">
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Open Source</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">Partiellement. Interface et fonctionnalités propriétaires, mais certains composants sont open source</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">Complètement open source (licence MIT). Version Community Edition disponible gratuitement</td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Détenteur</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">Microsoft (depuis 2018)</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">GitLab Inc.</td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Types de projets adaptés</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">
+                  • Idéal pour projets open source<br>
+                  • Collaboration massive (millions de contributeurs)<br>
+                  • Projets de toutes tailles, mais particulièrement fort pour l'open source
+                </td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">
+                  • Adapté aux projets d'entreprise et privés<br>
+                  • Équipes de toutes tailles<br>
+                  • Particulièrement adapté pour les entreprises souhaitant héberger leur propre instance
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Solutions CI</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">GitHub Actions - Intégration flexible, workflows basés sur YAML, intégration native</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">GitLab CI/CD - Puissant, natif, avec pipeline as code et interface intuitive pour visualiser les étapes</td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Solutions CD</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">GitHub Actions avec support déploiement, intégration avec services AWS, Azure, GCP, etc.</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">Système CD natif intégré avec Auto DevOps, environnements de préproduction, déploiements Kubernetes, etc.</td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Hébergement de sites</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">GitHub Pages - Simple, gratuit, idéal pour la documentation statique, blogs et sites personnels</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">GitLab Pages - Similaire à GitHub Pages mais avec plus d'options de configuration via CI/CD</td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Gestion de la documentation</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">
+                  • Wiki intégré<br>
+                  • Support Markdown<br>
+                  • GitHub Pages pour documentation statique<br>
+                  • Intégration facile avec Jekyll
+                </td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">
+                  • Wiki plus avancé avec historique complet<br>
+                  • Support Markdown<br>
+                  • Documentation spécifique par environnement<br>
+                  • Intégration avec plusieurs générateurs de sites statiques
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Gestion de projet</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">
+                  • Issues et projets basiques<br>
+                  • GitHub Projects (tableau kanban)<br>
+                  • Milestones<br>
+                  • Limité par rapport à des outils dédiés
+                </td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">
+                  • Suite complète d'outils (issues, milestones, epics)<br>
+                  • Tableaux kanban avancés<br>
+                  • Roadmaps<br>
+                  • Peut remplacer des outils comme Jira
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Self-Hosting</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">Enterprise version disponible, mais coûteuse et moins flexible</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">Totalement possible et relativement simple, option populaire pour les entreprises avec Community Edition gratuite</td>
+              </tr>
+              <tr>
+                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Intégration DevOps</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">Modèle modulaire avec Marketplace et intégrations tierces</td>
+                <td style="padding: 1.5vw; border: 1px solid #999;">Solution DevOps tout-en-un (référentiel, CI/CD, sécurité, monitoring)</td>
+              </tr>
+            </tbody>
+          </table>
+          </p>
+        <p> 
+          Il exist également d'autres solution pour les dépots en ligne comme SoureForge(vieux), Lauchpad(Ubuntu) ect... <br>
+          Le choix de la plateforme serra à faire en fonction du projet. 
+        </p>
       </article>
-      <article id="item1">
-        <h2>ITEM1</h2>
+      <article id="CI/CD">
+        <h2>CI/CD : Intégration et Déploiement continus</h2>
+          <dl>
+            <dt><strong>CI</strong> - Intégration continue</dt>
+            <dd><i>Continuous Integration</i> en anglais</dd>
+            <dt><strong>CD</strong> - Déploiement continu</dt>
+            <dd><i>Continuous Deployment</i> en anglais</dd>
+          </dl>
         <p>
-          This is a normal paragraph (<code>p</code> element).  To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>.  You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default.  It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
+          Par la présence du dépot en ligne et de plusieurs version on peut mettre en place un système d'intégration continue et aussi de developpement continu. 
         </p>
-        <p>
-          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
-        </p>
-        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>div</code>.)</div>
-        <blockquote>
-          <p>
-            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point. After all, this page does not use HTML markup very normally anyway.
-          </p>
-        </blockquote>
-        <p>The following contains address information about the author, in an <code>address</code> element.</p>    
-    </article>
-    <article id="item2">
-        <h2>ITEM 2</h2>
-        <p>
-          This is a normal paragraph (<code>p</code> element).  To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>.  You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default.  It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
-        </p>
-        <p>
-          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
-        </p>
-        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>div</code>.)</div>
-        <blockquote>
-          <p>
-            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point. After all, this page does not use HTML markup very normally anyway.
-          </p>
-        </blockquote>
-        <p>The following contains address information about the author, in an <code>address</code> element.</p>    
-    </article>
-    <article id="item3">
-        <h2>ITEM 3</h2>
-        <p>
-          This is a normal paragraph (<code>p</code> element).  To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>.  You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default.  It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
-        </p>
-        <p>
-          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
-        </p>
-        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>div</code>.)</div>
-        <blockquote>
-          <p>
-            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point. After all, this page does not use HTML markup very normally anyway.
-          </p>
-        </blockquote>
-        <p>The following contains address information about the author, in an <code>address</code> element.</p>    
-    </article>
-    <article id="item4">
+
+      <article id="item4">
         <h2>ITEM 4</h2>
         <p>
-          This is a normal paragraph (<code>p</code> element).  To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>.  You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default.  It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
+          This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page
+          was primarily written for testing the effect of <strong>user style sheets</strong>. You can use it for various
+          other purposes as well, like just checking how your browser displays various HTML elements by default. It can
+          also be useful when testing conversions from HTML format to other formats, since some elements can go wrong
+          then.
         </p>
         <p>
-          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in
+          any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my
+          opionion.
         </p>
-        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>div</code>.)</div>
+        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various
+          reasons. (End of <code>div</code>.)</div>
         <blockquote>
           <p>
-            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point. After all, this page does not use HTML markup very normally anyway.
+            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em>
+            quoted text, but I hope you understand the point. After all, this page does not use HTML markup very
+            normally anyway.
           </p>
         </blockquote>
-        <p>The following contains address information about the author, in an <code>address</code> element.</p>    
-    </article>
-    <article id="item5">
+        <p>The following contains address information about the author, in an <code>address</code> element.</p>
+      </article>
+      <article id="item5">
         <h2>ITEM 5</h2>
         <p>
-          This is a normal paragraph (<code>p</code> element).  To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>.  You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default.  It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
+          This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page
+          was primarily written for testing the effect of <strong>user style sheets</strong>. You can use it for various
+          other purposes as well, like just checking how your browser displays various HTML elements by default. It can
+          also be useful when testing conversions from HTML format to other formats, since some elements can go wrong
+          then.
         </p>
         <p>
-          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in
+          any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my
+          opionion.
         </p>
-        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>div</code>.)</div>
+        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various
+          reasons. (End of <code>div</code>.)</div>
         <blockquote>
           <p>
-            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point. After all, this page does not use HTML markup very normally anyway.
+            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em>
+            quoted text, but I hope you understand the point. After all, this page does not use HTML markup very
+            normally anyway.
           </p>
         </blockquote>
-        <p>The following contains address information about the author, in an <code>address</code> element.</p>    
-    </article>
-</main>
-<!-- BACK TO TOP -->
-<nav class="sub-navbar navbar navbar-expand bg-secondary py-1">
+        <p>The following contains address information about the author, in an <code>address</code> element.</p>
+      </article>
+  </main>
+  <!-- BACK TO TOP -->
+  <nav class="sub-navbar navbar navbar-expand bg-secondary py-1">
     <div class="container d-flex justify-content-center">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link text-white" href="#top">Début de page</a></li>
-        </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-white" href="#top">Début de page</a></li>
+      </ul>
     </div>
   </nav>
-<!-- Bootstrap Bundle JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="main.js"></script>
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
