@@ -73,25 +73,43 @@
         Voici la bonne pratique pour enregistrer une nouvelle version. <br>
       </p>
       <pre>
-            <code>
-              # Initialisation d'un repo git
-              <strong>git init</strong>
-              
-              # Ajouter les modifications
-              <strong>git add .</strong>
-              
-              # Enregistrer les modifications
-              <strong>git commit -m</strong>"Un message indiquant les modifications apportées à chaque fichier"
-            </code>
-          </pre>
+        <code>
+          # Initialisation d'un repo git
+          <strong>git init</strong>
+          
+          # Ajouter les modifications
+          <strong>git add .</strong>
+          
+          # Enregistrer les modifications
+          <strong>git commit -m</strong>"Un message indiquant les modifications apportées à chaque fichier"
+        </code>
+      </pre>
 
       <p>
         <strong>Attention: </strong>ces modificaion serront uniquement enregistrer localement sur la branch git active
         <a href="https://git-scm.com/docs/git-branch" target="_blank" rel="noopener noreferrer">(voir doc)</a><br>
         Dans le cadre d'un application ou d'un site, on poussera ces modification vers un dépot en ligne. <br>
-        De cette manière on peut non seuelement mettre en commun le travail, mais aussi publier les différentes version
+        De cette manière on peut non seulement mettre en commun le travail, mais aussi publier les différentes version
         de manière succives tout en concervant les anciennes.
       </p>
+      <p>
+        <strong>Cependant: </strong> on ne pousse pas se modification n'importe commun au risque d'effacer le travail commun.<br>
+        Après avoir commit ses modificaiton en locale ont : 
+        <ul>
+          <li>Se met à jour avec le dépot à distance</li>
+          <li>Résouds les conflits existants</li>
+          <li><strong>Alors seuelement</strong> on pousse ses modifications</li>
+        </ul>
+        <pre>
+          <code>
+            # Se mettre à jour avec le repo en ligne
+            <strong>git pull origin BranchDeTravail</strong><br>
+            # On vérifie que l'on est à jour et on résouds les conlfit.
+            <strong>git push origin BranchDeTravail</strong><br>
+          </code>
+        </pre>
+      </p>
+
 
       <article id="Depot">
         <h2>Les Dépots </h2>
@@ -215,7 +233,7 @@
             <dd><i>Continuous Deployment</i> en anglais</dd>
           </dl>
         <p>
-          Par la présence du dépot en ligne et de plusieurs version on peut mettre en place un système d'intégration continue et aussi de developpement continu. 
+          Par la présence du dépot en ligne et de plusieurs version on peut mettre en place un système d'intégration continue et aussi de développement continu. 
         </p>
 
       <article id="item4">
