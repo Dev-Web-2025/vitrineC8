@@ -47,8 +47,8 @@
           <li class="nav-item"><a class="nav-link text-white" href="#Versionning">Versionning</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#Depot">Dépot</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#CI/CD">CI/CD</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#item4">Item 4</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#item5">Item 5</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#Outils">Outils</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#Bonnes pratiques">Bonnes pratiques</a></li>
         </ul>
       </div>
     </nav>
@@ -93,8 +93,8 @@
         de manière succives tout en concervant les anciennes.
       </p>
       <p>
-        <strong>Cependant: </strong> on ne pousse pas se modification n'importe commun au risque d'effacer le travail commun.<br>
-        Après avoir commit ses modificaiton en locale ont : 
+        <strong>Cependant: </strong> on ne pousse pas ses modifications n'importe comment au risque d'effacer le travail commun.<br>
+        Après avoir commit ses modificaitons en locale ont : 
         <ul>
           <li>Se met à jour avec le dépot à distance</li>
           <li>Résouds les conflits existants</li>
@@ -233,58 +233,43 @@
             <dd><i>Continuous Deployment</i> en anglais</dd>
           </dl>
         <p>
-          Par la présence du dépot en ligne et de plusieurs version on peut mettre en place un système d'intégration continue et aussi de développement continu. 
+          Grâce au versionning et au dépot en ligne on peut mettre en place un développement et une <strong>intégration en continue ou CI</strong>.
+          continue et aussi de développement continu. 
+          L'intégration coninue consiste à pousser différentes version de manière incrémentiel.<br>
+          Plutot que de travailler en livrant toute les fonctions d'un coups, on ajoute au fur et à mesure les différentes fonctions et correctif. 
+          Cela permet de 
+          <ul>
+            <li>Facilitée la résolution des bugs vue qu'une moins grande quantité de code est poussé</li>
+            <li>Incrémenter en continue de nouvelles fonctions</li>
+            <li>Tester plus facilements les différentes fonction</li>
+          </ul>
+        </p>
+        <p>
+          <strong>Le développement continu</strong> ou <i>continous developpement</i> CD en englais peut lui aussi être mis en place grâce au versionning.<br>
+          En plus d'un intégration continueon vas également pousser les dernière intégration <strong>une fois tester</strong> vers les serveur de production.<br>
+          On peut ainsi : 
+          <ul>
+            <li>Automatiser l'inplémentation de fonction</li>
+            <li>Maintenir le site ou projet à jour</li>
+            <li>Suivre et documenter toute les versions du projet</li>
+            <li>Faire des back up si néccésaire</li>
+          </ul>
+        </p>
+        <p> 
+          La CI/CD peut être entièrement automatisé par les plateforme de dépot en ligne. Chez git hub on trouvera
+          <a href="https://github.com/features/actions" target="_blank" rel="noopener noreferrer">des Actions</a>.<br>
+          Chez git lab on trouvera <a href="https://docs.gitlab.com/ci/pipelines/" target="_blank" rel="noopener noreferrer">les pipelines CI/CD</a><i> tuyautrie en anglais</i> 
         </p>
 
-      <article id="item4">
-        <h2>ITEM 4</h2>
-        <p>
-          This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page
-          was primarily written for testing the effect of <strong>user style sheets</strong>. You can use it for various
-          other purposes as well, like just checking how your browser displays various HTML elements by default. It can
-          also be useful when testing conversions from HTML format to other formats, since some elements can go wrong
-          then.
-        </p>
-        <p>
-          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in
-          any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my
-          opionion.
-        </p>
-        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various
-          reasons. (End of <code>div</code>.)</div>
-        <blockquote>
-          <p>
-            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em>
-            quoted text, but I hope you understand the point. After all, this page does not use HTML markup very
-            normally anyway.
-          </p>
-        </blockquote>
-        <p>The following contains address information about the author, in an <code>address</code> element.</p>
+      <article id="Outils">
+        <h2>Outils</h2>
+        On vas désormais voir en pratiques différents outils pour mettre en place une CI/CD <br>
+
       </article>
-      <article id="item5">
-        <h2>ITEM 5</h2>
-        <p>
-          This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page
-          was primarily written for testing the effect of <strong>user style sheets</strong>. You can use it for various
-          other purposes as well, like just checking how your browser displays various HTML elements by default. It can
-          also be useful when testing conversions from HTML format to other formats, since some elements can go wrong
-          then.
-        </p>
-        <p>
-          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in
-          any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my
-          opionion.
-        </p>
-        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various
-          reasons. (End of <code>div</code>.)</div>
-        <blockquote>
-          <p>
-            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em>
-            quoted text, but I hope you understand the point. After all, this page does not use HTML markup very
-            normally anyway.
-          </p>
-        </blockquote>
-        <p>The following contains address information about the author, in an <code>address</code> element.</p>
+      <article id="Bonne pratiques">
+        <h2>Bonne pratiques</h2>
+        Pour conclure un petit rappel sur les notions vue et les bonne pratiques à utiliser pour assurer un verionning simple et efficace.<br>
+
       </article>
   </main>
   <!-- BACK TO TOP -->
