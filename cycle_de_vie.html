@@ -6,6 +6,62 @@
     <title>Le cycle de vie</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+      .timeline {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          margin: 20px 0;
+          padding: 20px 0;
+          height: 50px; /* Hauteur de la frise */
+      }
+      .timeline-item {
+          flex: 1; /* Prend une part égale de l'espace */
+          text-align: center;
+          position: relative;
+          background: #007bff; /* Couleur par défaut */
+          color: white;
+          padding: 10px 0;
+          transition: background 0.3s;
+          border: none; /* Enlève les bordures */
+          cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+      }
+      .timeline-item:hover {
+          background: #0056b3; /* Couleur au survol */
+      }
+      .timeline-item:nth-child(1) {
+          background: #28a745; /* Couleur pour Analyse des besoins */
+      }
+      .timeline-item:nth-child(2) {
+          background: #ffc107; /* Couleur pour Conception et planification */
+      }
+      .timeline-item:nth-child(3) {
+          background: #17a2b8; /* Couleur pour Développement */
+        }
+        .timeline-item:nth-child(4) {
+            background: #dc3545; /* Couleur pour Déploiement */
+        }
+        .timeline-item:nth-child(5) {
+            background: #6f42c1; /* Couleur pour Maintenance et évolutions */
+        }
+        .timeline-item:nth-child(6) {
+            background: #fd7e14; /* Couleur pour Décommissionnement */
+            position: relative; /* Nécessaire pour le triangle */
+        }
+        .triangle {
+    content: '';
+    position: absolute;
+    right: -15px; /* Ajustez cette valeur si nécessaire */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid #fd7e14; /* Largeur du triangle */
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+}
+    </style>
 </head>
 <body>
 <header class="fixed-top">
@@ -44,7 +100,7 @@
                 <li class="nav-item"><a class="nav-link text-white" href="#item2">Grandes étapes</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#item3">Cas pratique</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#item4">Conclusion</a></li>
-                            </ul>
+            </ul>
         </div>
     </nav>
 </header>
@@ -57,35 +113,90 @@
       <br id="item1"><br>
         <h2>Introduction</h2>
         <p>
-          This is a normal paragraph (<code>p</code> element).  To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>.  You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default.  It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
-        </p>
-        <p>
-          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
-        </p>
-        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>div</code>.)</div>
-        <blockquote>
-          <p>
-            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point. After all, this page does not use HTML markup very normally anyway.
+          Le cycle de vie d'une application web représente l'ensemble des étapes nécessaires à la conception, au développement, à la mise en production et à la maintenance d'une application. Chaque phase est cruciale pour assurer le bon fonctionnement, la sécurité et l'évolutivité de l'application tout au long de son existence. Ce cycle inclut des processus variés, allant de l'analyse des besoins des utilisateurs à la décommission des services lorsque l'application arrive en fin de vie. Chaque étape implique une collaboration étroite entre différents acteurs : chefs de projet, développeurs, testeurs, administrateurs système, UX/UI designers, et bien d'autres.
           </p>
-        </blockquote>
-        <p>The following contains address information about the author, in an <code>address</code> element.</p>    
+          <p>   
+          Ce site explore chaque phase du cycle de vie, de manière claire et structurée, en détaillant les rôles des différents acteurs, les outils utilisés et les bonnes pratiques à adopter pour réussir. Nous allons également illustrer chaque étape à travers des exemples concrets, des schémas explicatifs et des démonstrations pratiques. L'objectif est de fournir une vision complète et pédagogique du processus de création et de gestion d'une application web, en soulignant l'importance de chaque phase pour garantir une solution finale sécurisée, performante et évolutive.
+        </p>
     </article>
     <article id="item2">
+      <br>
         <h2>Les grandes étapes du cycle de vie</h2>
-        <p>
-          This is a normal paragraph (<code>p</code> element).  To add some length to it, let us mention that this page was primarily written for testing the effect of <strong>user style sheets</strong>.  You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default.  It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
-        </p>
-        <p>
-          This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
-        </p>
-        <div>This is a <code>div</code> element. Authors may use such elements instead of paragraph markup for various reasons. (End of <code>div</code>.)</div>
-        <blockquote>
-          <p>
-            This is a block quotation containing a single paragraph. Well, not quite, since this is not <em>really</em> quoted text, but I hope you understand the point. After all, this page does not use HTML markup very normally anyway.
-          </p>
-        </blockquote>
-        <p>The following contains address information about the author, in an <code>address</code> element.</p>    
-    </article>
+          <div class="timeline">
+              <div class="timeline-item" onclick="location.href='#analyse'">Analyse des besoins</div>
+              <div class="timeline-item" onclick="location.href='#conception'">Conception et planification</div>
+              <div class="timeline-item" onclick="location.href='#developpement'">Développement</div>
+              <div class="timeline-item" onclick="location.href='#deploiement'">Déploiement</div>
+              <div class="timeline-item" onclick="location.href='#maintenance'">Maintenance et évolutions</div>
+              <div class="timeline-item" onclick="location.href='#decommissionnement'">Décommissionnement
+                <div class="triangle"></div>
+            </div>
+          </div>
+      </div>
+      <br>
+    
+        <!-- Analyse des besoins -->
+        <section id="analyse" class="my-5">
+            <h2>Analyse des besoins</h2>
+            <p>La première étape du cycle de vie consiste à analyser les besoins des utilisateurs et à définir les objectifs 
+                de l'application. Cette phase implique la compréhension du public cible, des exigences métiers et des contraintes 
+                techniques. L'objectif est de poser les bases du projet en identifiant les fonctionnalités clés et en précgit isant 
+                les attentes des utilisateurs finaux. Une bonne analyse permet d’éviter des erreurs de conception et de s’assurer 
+                que le produit final répondra aux attentes.</p>
+             <p><b> Acteurs : Chefs de projet, UX/UI designers. </b> </p>
+        </section>
+    
+        <!-- Conception et planification -->
+        <section id="conception" class="my-5">
+            <h2>Conception et planification</h2>
+            <p>Une fois les besoins définis, on passe à la conception du projet. Cette étape inclut la création des maquettes
+                 visuelles, le choix des technologies à utiliser et la définition de l’architecture du système. L'architecture 
+                 logicielle et le design technique sont planifiés pour s'assurer que l'application soit performante et évolutive.
+                  La planification détaillée permet de structurer le travail à venir et de coordonner efficacement l'équipe.</p>
+                  <p><b> Acteurs : Chefs de projet, UX/UI designers, architectes logiciels, développeurs.</b> </p>
+        </section>
+    
+        <!-- Développement -->
+        <section id="developpement" class="my-5">
+            <h2>Développement</h2>
+            <p>Le développement consiste à transformer les maquettes et les spécifications en un produit fonctionnel.
+                 Les développeurs écrivent le code source pour implémenter les fonctionnalités, tout en garantissant la qualité 
+                 du code par des tests unitaires et fonctionnels. L'intégration continue est souvent utilisée pour automatiser 
+                 le processus de tests et de mise à jour du code. Cette étape est essentielle pour s'assurer que le produit 
+                 respecte les exigences fonctionnelles et qu’il est stable.</p>
+              <p><b>Acteurs : Développeurs, testeurs QA, DevOps.</b></p>
+        </section>
+          <!-- Déploiement -->
+    <section id="deploiement" class="my-5">
+      <h2>Déploiement</h2>
+      <p>Une fois l’application développée, elle doit être mise en production. Cela inclut la configuration des serveurs,
+         la gestion des bases de données et le suivi des performances en temps réel. Les outils de monitoring permettent 
+         de détecter rapidement tout problème après la mise en ligne. Le déploiement se fait souvent en plusieurs étapes 
+         pour s’assurer que l’application fonctionne correctement dans l’environnement de production sans interruptions pour 
+         les utilisateurs.</p>
+        <p><b>  Acteurs : DevOps, administrateurs système, chefs de projet.</b> </p>
+  </section>
+
+  <!-- Maintenance et évolutions -->
+  <section id="maintenance" class="my-5">
+      <h2>Maintenance et évolutions</h2>
+      <p>Après le déploiement, il est important d’assurer une maintenance continue pour corriger les bugs, effectuer des 
+        mises à jour de sécurité et optimiser les performances. Les feedbacks utilisateurs sont collectés pour améliorer 
+        l'application, en ajoutant de nouvelles fonctionnalités ou en ajustant les fonctionnalités existantes. 
+        Cette phase permet de garantir la pérennité et l’évolution de l’application tout au long de sa vie. </p>
+        <p><b>   Acteurs : Développeurs, testeurs QA, support technique.</b> </p>
+  </section>
+
+  <!-- Décommissionnement -->
+  <section id="decommissionnement" class="my-5">
+      <h2>Décommissionnement</h2>
+      <p>Le décommissionnement intervient lorsque l'application arrive à la fin de sa vie ou lorsque son service n’est 
+        plus nécessaire. Cette phase comprend l'arrêt progressif des services, la migration des utilisateurs vers une nouvelle 
+        solution et la suppression sécurisée des données. Il est essentiel de respecter les normes légales et les exigences
+         de sécurité, comme le RGPD, pour garantir que toutes les données sensibles sont correctement supprimées.</p>
+        <p><b>Acteurs : Chefs de projet, administrateurs système, équipes légales.</b> </p>
+  </section>
+      
     <article id="item3">
         <h2>Illustrations et cas pratiques
           </h2><br>
@@ -120,7 +231,6 @@
           <div class="container text-center mt-5">
             <p><strong>Cycle de vie d'un site e-commerce</strong></p>
             <div class="d-flex justify-content-center mt-4">
-                <img src="img/img-cycle/cycledevie.webp" class="img-thumbnail" alt="Cycle de vie" style="max-width: 50vw; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
         </div>
         
@@ -132,7 +242,6 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
           </div>
           <div class="modal-body d-flex justify-content-center align-items-center p-0">
-              <img src="img/img-cycle/cycledevie.webp" class="img-fluid" alt="Cycle de vie"
                    style="width: 100vw; height: 100vh; object-fit: contain;">
           </div>
       </div>
