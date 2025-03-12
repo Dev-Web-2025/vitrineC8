@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -48,7 +48,7 @@
           <li class="nav-item"><a class="nav-link text-white" href="#Depot">Dépot</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#CI/CD">CI/CD</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#Outils">Outils</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#Bonnes pratiques">Bonnes pratiques</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#bonnes-pratiques">Bonnes pratiques</a></li>
         </ul>
       </div>
     </nav>
@@ -58,19 +58,23 @@
     <article id="Versionning">
       <h2>Le Versionning</h2>
       <p>
-        Une fois qu'une première version du projet à été réaliser, il est désormait temps de me faire évoluer.<br>
-        Pour ce faire on vas réaliser plusieurs version d l'application ou du site.
-        Ces version peuvent majeur ou mineur. <br>
-        Elle peuvent être due à l'ajout d'une nouvelle fonction ou à une faille de sécurité, issue ausi bien d'un montée
-        de version ou d'une vulnérabilité. <br>
-        Dans tout les cas il faut maintir sont code a jour.
+        Une fois qu'une première version du projet a été réalisée, il est désormais temps de le faire évoluer.<br>
+        Pour ce faire on va réaliser plusieurs versions de l'application ou du site.
+        Ces versions peuvent être majeures ou mineures. <br>
+        Elles peuvent être dues à l'ajout d'une nouvelle fonction ou à une faille de sécurité, issues aussi bien d'une
+        montée
+        de version que d'une vulnérabilité. <br>
+        Dans tous les cas il faut maintenir son code à jour.
         <strong>user style sheets</strong>.
       </p>
       <p>
-        On met ainsi en place un <strong>verionning</strong>.<br>
+        On met ainsi en place un <strong>versioning</strong>.
+        <br>
         On utilisera le plus souvent <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">git</a>
-        pour enregistrer différente version du code.<br>
-        Voici la bonne pratique pour enregistrer une nouvelle version. <br>
+        pour enregistrer différentes versions du code.
+        <br>
+        Voici la bonne pratique pour enregistrer une nouvelle version.
+        <br>
       </p>
       <pre>
         <code>
@@ -86,21 +90,23 @@
       </pre>
 
       <p>
-        <strong>Attention: </strong>ces modificaion serront uniquement enregistrer localement sur la branch git active
+        <strong>Attention: </strong>ces modifications seront uniquement enregistrées localement sur la branche git
+        active
         <a href="https://git-scm.com/docs/git-branch" target="_blank" rel="noopener noreferrer">(voir doc)</a><br>
-        Dans le cadre d'un application ou d'un site, on poussera ces modification vers un dépot en ligne. <br>
-        De cette manière on peut non seulement mettre en commun le travail, mais aussi publier les différentes version
-        de manière succives tout en concervant les anciennes.
+        Dans le cadre d'une application ou d'un site, on poussera ces modifications vers un dépôt en ligne. <br>
+        De cette manière on peut non seulement mettre en commun le travail, mais aussi publier les différentes versions
+        de manière successives tout en conservant les anciennes.
       </p>
       <p>
-        <strong>Cependant: </strong> on ne pousse pas ses modifications n'importe comment au risque d'effacer le travail commun.<br>
-        Après avoir commit ses modificaitons en locale ont : 
-        <ul>
-          <li>Se met à jour avec le dépot à distance</li>
-          <li>Résouds les conflits existants</li>
-          <li><strong>Alors seuelement</strong> on pousse ses modifications</li>
-        </ul>
-        <pre>
+        <strong>Cependant: </strong> on ne pousse pas ses modifications n'importe comment au risque d'effacer le travail
+        commun.<br>
+        Après avoir commit ses modifications en local on :
+      <ul>
+        <li>Se met à jour avec le dépôt à distance</li>
+        <li>Résout les conflits existants</li>
+        <li><strong>Alors seulement</strong> on pousse ses modifications</li>
+      </ul>
+      <pre>
           <code>
             # Se mettre à jour avec le repo en ligne
             <strong>git pull origin BranchDeTravail</strong><br>
@@ -115,162 +121,339 @@
         <h2>Les Dépots </h2>
         <p>
           Il existe plusieurs solutions pour de repos en ligne. Le plus connus sont git-hub et git lab.
-          <table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: 0.15vw solid #333; width: 90vw; max-width: 1000px;">
-            <caption style="margin-bottom: 1vw; font-size: 1.3rem; font-weight: bold;">Comparatif des solutions de dépôts Git en ligne</caption>
-            <thead>
-              <tr>
-                <th style="padding: 1.5vw; border: 1px solid #999; background-color: #f0f0f0; font-size: 1.1rem; width: 20%;">Caractéristique</th>
-                <th style="padding: 1.5vw; border: 1px solid #999; background-color: #f0f0f0; font-size: 1.1rem; width: 40%;">GitHub</th>
-                <th style="padding: 1.5vw; border: 1px solid #999; background-color: #f0f0f0; font-size: 1.1rem; width: 40%;">GitLab</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Logo</td>
-                <td style="text-align: center; padding: 2vw; border: 1px solid #999;">
-                  <a href="./img/img-version/github-logo.png">
-                    <img src="./img/img-version/github-logo.png" alt="Logo GitHub" style="max-width: 12vw; min-width: 100px; height: auto;">
-                  </a>
-                </td>
-                <td style="text-align: center; padding: 2vw; border: 1px solid #999;">
-                  <a href="./img/img-version/gitlab.png">
-                    <img src="./img/img-version/gitlab.png" alt="Logo GitLab" style="max-width: 12vw; min-width: 100px; height: auto;">
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Open Source</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">Partiellement. Interface et fonctionnalités propriétaires, mais certains composants sont open source</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">Complètement open source (licence MIT). Version Community Edition disponible gratuitement</td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Détenteur</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">Microsoft (depuis 2018)</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">GitLab Inc.</td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Types de projets adaptés</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">
-                  • Idéal pour projets open source<br>
-                  • Collaboration massive (millions de contributeurs)<br>
-                  • Projets de toutes tailles, mais particulièrement fort pour l'open source
-                </td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">
-                  • Adapté aux projets d'entreprise et privés<br>
-                  • Équipes de toutes tailles<br>
-                  • Particulièrement adapté pour les entreprises souhaitant héberger leur propre instance
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Solutions CI</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">GitHub Actions - Intégration flexible, workflows basés sur YAML, intégration native</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">GitLab CI/CD - Puissant, natif, avec pipeline as code et interface intuitive pour visualiser les étapes</td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Solutions CD</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">GitHub Actions avec support déploiement, intégration avec services AWS, Azure, GCP, etc.</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">Système CD natif intégré avec Auto DevOps, environnements de préproduction, déploiements Kubernetes, etc.</td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Hébergement de sites</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">GitHub Pages - Simple, gratuit, idéal pour la documentation statique, blogs et sites personnels</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">GitLab Pages - Similaire à GitHub Pages mais avec plus d'options de configuration via CI/CD</td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Gestion de la documentation</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">
-                  • Wiki intégré<br>
-                  • Support Markdown<br>
-                  • GitHub Pages pour documentation statique<br>
-                  • Intégration facile avec Jekyll
-                </td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">
-                  • Wiki plus avancé avec historique complet<br>
-                  • Support Markdown<br>
-                  • Documentation spécifique par environnement<br>
-                  • Intégration avec plusieurs générateurs de sites statiques
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Gestion de projet</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">
-                  • Issues et projets basiques<br>
-                  • GitHub Projects (tableau kanban)<br>
-                  • Milestones<br>
-                  • Limité par rapport à des outils dédiés
-                </td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">
-                  • Suite complète d'outils (issues, milestones, epics)<br>
-                  • Tableaux kanban avancés<br>
-                  • Roadmaps<br>
-                  • Peut remplacer des outils comme Jira
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Self-Hosting</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">Enterprise version disponible, mais coûteuse et moins flexible</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">Totalement possible et relativement simple, option populaire pour les entreprises avec Community Edition gratuite</td>
-              </tr>
-              <tr>
-                <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Intégration DevOps</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">Modèle modulaire avec Marketplace et intégrations tierces</td>
-                <td style="padding: 1.5vw; border: 1px solid #999;">Solution DevOps tout-en-un (référentiel, CI/CD, sécurité, monitoring)</td>
-              </tr>
-            </tbody>
-          </table>
-          </p>
-        <p> 
-          Il exist également d'autres solution pour les dépots en ligne comme SoureForge(vieux), Lauchpad(Ubuntu) ect... <br>
-          Le choix de la plateforme serra à faire en fonction du projet. 
+        <table
+          style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: 0.15vw solid #333; width: 90vw; max-width: 1000px;">
+          <caption style="margin-bottom: 1vw; font-size: 1.3rem; font-weight: bold;">Comparatif des solutions de dépôts
+            Git en ligne</caption>
+          <thead>
+            <tr>
+              <th
+                style="padding: 1.5vw; border: 1px solid #999; background-color: #f0f0f0; font-size: 1.1rem; width: 20%;">
+                Caractéristique</th>
+              <th
+                style="padding: 1.5vw; border: 1px solid #999; background-color: #f0f0f0; font-size: 1.1rem; width: 40%;">
+                GitHub</th>
+              <th
+                style="padding: 1.5vw; border: 1px solid #999; background-color: #f0f0f0; font-size: 1.1rem; width: 40%;">
+                GitLab</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Logo</td>
+              <td style="text-align: center; padding: 2vw; border: 1px solid #999;">
+                <a href="./img/img-version/github-logo.png">
+                  <img src="./img/img-version/github-logo.png" alt="Logo GitHub"
+                    style="max-width: 12vw; min-width: 100px; height: auto;">
+                </a>
+              </td>
+              <td style="text-align: center; padding: 2vw; border: 1px solid #999;">
+                <a href="./img/img-version/gitlab.png">
+                  <img src="./img/img-version/gitlab.png" alt="Logo GitLab"
+                    style="max-width: 12vw; min-width: 100px; height: auto;">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Open Source</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">Partiellement. Interface et fonctionnalités
+                propriétaires, mais certains composants sont open source</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">Complètement open source (licence MIT). Version
+                Community Edition disponible gratuitement</td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Détenteur</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">Microsoft (depuis 2018)</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">GitLab Inc.</td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Types de projets adaptés</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">
+                • Idéal pour projets open source<br>
+                • Collaboration massive (millions de contributeurs)<br>
+                • Projets de toutes tailles, mais particulièrement fort pour l'open source
+              </td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">
+                • Adapté aux projets d'entreprise et privés<br>
+                • Équipes de toutes tailles<br>
+                • Particulièrement adapté pour les entreprises souhaitant héberger leur propre instance
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Solutions CI</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">GitHub Actions - Intégration flexible, workflows basés
+                sur YAML, intégration native</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">GitLab CI/CD - Puissant, natif, avec pipeline as code
+                et interface intuitive pour visualiser les étapes</td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Solutions CD</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">GitHub Actions avec support déploiement, intégration
+                avec services AWS, Azure, GCP, etc.</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">Système CD natif intégré avec Auto DevOps,
+                environnements de préproduction, déploiements Kubernetes, etc.</td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Hébergement de sites</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">GitHub Pages - Simple, gratuit, idéal pour la
+                documentation statique, blogs et sites personnels</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">GitLab Pages - Similaire à GitHub Pages mais avec plus
+                d'options de configuration via CI/CD</td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Gestion de la documentation</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">
+                • Wiki intégré<br>
+                • Support Markdown<br>
+                • GitHub Pages pour documentation statique<br>
+                • Intégration facile avec Jekyll
+              </td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">
+                • Wiki plus avancé avec historique complet<br>
+                • Support Markdown<br>
+                • Documentation spécifique par environnement<br>
+                • Intégration avec plusieurs générateurs de sites statiques
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Gestion de projet</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">
+                • Issues et projets basiques<br>
+                • GitHub Projects (tableau kanban)<br>
+                • Milestones<br>
+                • Limité par rapport à des outils dédiés
+              </td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">
+                • Suite complète d'outils (issues, milestones, epics)<br>
+                • Tableaux kanban avancés<br>
+                • Roadmaps<br>
+                • Peut remplacer des outils comme Jira
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Self-Hosting</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">Enterprise version disponible, mais coûteuse et moins
+                flexible</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">Totalement possible et relativement simple, option
+                populaire pour les entreprises avec Community Edition gratuite</td>
+            </tr>
+            <tr>
+              <td style="padding: 1.5vw; border: 1px solid #999; font-weight: bold;">Intégration DevOps</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">Modèle modulaire avec Marketplace et intégrations
+                tierces</td>
+              <td style="padding: 1.5vw; border: 1px solid #999;">Solution DevOps tout-en-un (référentiel, CI/CD,
+                sécurité, monitoring)</td>
+            </tr>
+          </tbody>
+        </table>
+        </p>
+        <p>
+          Il existe également d'autres solutions pour les dépôts en ligne comme SourceForge (vieux), Launchpad (Ubuntu), etc...
+          <br>
+          Le choix de la plateforme sera à faire en fonction du projet.
         </p>
       </article>
       <article id="CI/CD">
         <h2>CI/CD : Intégration et Déploiement continus</h2>
-          <dl>
-            <dt><strong>CI</strong> - Intégration continue</dt>
-            <dd><i>Continuous Integration</i> en anglais</dd>
-            <dt><strong>CD</strong> - Déploiement continu</dt>
-            <dd><i>Continuous Deployment</i> en anglais</dd>
-          </dl>
+        <dl>
+          <dt><strong>CI</strong> - Intégration continue</dt>
+          <dd><i>Continuous Integration</i> en anglais</dd>
+          <dt><strong>CD</strong> - Déploiement continu</dt>
+          <dd><i>Continuous Deployment</i> en anglais</dd>
+        </dl>
         <p>
-          Grâce au versionning et au dépot en ligne on peut mettre en place un développement et une <strong>intégration en continue ou CI</strong>.
-          continue et aussi de développement continu. 
-          L'intégration coninue consiste à pousser différentes version de manière incrémentiel.<br>
-          Plutot que de travailler en livrant toute les fonctions d'un coups, on ajoute au fur et à mesure les différentes fonctions et correctif. 
-          Cela permet de 
-          <ul>
-            <li>Facilitée la résolution des bugs vue qu'une moins grande quantité de code est poussé</li>
-            <li>Incrémenter en continue de nouvelles fonctions</li>
-            <li>Tester plus facilements les différentes fonction</li>
-          </ul>
+          Grâce au versioning et au dépôt en ligne on peut mettre en place un développement et une <strong>intégration
+          en continue ou CI</strong>.
+          L'intégration continue consiste à pousser différentes versions de manière incrémentielle.<br>
+          Plutôt que de travailler en livrant toutes les fonctions d'un coup, on ajoute au fur et à mesure les
+          différentes fonctions et correctifs.
+          Cela permet de :
+        <ul>
+          <li>Faciliter la résolution des bugs vu qu'une moins grande quantité de code est poussée</li>
+          <li>Incrémenter en continu de nouvelles fonctions</li>
+          <li>Tester plus facilement les différentes fonctions</li>
+        </ul>
         </p>
         <p>
-          <strong>Le développement continu</strong> ou <i>continous developpement</i> CD en englais peut lui aussi être mis en place grâce au versionning.<br>
-          En plus d'un intégration continueon vas également pousser les dernière intégration <strong>une fois tester</strong> vers les serveur de production.<br>
-          On peut ainsi : 
-          <ul>
-            <li>Automatiser l'inplémentation de fonction</li>
-            <li>Maintenir le site ou projet à jour</li>
-            <li>Suivre et documenter toute les versions du projet</li>
-            <li>Faire des back up si néccésaire</li>
-          </ul>
+          <strong>Le développement continu</strong> ou <i>continuous development</i> CD en anglais peut lui aussi être
+          mis en place grâce au versioning.<br>
+          En plus d'une intégration continue, on va également pousser les dernières intégrations <strong>une fois
+            testées</strong> vers les serveurs de production.<br>
+          On peut ainsi :
+        <ul>
+          <li>Automatiser l'implémentation de fonctions</li>
+          <li>Maintenir le site ou projet à jour</li>
+          <li>Suivre et documenter toutes les versions du projet</li>
+          <li>Faire des backups si nécessaire</li>
+        </ul>
         </p>
-        <p> 
+        <p>
           La CI/CD peut être entièrement automatisé par les plateforme de dépot en ligne. Chez git hub on trouvera
           <a href="https://github.com/features/actions" target="_blank" rel="noopener noreferrer">des Actions</a>.<br>
-          Chez git lab on trouvera <a href="https://docs.gitlab.com/ci/pipelines/" target="_blank" rel="noopener noreferrer">les pipelines CI/CD</a><i> tuyautrie en anglais</i> 
+          Chez git lab on trouvera <a href="https://docs.gitlab.com/ci/pipelines/" target="_blank"
+            rel="noopener noreferrer">les pipelines CI/CD</a><i> tuyautrie en anglais</i>
         </p>
 
-      <article id="Outils">
-        <h2>Outils</h2>
-        On vas désormais voir en pratiques différents outils pour mettre en place une CI/CD <br>
+        <article id="Outils">
+          <h2>Outils Git avancés</h2>
 
-      </article>
-      <article id="Bonne pratiques">
-        <h2>Bonne pratiques</h2>
-        Pour conclure un petit rappel sur les notions vue et les bonne pratiques à utiliser pour assurer un verionning simple et efficace.<br>
+          <h3>Git hooks</h3>
+          <p>
+            Les hooks sont des scripts qui s'exécutent automatiquement lors de certaines actions Git.
+            Exemples courants :
+          <ul>
+            <li><code>pre-commit</code> : vérification du code avant commit (linting, tests unitaires)</li>
+            <li><code>pre-push</code> : validation avant de pousser des modifications</li>
+            <li><code>post-receive</code> : déclenchement d'actions après réception de modifications</li>
+          </ul>
+          </p>
 
-      </article>
+          <h3>Git LFS (Large File Storage)</h3>
+          <p>
+            Permet de gérer efficacement les fichiers volumineux (images, vidéos, binaires) :
+          <ul>
+            <li>Remplace les gros fichiers par des pointeurs légers dans le dépôt</li>
+            <li>Stocke le contenu réel séparément</li>
+            <li>Idéal pour les projets avec des ressources multimédias</li>
+          </ul>
+          </p>
+
+          <h3>Interfaces graphiques</h3>
+          <p>
+            Pour ceux qui préfèrent une approche visuelle :
+          <ul>
+            <li><strong>GitKraken</strong> : interface moderne et intuitive</li>
+            <li><strong>Sourcetree</strong> : outil gratuit d'Atlassian</li>
+            <li><strong>GitHub Desktop</strong> : solution simple orientée GitHub</li>
+            <li><strong>Extensions IDE</strong> : intégration dans VS Code, IntelliJ, etc.</li>
+          </ul>
+          </p>
+
+        </article>
+        <article id="bonnes-pratiques">
+          <h2>Bonnes pratiques de versioning</h2>
+
+          <h3>Stratégies de branches</h3>
+          <p>
+            Choisir une stratégie de branches adaptée est essentiel pour organiser efficacement le développement en
+            équipe. Voici quelques exemples.
+          </p>
+
+          <h4>GitFlow</h4>
+          <p>
+            Modèle robuste avec structure de branches hiérarchisée, idéal pour les projets avec des cycles de release
+            planifiés.
+          </p>
+          <ul>
+            <li><strong>Branches principales</strong>:
+              <ul>
+                <li><code>main</code> (ou <code>master</code>): code en production uniquement</li>
+                <li><code>develop</code>: branche d'intégration des fonctionnalités</li>
+              </ul>
+            </li>
+            <li><strong>Branches de support</strong>:
+              <ul>
+                <li><code>feature/*</code>: développement de nouvelles fonctionnalités (à partir de
+                  <code>develop</code>)
+                </li>
+                <li><code>release/*</code>: préparation des versions (à partir de <code>develop</code>)</li>
+                <li><code>hotfix/*</code>: corrections d'urgence en production (à partir de <code>main</code>)</li>
+              </ul>
+            </li>
+            <li><strong>Avantages</strong>: structure claire, gestion précise des versions, adapté aux équipes
+              distribuées</li>
+            <li><strong>Inconvénients</strong>: peut sembler complexe pour de petits projets, nombreuses branches à
+              gérer</li>
+          </ul>
+
+          <h4>GitHub Flow</h4>
+          <p>
+            Modèle simplifié favorisant le déploiement continu, populaire pour les applications web et les services en
+            ligne.
+          </p>
+          <ul>
+            <li><strong>Principe</strong>: une seule branche principale (<code>main</code>) considérée comme toujours
+              déployable</li>
+            <li><strong>Workflow</strong>:
+              <ul>
+                <li>Créer une branche descriptive à partir de <code>main</code> pour chaque fonctionnalité/correctif
+                </li>
+                <li>Effectuer des commits réguliers sur cette branche</li>
+                <li>Ouvrir une Pull Request dès que possible pour discussion</li>
+                <li>Après revue et validation, merger dans <code>main</code></li>
+                <li>Déployer immédiatement après merge</li>
+              </ul>
+            </li>
+            <li><strong>Avantages</strong>: simplicité, adapté au déploiement continu, facile à comprendre</li>
+            <li><strong>Inconvénients</strong>: moins adapté aux projets nécessitant plusieurs versions en parallèle
+            </li>
+          </ul>
+
+          <h4>Trunk-Based Development</h4>
+          <p>
+            Approche minimaliste où tous les développeurs travaillent principalement sur une seule branche (trunk ou
+            main).
+          </p>
+          <ul>
+            <li><strong>Principe</strong>: éviter les branches de longue durée, privilégier l'intégration rapide et
+              fréquente</li>
+            <li><strong>Techniques clés</strong>:
+              <ul>
+                <li><strong>Feature Toggles</strong>: code activé/désactivé via configuration sans changement de branche
+                </li>
+                <li><strong>Branch by Abstraction</strong>: refactoring progressif pour modifications majeures</li>
+                <li>Intégrations multiples par jour dans la branche principale</li>
+                <li>Courtes branches de fonctionnalités (1-2 jours maximum)</li>
+              </ul>
+            </li>
+            <li><strong>Avantages</strong>: minimise les conflits de merge, facilite l'intégration continue, réduit la
+              dette technique</li>
+            <li><strong>Inconvénients</strong>: nécessite des tests automatisés solides, maturité d'équipe et rigueur
+            </li>
+          </ul>
+
+          <h4>Quelle stratégie choisir?</h4>
+          <table style="border: 1px solid black;">
+            <thead style="border: 1px solid black;">
+              <tr>
+                <th>Type de projet</th>
+                <th>Stratégie recommandée</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border: 1px solid black;">
+                <td>Applications avec releases périodiques</td>
+                <td>GitFlow</td>
+              </tr>
+              <tr style="border: 1px solid black;">
+                <td>Applications web avec déploiement fréquent</td>
+                <td>GitHub Flow</td>
+              </tr>
+              <tr style="border: 1px solid black;">
+                <td>Équipes DevOps matures avec bonne couverture de tests</td>
+                <td>Trunk-Based Development</td>
+              </tr>
+              <tr style="border: 1px solid black;">
+                <td>Projets open-source</td>
+                <td>GitHub Flow ou GitFlow simplifié</td>
+              </tr>
+              <tr style="border: 1px solid black;">
+                <td>Petites équipes (1-3 développeurs)</td>
+                <td>GitHub Flow (plus simple à gérer)</td>
+              </tr>
+            </tbody>
+          </table> <br>
+
+          <h3>Versioning sémantique</h3>
+          <p>
+            Le <a href="https://semver.org/lang/fr/" target="_blank">versioning sémantique</a> (X.Y.Z) :
+          <ul>
+            <li><strong>X</strong> : version majeure (changements incompatibles)</li>
+            <li><strong>Y</strong> : version mineure (ajouts compatibles)</li>
+            <li><strong>Z</strong> : patch (corrections de bugs)</li>
+          </ul>
+          </p>
+        </article>
   </main>
   <!-- BACK TO TOP -->
   <nav class="sub-navbar navbar navbar-expand bg-secondary py-1">
