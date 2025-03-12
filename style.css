@@ -26,3 +26,19 @@ body {
   color: white;
 }
 
+h2 {
+  position: relative;
+  padding-left: 20px; /* Espace entre le rectangle et le texte */
+  font-size: 32px; /* Ajustable selon les besoins */
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px; /* Largeur du rectangle */
+  height: 50%; /* Hauteur = demi-hauteur du texte */
+  background-color: #FF6E21; /* Couleur du rectangle */
+}
