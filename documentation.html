@@ -34,7 +34,7 @@
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-intro">Introduction</a></li>
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-bon">Bonnes pratiques</a></li>
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-outils">Outils</a></li>
-						<li class="nav-item"><a class="nav-link text-white" href="#doc-demo">Démonstration</a></li>
+						<li class="nav-item"><a class="nav-link text-white" href="#doc-demo">Exemples</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -43,31 +43,17 @@
 		<!-- Corps -->
 		<main class="container mt-5">
 			<article aria-label="headings">
-				<h1>Introduction à la documentation</h1>
-				<p>L'objectif est d'expliquer l'importance de la documentation dans le développement d'une application web et de montrer comment bien la structurer.</p>
-				<h3>Pourquoi documenter ?</h3>
-				<p>Facilite la maintenance et l'évolution du projet.</p>
-				<p>Améliore la collaboration entre les développeurs.</p>
-				<p>Assure la transmission des connaissances.</p>
-				<h3>Types de documentation</h3>
-				<p><strong>Documentation utilisateur :</strong> guides et tutoriels.</p>
-				<p><strong>Documentation technique :</strong> architecture, API, base de données.</p>
-				<p><strong>Documentation du code :</strong> commentaires, conventions de nommage</p>
-				<h3>Bonnes pratiques de documentation</h3>
-				<p><strong>Clarté et structure :</strong> Organiser les informations (introduction, explications, exemples).</p>
-				<p><strong>Mise à jour régulière :</strong> Une documentation obsolète est inutile.</p>
-				<p><strong>Standardisation :</strong> Utilisation de formats comme Markdown ou AsciiDoc.</p>
-				<h3>Outils et technologies recommandés</h3>
-				<p><strong>Markdown + GitHub Wiki :</strong> Pour une documentation versionnée et collaborative.</p>
-				<p><strong>Docusaurus :</strong> Génération de documentation interactive et bien structurée.</p>
-				<p><strong>Swagger / OpenAPI :</strong> Documentation automatique des API REST.</p>
-				<p><strong>JSDoc / DocFX :</strong> Documentation du code source.</p>
-				<h3>Démonstration interactive</h3>
-				<p><strong>Exemple de documentation Markdown :</strong> Présentation d'un fichier <mark>.md</mark> structuré.</p>
-				<p><strong>Swagger en action :</strong> Démonstration d’une API avec documentation interactive.</p>
+				<h2>Sommaire</h2>
+				<ul>
+					<li>Introduction à la documentation</li>
+					<li>Bonnes pratiques de documentation</li>
+					<li>Outils et technologies recommandés</li>
+					<li>Exemples</li>
+				</ul>
 			</article>
 			<article id="doc-intro">
 				<h2>Introduction à la Documentation</h2>
+				<p>L'objectif est d'expliquer l'importance de la documentation dans le développement d'une application web et de montrer comment bien la structurer.</p>
 				<h4>Pourquoi documenter ?</h4>
 				<p>
 					Une documentation bien rédigée est essentielle pour assurer la pérennité et l’évolution d’une application.
@@ -87,12 +73,16 @@
 						<br>Une documentation précise limite les mauvaises implémentations et les failles de sécurité.
 					</li>
 				</ul>
+				<br>
+				<img class="img-big" src="./img/img-doc/why-document.png" alt="Swagger">
+				<br>
 				<h4>Types de documentation</h4>
 				<p>On distingue plusieurs types de documentation, chacune ayant son rôle :</p>
 				<ol>
 					<li>
 						<strong>Documentation utilisateur</strong>
 						<ul>
+							<li><u>Guides et tutoriels</u></li>
 							<li>Destinée aux utilisateurs finaux.</li>
 							<li>Contient des guides d’utilisation, des FAQ et des tutoriels.</li>
 							<li>Exemples : Pages d’aide d’un site web, documentation API publique.</li>
@@ -101,6 +91,7 @@
 					<li>
 						<strong>Documentation technique</strong>
 						<ul>
+							<li><u>Architecture, API, base de données</u></li>
 							<li>Décrypte l’architecture du projet, les choix techniques et les dépendances.</li>
 							<li>Cible les développeurs et les administrateurs système.</li>
 							<li>Contient des schémas, diagrammes et explications détaillées.</li>
@@ -109,18 +100,26 @@
 					<li>
 						<strong>Documentation du code</strong>
 						<ul>
+							<li><u>Commentaires, conventions de nommage</u></li>
 							<li>Intégrée directement dans le code source.</li>
 							<li>Utilise des commentaires et des outils comme JSDoc ou DocFX.</li>
 							<li>Explique les classes, fonctions et variables importantes.</li>
 						</ul>
 					</li>
 				</ol>
+				<br>
+				<img class="img-big" src="./img/img-doc/types-of-doc.jpg" alt="Swagger">
+				<br>
 			</article>
 			<article id="doc-bon">
 				<h2>Bonnes pratiques de documentation</h2>
 				<h4>Clarté et structure</h4>
 				<ul>
-					<li>Organiser la documentation en sections claires et hiérarchisées.</li>
+					<li>
+						Organiser les informations (introduction, explications, exemples).
+						<br>
+						<em>Organiser la documentation en sections claires et hiérarchisées.</em>
+					</li>
 					<li>Utiliser un sommaire et une navigation intuitive.</li>
 					<li>Intégrer des exemples concrets et des schémas explicatifs.</li>
 				</ul>
@@ -146,7 +145,7 @@
 				<h2>Outils et technologies recommandés</h2>
 				<h4>Documentation versionnée et collaborative</h4>
 				<ul>
-					<li><strong>Markdown + GitHub Wiki :</strong> Documentation simple, stockée avec le code source.</li>
+					<li><strong>Markdown + GitHub Wiki :</strong> Documentation simple, stockée avec le code source (versionnée et collaborative).</li>
 					<li><strong>Read the Docs :</strong> Génération automatique d’une documentation hébergée.</li>
 				</ul>
 				<h4>Génération de documentation interactive</h4>
@@ -168,7 +167,7 @@
 				</ul>
 			</article>
 			<article id="doc-demo">
-				<h2>Démonstration</h2>
+				<h2>Exemples</h2>
 				<p>L’objectif de cette démonstration est de montrer comment structurer une documentation efficace et comment utiliser des outils pratiques pour documenter un projet.</p>
 				<h4>Exemple de documentation Markdown</h4>
 				<p>
@@ -216,6 +215,8 @@
 					</tbody>
 				</table>
 				<br>
+				<img class="img-big" src="./img/img-doc/swagger.png" alt="Swagger">
+				<br>
 				<h4>Documentation du code avec JSDoc</h4>
 				<p>JSDoc permet d’ajouter des commentaires documentés directement dans le code.</p>
 				<p>Exemple :</p>
@@ -229,6 +230,9 @@
 					<br>&emsp; &emsp; res.json([{ id: 1, name: "Alice" }, { id: 2, name: "Bob" }]);
 					<br>});
 				</code>
+				<br>
+				<img class="img-big" src="./img/img-doc/xml-comment.png" alt="Swagger">
+				<br>
 			</article>
 		</main>
 
