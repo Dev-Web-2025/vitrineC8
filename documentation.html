@@ -34,7 +34,8 @@
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-intro">Introduction</a></li>
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-bon">Bonnes pratiques</a></li>
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-outils">Outils</a></li>
-						<li class="nav-item"><a class="nav-link text-white" href="#doc-demo">Exemples</a></li>
+						<li class="nav-item"><a class="nav-link text-white" href="#doc-exemple">Exemples</a></li>
+						<li class="nav-item"><a class="nav-link text-white" href="#doc-bonus">Bonus</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -113,6 +114,7 @@
 			</article>
 			<article id="doc-bon">
 				<h2>Bonnes pratiques de documentation</h2>
+				<br>
 				<h4>Clarté et structure</h4>
 				<ul>
 					<li>
@@ -123,11 +125,13 @@
 					<li>Utiliser un sommaire et une navigation intuitive.</li>
 					<li>Intégrer des exemples concrets et des schémas explicatifs.</li>
 				</ul>
+				<br>
 				<h4>Mise à jour régulière</h4>
 				<ul>
 					<li>Une documentation périmée est plus nuisible qu’une absence de documentation.</li>
 					<li>Automatiser la mise à jour avec des outils comme GitHub Actions pour générer des docs à partir du code.</li>
 				</ul>
+				<br>
 				<h4>Standardisation</h4>
 				<ul>
 					<li>Utiliser des conventions d’écriture (ex. : norme pour les commentaires de code).</li>
@@ -143,21 +147,26 @@
 			</article>
 			<article id="doc-outils">
 				<h2>Outils et technologies recommandés</h2>
+				<br>
 				<h4>Documentation versionnée et collaborative</h4>
 				<ul>
 					<li><strong>Markdown + GitHub Wiki :</strong> Documentation simple, stockée avec le code source (versionnée et collaborative).</li>
 					<li><strong>Read the Docs :</strong> Génération automatique d’une documentation hébergée.</li>
 				</ul>
+				<br>
 				<h4>Génération de documentation interactive</h4>
 				<ul>
 					<li><strong>Docusaurus :</strong> Création d’une documentation web interactive avec une navigation intuitive.</li>
 					<li><strong>MkDocs :</strong> Alternative légère pour documenter un projet Python.</li>
 				</ul>
+				<img class="img-big" src="./img/img-doc/Docusaurus-logo.png" style="max-width: 10vw; margin-left: 0;" alt="Swagger">
+				<br>
 				<h4>Documentation des API</h4>
 				<ul>
 					<li><strong>Swagger / OpenAPI :</strong> Génération de documentation dynamique à partir du code de l’API.</li>
 					<li><strong>Postman :</strong> Outil de test d’API avec documentation interactive intégrée.</li>
 				</ul>
+				<br>
 				<h4>Documentation du code source</h4>
 				<ul>
 					<li>
@@ -166,7 +175,7 @@
 					</li>
 				</ul>
 			</article>
-			<article id="doc-demo">
+			<article id="doc-exemple">
 				<h2>Exemples</h2>
 				<p>L’objectif de cette démonstration est de montrer comment structurer une documentation efficace et comment utiliser des outils pratiques pour documenter un projet.</p>
 				<h4>Exemple de documentation Markdown</h4>
@@ -232,6 +241,91 @@
 				</code>
 				<br>
 				<img class="img-big" src="./img/img-doc/xml-comment.png" alt="Swagger">
+				<br>
+			</article>
+			<article id="doc-bonus">
+				<h2>Pour aller plus loin</h2>
+				<p>Voici quelques aspects complémentaire à la documentation.</p>
+				<h4>Documentation et qualité du Code</h4>
+				<ul>
+					<li>
+						<strong>Normes et conventions :</strong>
+						Respecter des standards comme le guide de style Airbnb pour JavaScript ou PEP 8 pour Python.
+					</li>
+					<li>
+						<strong>Linting et formatage automatique :</strong>
+						Utilisation d’ESLint, Prettier, Black (Python) pour assurer une cohérence dans le code.
+					</li>
+					<li>
+						<strong>Tests et documentation :</strong>
+						Générer automatiquement une documentation des tests avec Jest, Mocha, ou PHPUnit.
+					</li>
+				</ul>
+				<br>
+				<h4>Documentation et accessibilité</h4>
+				<ul>
+					<li>
+						<strong>Rendre la documentation inclusive :</strong>
+						<ul>
+							<li>Éviter les termes trop techniques sans explication.</li>
+							<li>Ajouter des exemples concrets et des cas d’usage.</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Compatibilité avec les outils d’accessibilité :</strong>
+						<ul>
+							<li>Générer des versions PDF pour les personnes ayant des difficultés avec les formats web.</li>
+							<li>Vérifier la lisibilité avec des outils comme Hemingway Editor.</li>
+						</ul>
+					</li>
+				</ul>
+				<br>
+				<h4>Documentation et sécurité</h4>
+				<ul>
+					<li>
+						<strong>Sensibilisation aux bonnes pratiques :</strong>
+						Ajouter une section dédiée à la sécurité (ex : protection des API, gestion des clés d’accès).
+					</li>
+					<li>
+						<strong>Exemples d’attaques courantes :</strong>
+						Injection SQL, XSS, mauvaise gestion des authentifications.
+					</li>
+					<li>
+						<strong>Documentation de la gestion des secrets :</strong>
+						Ne jamais inclure des clés API en clair, utiliser des fichiers <mark>.env</mark>.
+					</li>
+				</ul>
+				<br>
+				<h4>Documentation et intelligence artificielle</h4>
+				<ul>
+					<li>
+						<strong>Utilisation d’IA pour améliorer la documentation :</strong>
+						<ul>
+							<li>ChatGPT, Copilot ou Tabnine pour aider à générer des descriptions claires.</li>
+							<li>Outils comme Mintlify ou Stenography pour générer automatiquement des explications à partir du code source.</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Traduction automatique :</strong>
+						Rendre la documentation multilingue avec DeepL API ou Google Translate API.
+					</li>
+				</ul>
+				<br>
+				<h4>Documentation et collaboration</h4>
+				<ul>
+					<li>
+						<strong>Utilisation d’outils collaboratifs :</strong>
+						Notion, Confluence, Slite pour rédiger en équipe.
+					</li>
+					<li>
+						<strong>Workflow d’approbation :</strong>
+						Faire relire la documentation via des Pull Requests Git.
+					</li>
+					<li>
+						<strong>Intégration à un CI/CD :</strong>
+						Automatiser la génération de documentation avec des scripts (ex : déclencher la mise à jour de la documentation après un commit sur <mark>main</mark>).
+					</li>
+				</ul>
 				<br>
 			</article>
 		</main>
