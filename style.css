@@ -284,6 +284,14 @@ a > img {
   min-width: 200px;
   height: auto;
 }
+.img-mini {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+  max-width: 10vw;
+  min-width: 200px;
+  height: auto;
+}
 
 /* --- BLOCS ARTICLES --- */
 article {

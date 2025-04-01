@@ -34,8 +34,10 @@
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-intro">Introduction</a></li>
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-bon">Bonnes pratiques</a></li>
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-outils">Outils</a></li>
+						<li class="nav-item"><a class="nav-link text-white" href="#doc-cycle">Cycle</a></li>
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-exemple">Exemples</a></li>
 						<li class="nav-item"><a class="nav-link text-white" href="#doc-bonus">Bonus</a></li>
+						<li class="nav-item"><a class="nav-link text-white" href="#doc-conclusion">Conclusion</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -49,7 +51,10 @@
 					<li>Introduction à la documentation</li>
 					<li>Bonnes pratiques de documentation</li>
 					<li>Outils et technologies recommandés</li>
+					<li>Cycle de vie de la documentation</li>
 					<li>Exemples</li>
+					<li>Pour aller plus loin</li>
+					<li>Conclusion</li>
 				</ul>
 			</article>
 			<article id="doc-intro">
@@ -61,21 +66,25 @@
 					<br>Elle permet de :
 				</p>
 				<ul>
-					<li><strong>Faciliter la maintenance :</strong>
+					<li><strong>Communiquer :</strong>
+						<br>Si vous écrivez du code aujourd'hui et que vous revenez dessus dans six mois, vous serez très content d'avoir laissé quelques notes.
+						<br>Si vous travaillez en équipe, la documentation est ce qui assure la transmission des connaissances.
+					</li>
+					<li><strong>Faciliter la maintenance et la mise à jour :</strong>
 						<br>Un développeur reprenant un projet doit comprendre rapidement son architecture et son fonctionnement.
 					</li>
 					<li><strong>Améliorer la collaboration :</strong>
 						<br>Dans une équipe, une documentation claire permet à chacun de travailler efficacement sans perte de temps à poser des questions.
+						<br>Entre les développeurs, mais aussi avec les autres parties prenantes (chefs de projet, clients).
 					</li>
 					<li><strong>Assurer la transmission des connaissances :</strong>
 						<br>Un projet peut évoluer sur plusieurs années et plusieurs développeurs, il est crucial d’enregistrer les décisions techniques.
 					</li>
-					<li><strong>Réduire les erreurs :</strong>
+					<li><strong>Réduire les erreurs et la dette technique :</strong>
 						<br>Une documentation précise limite les mauvaises implémentations et les failles de sécurité.
 					</li>
 				</ul>
-				<br>
-				<img class="img-big" src="./img/img-doc/why-document.png" alt="Swagger">
+				<img class="img-big" src="./img/img-doc/why-document.png" alt="Pourquoi il faut documenter">
 				<br>
 				<h4>Types de documentation</h4>
 				<p>On distingue plusieurs types de documentation, chacune ayant son rôle :</p>
@@ -87,6 +96,13 @@
 							<li>Destinée aux utilisateurs finaux.</li>
 							<li>Contient des guides d’utilisation, des FAQ et des tutoriels.</li>
 							<li>Exemples : Pages d’aide d’un site web, documentation API publique.</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Documentation fonctionnelle</strong>
+						<ul>
+							<li><u>Les règles métier</u></li>
+							<li>Elle décrit ce que doit faire l'application.</li>
 						</ul>
 					</li>
 					<li>
@@ -108,30 +124,35 @@
 						</ul>
 					</li>
 				</ol>
+				<a href="./img/img-doc/types-of-doc.jpg">
+					<img class="img-big" src="./img/img-doc/types-of-doc.webp" alt="Les types de documentation">
+				</a>
 				<br>
-				<img class="img-big" src="./img/img-doc/types-of-doc.jpg" alt="Swagger">
-				<br>
+				<p>
+					Et bien sûr, toutes ces documentations doivent être <strong>claires, accessibles et à jour</strong>.
+				</p>
 			</article>
 			<article id="doc-bon">
 				<h2>Bonnes pratiques de documentation</h2>
-				<br>
 				<h4>Clarté et structure</h4>
 				<ul>
-					<li>
-						Organiser les informations (introduction, explications, exemples).
-						<br>
-						<em>Organiser la documentation en sections claires et hiérarchisées.</em>
-					</li>
+					<li>Soyez clair et concis.</li>
+					<li>Organiser les informations.</li>
 					<li>Utiliser un sommaire et une navigation intuitive.</li>
-					<li>Intégrer des exemples concrets et des schémas explicatifs.</li>
+					<li>Utilisez des titres, des tableaux et des schémas pour organiser l'information.</li>
+					<li>Définissez un format standard pour tout le projet.</li>
 				</ul>
-				<br>
 				<h4>Mise à jour régulière</h4>
 				<ul>
-					<li>Une documentation périmée est plus nuisible qu’une absence de documentation.</li>
-					<li>Automatiser la mise à jour avec des outils comme GitHub Actions pour générer des docs à partir du code.</li>
+					<li>
+						<strong>Documentation vivante et non statique.</strong>
+						<br>Une documentation périmée est plus nuisible qu’une absence de documentation.
+					</li>
+					<li>
+						<strong>Automatiser les mises à jour via CI/CD.</strong>
+						<br>Automatiser la mise à jour avec des outils comme GitHub Actions pour générer des docs à partir du code.
+					</li>
 				</ul>
-				<br>
 				<h4>Standardisation</h4>
 				<ul>
 					<li>Utiliser des conventions d’écriture (ex. : norme pour les commentaires de code).</li>
@@ -143,36 +164,85 @@
 							<li><strong>Swagger/OpenAPI</strong> pour documenter une API REST automatiquement.</li>
 						</ul>
 					</li>
+					<li>
+						Exemples :
+						<ul>
+							<li>Normes : ISO/IEC 26514, Google Developer Documentation</li>
+							<li>Templates et conventions : RFC, "README.md" standardisé</li>
+						</ul>
+					</li>
 				</ul>
 			</article>
 			<article id="doc-outils">
 				<h2>Outils et technologies recommandés</h2>
-				<br>
 				<h4>Documentation versionnée et collaborative</h4>
 				<ul>
-					<li><strong>Markdown + GitHub Wiki :</strong> Documentation simple, stockée avec le code source (versionnée et collaborative).</li>
-					<li><strong>Read the Docs :</strong> Génération automatique d’une documentation hébergée.</li>
+					<li><strong>Markdown, GitHub Wiki</strong> : Documentation simple, stockée avec le code source.</li>
+					<li><strong>Confluence, Notion</strong> : Outils pour collaborer.</li>
+					<li><strong>Read the Docs</strong> : Génération automatique d’une documentation hébergée.</li>
+					<li><strong>Google Docs</strong> : Documents classiques.</li>
 				</ul>
-				<br>
 				<h4>Génération de documentation interactive</h4>
 				<ul>
-					<li><strong>Docusaurus :</strong> Création d’une documentation web interactive avec une navigation intuitive.</li>
-					<li><strong>MkDocs :</strong> Alternative légère pour documenter un projet Python.</li>
+					<img class="img-mini" src="./img/img-doc/Docusaurus-logo.png" alt="Docusaurus">
+					<li><strong>Docusaurus</strong> : Création d’une documentation web interactive avec une navigation intuitive.</li>
+					<li><strong>MkDocs</strong> : Alternative légère pour documenter un projet Python.</li>
+					<li><strong>VuePress</strong> : Génération d'un site à partir de Markdown.</li>
 				</ul>
-				<img class="img-big" src="./img/img-doc/Docusaurus-logo.png" style="max-width: 10vw; margin-left: 0;" alt="Swagger">
-				<br>
 				<h4>Documentation des API</h4>
 				<ul>
 					<li><strong>Swagger / OpenAPI :</strong> Génération de documentation dynamique à partir du code de l’API.</li>
 					<li><strong>Postman :</strong> Outil de test d’API avec documentation interactive intégrée.</li>
 				</ul>
-				<br>
 				<h4>Documentation du code source</h4>
 				<ul>
 					<li>
-						<strong>JSDoc (JavaScript), DocFX (.NET), Sphinx (Python) :</strong>
+						<strong>JSDoc (JavaScript), DocFX (.NET), Sphinx (Python), Doxygen :</strong>
 						<br>Génération automatique de documentation à partir des commentaires de code.
 					</li>
+				</ul>
+			</article>
+			<article id="doc-cycle">
+				<h2>Cycle de vie de la documentation</h2>
+				<p>Une documentation bien gérée dès ces premières étapes garantit une meilleure exécution du projet et une anticipation des problèmes.</p>
+				<h4>Les 6 documents avant le développement</h4>
+				<ol>
+					<li>
+						<strong>Expression du besoin</strong>
+						<br>Le point de départ : problème à résoudre, attentes.
+						<br>Ce document recueille les attentes du client ou des utilisateurs finaux sans entrer dans les détails techniques.
+						<br>Il sert de point de départ pour comprendre les objectifs du projet.
+					</li>
+					<li>
+						<strong>Cahier des charges fonctionnel</strong>
+						<br>Décrit les fonctionnalités attendues, les règles métier et les exigences de l'application.
+					</li>
+					<li>
+						<strong>Cahier des charges technique</strong>
+						<br>Spécifie les choix techniques, les technologies utilisées, les contraintes d’architecture et de performance.
+					</li>
+					<li>
+						<strong>Plan de gestion des risques</strong>
+						<br>Identifie les risques potentiels liés au projet (techniques, organisationnels, financiers) et propose des stratégies d’atténuation.
+					</li>
+					<li>
+						<strong>Analyse des parties prenantes (RACI)</strong>
+						<br>Permet d’identifier les acteurs du projet et leurs responsabilités (qui est responsable, qui est consulté, qui est informé, etc.).
+						<br><strong>R</strong> : responsible (on utilise aussi parfois le terme réalisateur car il réalise l'activité).
+						<br><strong>A</strong> : accountable (on utilise aussi parfois le terme approver (approbateur), donc "validateur").
+						<br><strong>C</strong> : consulted.
+						<br><strong>I</strong> : informed.
+					</li>
+					<li>
+						<strong>Plan de tests et validation</strong>
+						<br>Décrit les méthodes de test à appliquer pour valider le bon fonctionnement de l’application.
+					</li>
+				</ol>
+				<h4>Documentation évolutive en phase de développement</h4>
+				<ul>
+					<li>Versionnage</li>
+					<li>Validation des docs via Pull Requests</li>
+					<li>Intégration dans les sprints Agile</li>
 				</ul>
 			</article>
 			<article id="doc-exemple">
@@ -224,7 +294,9 @@
 					</tbody>
 				</table>
 				<br>
-				<img class="img-big" src="./img/img-doc/swagger.png" alt="Swagger">
+				<a href="./img/img-doc/swagger.png">
+					<img class="img-big" src="./img/img-doc/swagger.webp" alt="Swagger">
+				</a>
 				<br>
 				<h4>Documentation du code avec JSDoc</h4>
 				<p>JSDoc permet d’ajouter des commentaires documentés directement dans le code.</p>
@@ -240,7 +312,7 @@
 					<br>});
 				</code>
 				<br>
-				<img class="img-big" src="./img/img-doc/xml-comment.png" alt="Swagger">
+				<img class="img-big" src="./img/img-doc/xml-comment.png" alt="Commentaire au format XML">
 				<br>
 			</article>
 			<article id="doc-bonus">
@@ -261,7 +333,6 @@
 						Générer automatiquement une documentation des tests avec Jest, Mocha, ou PHPUnit.
 					</li>
 				</ul>
-				<br>
 				<h4>Documentation et accessibilité</h4>
 				<ul>
 					<li>
@@ -276,10 +347,11 @@
 						<ul>
 							<li>Générer des versions PDF pour les personnes ayant des difficultés avec les formats web.</li>
 							<li>Vérifier la lisibilité avec des outils comme Hemingway Editor.</li>
+							<li>Compatibilité avec lecteurs d’écran.</li>
+							<li>Version audio.</li>
 						</ul>
 					</li>
 				</ul>
-				<br>
 				<h4>Documentation et sécurité</h4>
 				<ul>
 					<li>
@@ -294,8 +366,8 @@
 						<strong>Documentation de la gestion des secrets :</strong>
 						Ne jamais inclure des clés API en clair, utiliser des fichiers <mark>.env</mark>.
 					</li>
+					<li><strong>Conformité RGPD et normes de cybersécurité.</strong></li>
 				</ul>
-				<br>
 				<h4>Documentation et intelligence artificielle</h4>
 				<ul>
 					<li>
@@ -310,7 +382,6 @@
 						Rendre la documentation multilingue avec DeepL API ou Google Translate API.
 					</li>
 				</ul>
-				<br>
 				<h4>Documentation et collaboration</h4>
 				<ul>
 					<li>
@@ -326,7 +397,18 @@
 						Automatiser la génération de documentation avec des scripts (ex : déclencher la mise à jour de la documentation après un commit sur <mark>main</mark>).
 					</li>
 				</ul>
+			</article>
+			<article id="doc-conclusion">
+				<h2>Conclusion</h2>
 				<br>
+				<p>Résumé des idées clés :</p>
+				<ul>
+					<li>La documentation est une communication efficace.</li>
+					<li>Elle doit être claire et accessible.</li>
+					<li>Une documentation efficace est évolutive et collaborative.</li>
+					<li>Elle commence dès l’expression du besoin et suit tout le cycle de vie du projet.</li>
+					<li>Automatiser la documentation permet de la maintenir à jour et de gagner du temps.</li>
+				</ul>
 			</article>
 		</main>
 
