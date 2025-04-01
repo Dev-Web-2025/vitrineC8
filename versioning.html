@@ -53,7 +53,72 @@
       </div>
     </nav>
   </header>
+  <article id="historique">
+    <h2>Histoire du versioning</h2>
+    <p>
+      Le versioning est né de la nécessité de suivre les modifications d’un projet, en particulier dans le développement logiciel.
+      Avant les systèmes de gestion de versions, les développeurs devaient conserver plusieurs copies manuelles de leur code à différentes étapes, ce qui était source d’erreurs et difficile à maintenir.
+    </p>
+    <p>
+      Les premiers systèmes de contrôle de version datent des années 1970, avec <strong>SCCS</strong> (Source Code Control System), suivi par <strong>RCS</strong> (Revision Control System). 
+      Dans les années 1990, <strong>CVS</strong> (Concurrent Versions System) a permis une gestion collaborative plus efficace.
+    </p>
+    <p>
+      Plus tard, <strong>Subversion (SVN)</strong> a simplifié le versioning centralisé, avant que <strong>Git</strong>, créé en 2005 par Linus Torvalds, ne devienne la norme actuelle grâce à sa rapidité, sa flexibilité et son modèle distribué.
+    </p>
 
+      <!-- Frise chronologique en image -->
+  <img src="./img/img-version/ver1.png" alt="Frise chronologique des systèmes de versioning" class="img-big" />
+  </article>
+  
+  <article id="types-versioning">
+    <h2>Les deux grands types de versioning</h2>
+    <ul>
+      <li><strong>Centralisé :</strong> un seul dépôt central (ex: SVN). Tous les développeurs doivent se connecter à un serveur central pour accéder ou sauvegarder leur travail.</li>
+      <li><strong>Distribué :</strong> chaque développeur possède une copie complète du projet (ex: Git). Cela permet de travailler hors ligne, d’expérimenter plus librement et de gérer les versions localement.</li>
+    </ul>
+   <!-- Image comparative -->
+   <figure>
+    <img src="./img/img-version/versioning-compare.png" alt="Comparaison entre versioning centralisé et distribué" class="img-big">
+    <figcaption style="text-align: center; font-style: italic; margin-top: 10px;">
+      Schéma comparatif : Centralisé (CVS/SVN) vs Distribué (Git)
+    </figcaption>
+  </figure>
+</article>
+  
+  <article id="gitlab-selfhosting">
+    <h2>Self-hosting avec GitLab</h2>
+    <p>
+      GitLab propose une version <strong>auto-hébergée</strong> appelée <strong>Community Edition</strong> (gratuite et open source).
+      Cela permet aux entreprises d’installer GitLab sur leurs propres serveurs pour :
+    </p>
+    <ul>
+      <li>Contrôler totalement les données et la sécurité</li>
+      <li>Personnaliser les fonctionnalités selon leurs besoins</li>
+      <li>Travailler en interne sans dépendre de plateformes tierces</li>
+    </ul>
+    <p>
+      GitLab Community Edition peut être installé sur un serveur local, un VPS, ou un cloud privé.
+      Il offre des fonctions complètes : dépôt Git, CI/CD, wiki, gestion de projets, etc.
+    </p>
+  </article>
+  
+  <article id="methodes-versioning">
+    <h2>Différentes méthodes de versioning</h2>
+    <p>
+      Plusieurs méthodes de versioning permettent de nommer et organiser les versions de projet. Voici les plus courantes :
+    </p>
+    <ul>
+      <li><strong>Versioning sémantique (SemVer)</strong> : format <code>MAJEUR.MINOR.PATCH</code> — très répandu, clair et structuré.</li>
+      <li><strong>Date-based versioning</strong> : la version correspond à une date, ex: <code>2024.03.31</code> — utilisé pour des publications fréquentes.</li>
+      <li><strong>Build number</strong> : incrémentation automatique à chaque version, ex: <code>v1.0.157</code> — pratique pour les pipelines automatisés.</li>
+      <li><strong>Git SHA</strong> : utiliser le hash Git (ex: <code>6b5c2fd</code>) — précis mais moins lisible.</li>
+    </ul>
+    <p>
+      Le choix dépend du projet, de l’équipe et des outils utilisés (CI/CD, Git, etc.).
+    </p>
+  </article>
+  
   <main class="container mt-5">
     <article id="Versionning">
       <h2>Le Versionning</h2>
