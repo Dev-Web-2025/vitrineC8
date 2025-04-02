@@ -51,6 +51,7 @@
           <li class="nav-item"><a class="nav-link text-white" href="#CI/CD">CI/CD</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#Outils">Outils</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#bonnes-pratiques">Bonnes pratiques</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#nomenclature">Nomenclature</a></li>
         </ul>
       </div>
     </nav>
@@ -58,18 +59,17 @@
   <article id="historique">
     <h2>Histoire du versioning</h2>
     <p>
-      Le versionning est née d'un besoin de suivre l'évolution d'un projet. La toute première version du version du
-      versionning est <strong>la copie manuelle</strong><br>
-      Cette dernière est néanmois source de problèmec: confusion entre versions, difficultés de maintenance, espace de
-      stockage excessif, existence de différentes verisons simulatanées.<br>
-      Pour cette raison le verisonning à lui même subit plusieurs itérations.<br>
+      Le versionning est née d'un besoin de suivre l'évolution d'un projet. La toute première version du versioning versionning est <strong>la copie manuelle</strong><br>
+      Cette dernière est néanmoins source de problèmes: confusion entre versions, difficultés de maintenance, espace de
+      stockage excessif, existence de différentes versions simultanées.<br>
+      Pour cette raison le versioning a lui même subi plusieurs itérations.<br>
     </p>
     <p>
-    <h4> Le SCCS source code Controle System 1970</h4>
+    <h4> Le SCCS Source Code Control System 1970</h4>
     <ul>
       <li>Fichiers SCCS avec une extension .s</li>
-      <li>Verrouillages strict, un seul developpeur peut effectuer des modification</li>
-      <li>Hitorique enregistrer dans un fichier centrale unique par projet</li>
+      <li>Verrouillages stricts, un seul developpeur peut effectuer des modifications</li>
+      <li>Historique enregistré dans un fichier central unique par projet</li>
 
       <li>Pas de support réseau natif</li>
       <li>Pas de branche</li>
@@ -77,10 +77,10 @@
     <h4> RCS (Revision Control System) en 1990</h4>
     <ul>
       <li>Chaque fichier a ses versions et son historique</li>
-      <li>La sauvegarde des fichier doit être faite de manière individuel et a chaque modification</li>
+      <li>La sauvegarde des fichiers doit être faite de manière individuelle et a chaque modification</li>
 
       <li>Sauvegarde locale uniquement</li>
-      <li>Partage manuel de l'historique entre dev</li>
+      <li>Partage manuel de l'historique entre devs</li>
     </ul>
     <h4> CVS (Concurrent Versions System) 1986-1990 <i>Dick Grune puis Brian Berliner</i></h4>
     <ul>
@@ -109,9 +109,9 @@
     </ul>
     </p>
 
-    <h4>Git 2005 <i>Linus Torvalds</i> pour les besoin du noyeau linux</h4>
+    <h4>Git 2005 <i>Linus Torvalds</i> pour les besoins du noyau linux</h4>
     <ul>
-      <li>Système complètement distribué (chaque clone contient l'historique complet)/li>
+      <li>Système complètement distribué (chaque clone contient l'historique complet)</li>
       <li>Extrêmement rapide (opérations locales)</li>
       <li>Branches et fusions très légères et flexibles</li>
       <li>Chaque objet identifié par un hash SHA-1 garantissant l'intégrité</li>
@@ -121,9 +121,6 @@
       <li>Stash : Stockage temporaire de modifications non commitées</li>
       <li>Submodules/subtrees : Intégration de repositories externes</li>
     </ul>
-
-
-    <!-- Frise chronologique en image -->
     <img src="./img/img-version/ver1.png" alt="Frise chronologique des systèmes de versioning" class="img-big" />
   </article>
 
@@ -547,11 +544,10 @@
             </tr>
           </tbody>
         </table> 
-        <article id="methodes-versioning">
-          <h2>Différentes méthodes de versioning</h2>
+        <article id="nomenclature">
+          <h2>Nommer ses version</h2>
           <p>
-            Plusieurs méthodes de versioning permettent de nommer et organiser les versions de projet. Voici les plus
-            courantes :
+            Plusieurs méthodes de versioning permettent de nommer et organiser les versions de projet. 
           <ol>
             <li><strong>
                 <format>Le <a href="https://semver.org/lang/fr/" target="_blank">versioning sémantique</a>
@@ -565,7 +561,7 @@
                 Ce système peut-être facilement automatisé dans les pipelines CI/CD pour moins d'erreur humaine et plus
                 de confort.
                 On peut également utiliser un versioning <strong>incrémental simple</strong>. <br>
-                Exemple : v1, v2, v3...X
+                Exemple : v1, v2, v3, ...X
             </li><br>
         
             <li><strong>Qualification à chaque version :</strong><br>
