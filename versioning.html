@@ -51,6 +51,7 @@
           <li class="nav-item"><a class="nav-link text-white" href="#CI/CD">CI/CD</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#Outils">Outils</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#bonnes-pratiques">Bonnes pratiques</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#nomenclature">Nomenclature</a></li>
         </ul>
       </div>
     </nav>
@@ -58,18 +59,17 @@
   <article id="historique">
     <h2>Histoire du versioning</h2>
     <p>
-      Le versionning est née d'un besoin de suivre l'évolution d'un projet. La toute première version du version du
-      versionning est <strong>la copie manuelle</strong><br>
-      Cette dernière est néanmois source de problèmec: confusion entre versions, difficultés de maintenance, espace de
-      stockage excessif, existence de différentes verisons simulatanées.<br>
-      Pour cette raison le verisonning à lui même subit plusieurs itérations.<br>
+      Le versionning est née d'un besoin de suivre l'évolution d'un projet. La toute première version du versioning versionning est <strong>la copie manuelle</strong><br>
+      Cette dernière est néanmoins source de problèmes: confusion entre versions, difficultés de maintenance, espace de
+      stockage excessif, existence de différentes versions simultanées.<br>
+      Pour cette raison le versioning a lui même subi plusieurs itérations.<br>
     </p>
     <p>
-    <h4> Le SCCS source code Controle System 1970</h4>
+    <h4> Le SCCS Source Code Control System 1970</h4>
     <ul>
       <li>Fichiers SCCS avec une extension .s</li>
-      <li>Verrouillages strict, un seul developpeur peut effectuer des modification</li>
-      <li>Hitorique enregistrer dans un fichier centrale unique par projet</li>
+      <li>Verrouillages stricts, un seul developpeur peut effectuer des modifications</li>
+      <li>Historique enregistré dans un fichier central unique par projet</li>
 
       <li>Pas de support réseau natif</li>
       <li>Pas de branche</li>
@@ -77,10 +77,10 @@
     <h4> RCS (Revision Control System) en 1990</h4>
     <ul>
       <li>Chaque fichier a ses versions et son historique</li>
-      <li>La sauvegarde des fichier doit être faite de manière individuel et a chaque modification</li>
+      <li>La sauvegarde des fichiers doit être faite de manière individuelle et a chaque modification</li>
 
       <li>Sauvegarde locale uniquement</li>
-      <li>Partage manuel de l'historique entre dev</li>
+      <li>Partage manuel de l'historique entre devs</li>
     </ul>
     <h4> CVS (Concurrent Versions System) 1986-1990 <i>Dick Grune puis Brian Berliner</i></h4>
     <ul>
@@ -94,7 +94,7 @@
       <li>Gestion limitée des renommages et déplacements</li>
       <li>Branches lourdes et complexes à fusionner</li>
     </ul>
-    <h4> SVN (Subversion)  2000 <i>CollabNet</i></h4>
+    <h4> SVN (Subversion) 2000 <i>CollabNet</i></h4>
     <ul>
       <li>Commits atomiques (tout ou rien)</li>
       <li>Versioning des répertoires, renommages et déplacements</li>
@@ -109,9 +109,9 @@
     </ul>
     </p>
 
-    <h4>Git 2005 <i>Linus Torvalds</i> pour les besoin du noyeau linux</h4>
+    <h4>Git 2005 <i>Linus Torvalds</i> pour les besoins du noyau linux</h4>
     <ul>
-      <li>Système complètement distribué (chaque clone contient l'historique complet)/li>
+      <li>Système complètement distribué (chaque clone contient l'historique complet)</li>
       <li>Extrêmement rapide (opérations locales)</li>
       <li>Branches et fusions très légères et flexibles</li>
       <li>Chaque objet identifié par un hash SHA-1 garantissant l'intégrité</li>
@@ -121,9 +121,6 @@
       <li>Stash : Stockage temporaire de modifications non commitées</li>
       <li>Submodules/subtrees : Intégration de repositories externes</li>
     </ul>
-
-
-    <!-- Frise chronologique en image -->
     <img src="./img/img-version/ver1.png" alt="Frise chronologique des systèmes de versioning" class="img-big" />
   </article>
 
@@ -387,7 +384,8 @@
     <article id="gitlab-selfhosting">
       <h2>Self-hosting avec GitLab</h2>
       <p>
-        GitLab propose une version <strong>auto-hébergée</strong> appelée <strong>Community Edition</strong> (gratuite et
+        GitLab propose une version <strong>auto-hébergée</strong> appelée <strong>Community Edition</strong> (gratuite
+        et
         open source).
         Cela permet aux entreprises d’installer GitLab sur leurs propres serveurs pour :
       </p>
@@ -475,25 +473,6 @@
           <li><strong>GitHub Desktop</strong> : solution simple orientée GitHub</li>
           <li><strong>Extensions IDE</strong> : intégration dans VS Code, IntelliJ, etc.</li>
         </ul>
-        </p>
-      </article>
-      <article id="methodes-versioning">
-        <h2>Différentes méthodes de versioning</h2>
-        <p>
-          Plusieurs méthodes de versioning permettent de nommer et organiser les versions de projet. Voici les plus
-          courantes :
-        </p>
-        <ul>
-          <li><strong>Versioning sémantique (SemVer)</strong> : format <code>MAJEUR.MINOR.PATCH</code> — très répandu, clair
-            et structuré.</li>
-          <li><strong>Date-based versioning</strong> : la version correspond à une date, ex: <code>2024.03.31</code> —
-            utilisé pour des publications fréquentes.</li>
-          <li><strong>Build number</strong> : incrémentation automatique à chaque version, ex: <code>v1.0.157</code> —
-            pratique pour les pipelines automatisés.</li>
-          <li><strong>Git SHA</strong> : utiliser le hash Git (ex: <code>6b5c2fd</code>) — précis mais moins lisible.</li>
-        </ul>
-        <p>
-          Le choix dépend du projet, de l’équipe et des outils utilisés (CI/CD, Git, etc.).
         </p>
       </article>
       <article id="bonnes-pratiques">
@@ -608,31 +587,84 @@
               <td>GitHub Flow (plus simple à gérer)</td>
             </tr>
           </tbody>
-        </table> <br>
-
-        <h3>Versioning sémantique</h3>
-        <p>
-          Le <a href="https://semver.org/lang/fr/" target="_blank">versioning sémantique</a> (X.Y.Z) :
-        <ul>
-          <li><strong>X</strong> : version majeure (changements incompatibles)</li>
-          <li><strong>Y</strong> : version mineure (ajouts compatibles)</li>
-          <li><strong>Z</strong> : patch (corrections de bugs)</li>
-        </ul>
+        </table> 
+        <article id="nomenclature">
+          <h2>Nommer ses version</h2>
+          <p>
+            Plusieurs méthodes de versioning permettent de nommer et organiser les versions de projet. 
+          <ol>
+            <li><strong>
+                <format>Le <a href="https://semver.org/lang/fr/" target="_blank">versioning sémantique</a>
+                  (X.Y.Z).</strong>
+                <ul>
+                  <li><strong>X</strong> : version majeure (changements incompatibles)</li>
+                  <li><strong>Y</strong> : version mineure (ajouts compatibles)</li>
+                  <li><strong>Z</strong> : patch (corrections de bugs)</li>
+                </ul>
+                <br>
+                Ce système peut-être facilement automatisé dans les pipelines CI/CD pour moins d'erreur humaine et plus
+                de confort.
+                On peut également utiliser un versioning <strong>incrémental simple</strong>. <br>
+                Exemple : v1, v2, v3, ...X
+            </li><br>
+        
+            <li><strong>Qualification à chaque version :</strong><br>
+              1.0.0-alpha, 1.0.0-beta, 1.0.0-rc.1 (rc = Release candidate). Cela permet d'indiquer la stabilité d'une version.
+            </li><br>
+            
+            <li><strong>Date-based versioning</strong> :<br>
+              Chaque version correspond à une date, ex: <code>2024.03.31</code>. Utilisé pour des publications
+              fréquentes.
+            <ul>
+              <li> Permet un suivi daté.</li>
+              <li> Incomplet si plusieurs versions par jour.</li>
+            </ul>
+            <br>Autre variation la <strong>versioning calendaire</strong> où l'on attribue un mois et une année à
+            chaque version. <br>
+            Exemple: Ubuntu 22.04 est la version d'avril 2022.<br>
+            </li><br>
+        
+            <li><strong>Versions codées</strong> :<br>
+              On peut donner des noms de code aux différentes versions<br>
+              <ul>
+                <li>Ubuntu utilise des noms d'animaux (Focal Fossa, Jammy Jellyfish)</li>
+                <li>Android a utilisé des noms de desserts (Oreo, Pie, Nougat)</li>
+                <li>MacOS utilise des noms de lieux californiens (Mojave, Catalina, Big Sur)</li>
+              </ul>
+            </li><br>
+        
+            <li><strong>Versioning basé sur les builds</strong> :<br>
+              Inclusion d'un numéro de build incrémenté automatiquement :<br>
+              1.2.345 où 345 est le numéro de build. <br>
+              Cette méthode s'adapte bien au CI/CD et développement agile avec un nommage efficace de nombreuses versions successives. 
+            </li><br>
+        
+            <li><strong>Versioning par hash Git</strong> :<br>
+              Utilisation des premiers caractères du hash de commit Git comme identifiant de version<br>
+              Exemple : v1.0-3f7e892. Utile pour les déploiements continus et environnements de développement
+            </li><br>
+        
+            <li><strong>Versioning par branches</strong> :<br>
+              Identification des versions selon les branches de développement :<br>
+              Exemple : main-20240331, develop-20240331. Utile pour environnements multiples avec une dev, une prod, des tests CI/CD
+            </li><br>
+          </ol>
         </p>
-      </article>
-      <!-- BACK TO TOP -->
-      <nav class="sub-navbar navbar navbar-expand bg-secondary py-1">
-        <div class="container d-flex justify-content-center">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link text-white" href="#top">Début de page</a></li>
-          </ul>
-        </div>
-      </nav>
-      <!-- Bootstrap Bundle JS -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-      <script src="main.js"></script>
+        <strong><i>Il y a énormément de méthodes de nommer ses versions. C'est au développeur de faire le bon choix, en fonction des besoins du projet, voir d'inventer la sienne</i></strong>
+        </article>
+        <!-- BACK TO TOP -->
+        <nav class="sub-navbar navbar navbar-expand bg-secondary py-1">
+          <div class="container d-flex justify-content-center">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link text-white" href="#top">Début de page</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Bootstrap Bundle JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
