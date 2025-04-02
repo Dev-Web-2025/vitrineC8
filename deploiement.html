@@ -53,19 +53,21 @@
   </header>
 
   <main class="container mt-5">
-    <section id="introduction">
+    <article id="introduction">
       <h2>Introduction au Déploiement</h2>
       <p>Le <strong>déploiement</strong> est le processus permettant de rendre une application web accessible aux
         utilisateurs après son développement. <br>
         Il assure l’accessibilité, la stabilité et la sécurité du projet pour les utilisateurs finaux.
       </p>
-    </section>
+    </article>
 
-    <section id="etapes">
+    <article id="etapes">
       <h2>Les 6 Étapes du Déploiement</h2>
       <img src="./img/img-deploy/Les-étapes-de-déploiement.png" alt="Schéma des étapes du déploiement"
         class="img-fluid">
+    </article>
 
+    <article id="etape1">
       <div class="icon-container">
         <img src="./img/img-deploy/preparation.png" alt="icon preparation" class="img-fluid" width="60" height="60">
         <h3>1. Préparation - Pré-déploiement</h3>
@@ -126,14 +128,16 @@
           <li><strong>Gestion de Projet :</strong>
             Outils comme Trello, Jira ou Asana pour planifier les tâches, suivre l'avancement et
             faciliter la collaboration entre les équipes.
-          </li> <strong>Contrôle de Version :</strong>
-          Git pour gérer les versions du code source, faciliter la collaboration entre
-          développeurs
-          et assurer un historique clair des modifications.
-          </li><strong>Intégration Continue :</strong>
-          Plateformes telles que Jenkins, GitLab CI/CD ou GitHub Actions pour automatiser les
-          tests
-          et les builds, garantissant ainsi la qualité du code à chaque modification.
+          </li>
+          <li><strong>Contrôle de Version :</strong>
+            Git pour gérer les versions du code source, faciliter la collaboration entre
+            développeurs
+            et assurer un historique clair des modifications.
+          </li>
+          <li><strong>Intégration Continue :</strong>
+            Plateformes telles que Jenkins, GitLab CI/CD ou GitHub Actions pour automatiser les
+            tests
+            et les builds, garantissant ainsi la qualité du code à chaque modification.
           </li>
         </ul>
 
@@ -157,117 +161,293 @@
           </li>
         </ul>
 
-        <br><p>En suivant ces directives lors de la phase de Pré-déploiement, les équipes s'assurent que l'application est
+        <br>
+        <p>En suivant ces directives lors de la phase de Pré-déploiement, les équipes s'assurent que l'application est
           prête pour une mise en production réussie, minimisant ainsi les risques d'échec et garantissant une expérience
           utilisateur optimale.</p>
       </div>
 
+    </article>
+
+    <article id="etape2">
       <div class="icon-container">
         <img src="./img/img-deploy/build.png" alt="icon preparation" class="img-fluid" width="60" height="60">
         <h3>2. Étape de Build</h3>
       </div>
       <div class="paragraph-container">
-        <p>Installation des dépendances et compilation du code, assurant qu'il fonctionne avec les bibliothèques et
-          frameworks utilisés.</p>
-        <p>
-          <strong>Outils :</strong> Docker, Webpack, Babel.
-        </p>
-      </div>
+        <H4>Objectifs</H4>
+        <ul>
+          <li><strong>Compilation du Code :</strong>
+            Transformer le code source en une application exécutable.
+          </li>
+          <li><strong>Gestion des Dépendances :</strong>
+            Installer et configurer toutes les bibliothèques et modules nécessaires.
+          </li>
 
+          <li><strong>Optimisation :</strong>
+            Minifier et compresser les fichiers pour améliorer les performances.
+          </li>
+        </ul>
+
+        <H4>Parties Prenantes</H4>
+        <ul>
+          <li><strong>Développeurs :</strong>
+            Responsables de l'écriture et de la maintenance du code source.
+          </li>
+          <li><strong>Équipe DevOps :</strong>
+            Automatise le processus de build et assure la cohérence entre les environnements.
+          </li>
+        </ul>
+
+        <H4>Outils</H4>
+        <ul>
+          <li><strong>Systèmes de Build :</strong>
+            Maven, Gradle, Webpack.
+          </li>
+          <li><strong>Contrôle de Version :</strong>
+            Git pour gérer les versions du code source, faciliter la collaboration entre
+            développeurs
+            et assurer un historique clair des modifications.
+          </li>
+          <li><strong>Intégration Continue :</strong>
+            Jenkins, GitLab CI/CD ou GitHub Actions.
+          </li>
+        </ul>
+
+        <H4>Bonnes Pratiques</H4>
+        <ul>
+          <li> <strong>Automatisation :</strong>
+            Utiliser des scripts pour automatiser le processus de build et réduire les erreurs humaines.
+          </li>
+          <li> <strong> Versioning :</strong>
+            Taguer chaque build avec un numéro de version unique pour faciliter le suivi.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="etape3">
       <div class="icon-container">
         <img src="./img/img-deploy/test.png" alt="icon preparation" class="img-fluid" width="60" height="60">
-        <h3>3. Tests</h3>
+        <h3>3. Tests et Validation</h3>
       </div>
       <div class="paragraph-container">
-        <p>Les tests unitaires, d'intégration et de performance sont exécutés pour détecter d'éventuels bugs avant la
-          mise
-          en production.</p>
-        <p>
-          <strong>Outils :</strong> PHPUnit, Jest, Cypress, Selenium.
-        </p>
-      </div>
+        <H4>Objectifs</H4>
+        <ul>
+          <li><strong>Assurance Qualité :</strong>
+            Vérifier que l'application fonctionne comme prévu et répond aux exigences.
+          </li>
+          <li><strong>Détection des Bugs :</strong>
+            Identifier et corriger les erreurs avant le déploiement en production.
+          </li>
+        </ul>
 
+        <H4>Parties Prenantes</H4>
+        <ul>
+          <li><strong>Équipe QA (Quality Assurance) :</strong>
+            Conçoit et exécute des tests pour valider les fonctionnalités.
+          </li>
+          <li><strong>Développeurs :</strong>
+            Collaborent avec l'équipe QA pour résoudre les problèmes identifiés.
+          </li>
+        </ul>
+
+        <H4>Outils</H4>
+        <ul>
+          <li><strong>Tests Unitaires :</strong>
+            JUnit, NUnit, PHPUnit.
+          </li>
+          <li><strong>Tests Fonctionnels :</strong>
+            Selenium, Cypress.
+          </li>
+          <li><strong>Tests de Performance :</strong>
+            JMeter, LoadRunner.
+          </li>
+        </ul>
+
+        <H4>Bonnes Pratiques</H4>
+        <ul>
+          <li> <strong>Automatisation des Tests :</strong>
+            Mettre en place des suites de tests automatisés pour détecter rapidement les régressions.
+          </li>
+          <li> <strong> Tests en Environnement Staging : </strong>
+            Effectuer des tests dans un environnement similaire à la production pour anticiper les problèmes potentiels.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="etape4">
       <div class="icon-container">
         <img src="./img/img-deploy/preproduction.png" alt="icon preparation" class="img-fluid" width="60" height="60">
         <h3>4. Préproduction</h3>
       </div>
       <div class="paragraph-container">
-        <p>Le code est déployé sur un environnement de test permettant de valider le bon fonctionnement en conditions
-          réelles.</p>
-        <p>
-          <strong>Outils :</strong> Docker, Kubernetes, Netlify.
-        </p>
-      </div>
+        <H4>Objectifs</H4>
+        <ul>
+          <li><strong>Validation Finale :</strong>
+            Tester l'application dans un environnement identique à la production.
+          </li>
+          <li><strong>Formation :</strong>
+            Permettre aux équipes internes de se familiariser avec la nouvelle version.
+          </li>
+        </ul>
 
+        <H4>Parties Prenantes</H4>
+        <ul>
+          <li><strong>Équipe DevOps :</strong>
+            Déploie l'application dans l'environnement de préproduction.
+          </li>
+          <li><strong>Utilisateurs Pilotes :</strong>
+            Effectuent des tests d'acceptation pour valider l'application.
+          </li>
+        </ul>
+
+        <H4>Outils</H4>
+        <ul>
+          <li><strong>Plateformes de Staging :</strong>
+            AWS Elastic Beanstalk, Heroku.
+          </li>
+          <li><strong>Outils de Déploiement :</strong>
+            Ansible, Chef, Puppet.
+          </li>
+        </ul>
+
+        <H4>Bonnes Pratiques</H4>
+        <ul>
+          <li> <strong>Synchronisation avec la Production :</strong>
+            S'assurer que l'environnement de préproduction est une réplique exacte de la production.
+          </li>
+          <li> <strong> Tests de Charge :</strong>
+            Simuler le trafic utilisateur pour évaluer les performances sous contrainte.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="etape5">
       <div class="icon-container">
         <img src="./img/img-deploy/deploiement.png" alt="icon preparation" class="img-fluid" width="60" height="60">
         <h3>5. Déploiement en Production</h3>
       </div>
       <div class="paragraph-container">
-        <p>Si toutes les étapes précédentes sont validées, le code est déployé en production. Le déploiement peut être
-          <strong>progressif</strong> pour éviter les risques.
-        </p>
-        <p>
-          <strong>Stratégies de Déploiement</strong>
-        </p>
-        <p>
-          <strong>1 - Déploiement progressif :</strong> Mise en ligne par palier (10% → 50% → 100%). <br>
-          <strong>2 - Blue-Green Deployment :</strong> Deux versions tournent en parallèle pour éviter les
-          interruptions.<br>
-          <strong>3 - Rolling Update :</strong> Mise à jour progressive sans downtime.
-        </p>
-        <p><strong>Outils :</strong>
-          CI/CD : GitHub Actions, GitLab CI/CD, Jenkins.
-          Hébergement : AWS, Google Cloud, OVH, Netlify.
-        </p>
-      </div>
+        <H4>Objectifs</H4>
+        <ul>
+          <li><strong>Mise en Ligne :</strong>
+            Rendre l'application accessible aux utilisateurs finaux.
+          </li>
+        </ul>
 
+        <H4>Parties Prenantes</H4>
+        <ul>
+          <li><strong>Équipe DevOps :</strong>
+            Supervise le processus de déploiement et résout les problèmes en temps réel.
+          </li>
+        </ul>
+
+        <H4>Outils</H4>
+        <ul>
+          <li><strong>Orchestration de Conteneurs :</strong>
+            Kubernetes, Docker Swarm.
+          </li>
+          <li><strong>Services Cloud :</strong>
+            AWS, Azure, Google Cloud Platform.
+          </li>
+        </ul>
+
+        <H4>Bonnes Pratiques</H4>
+        <ul>
+          <li> <strong>Déploiement Progressif :</strong>
+            Utiliser des stratégies comme le déploiement canari pour introduire progressivement la nouvelle version.
+          </li>
+          <li> <strong> Plan de Repli (Rollback) :</strong>
+            Prévoir des procédures pour revenir rapidement à une version précédente en cas de problème.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <article id="etape6">
       <div class="icon-container">
         <img src="./img/img-deploy/surveillance.png" alt="icon preparation" class="img-fluid" width="60" height="60">
         <h3>6. Surveillance et Maintenance</h3>
       </div>
       <div class="paragraph-container">
-        <p>Une fois l’application en ligne, il est crucial de surveiller ses performances. <br>
-          Des outils comme <strong>New Relic</strong> et <strong>Datadog</strong> permettent d'identifier les erreurs et
-          d’optimiser le site.</p>
-        <p>
-          Vérifier <strong>la stabilité et la rapidité</strong> du site. <br>
-          <strong>Surveiller les logs</strong> pour détecter les anomalies. <br>
-          <strong>Effectuer des tests de charge</strong> (ex: JMeter).
-        </p>
-      </div>
+        <H4>Objectifs</H4>
+        <ul>
+          <li><strong>Suivi des Performances :</strong>
+            Surveiller l'application pour détecter les anomalies et optimiser les performances.
+          </li>
+          <li><strong>Support Continu :</strong>
+            Fournir une assistance aux utilisateurs et résoudre les problèmes émergents.
+          </li>
+        </ul>
 
+        <H4>Parties Prenantes</H4>
+        <ul>
+          <li><strong>Support Technique :</strong>
+            Répond aux requêtes des utilisateurs et escalade les problèmes complexes.
+          </li>
+          <li><strong>Équipe DevOps :</strong>
+            Analyse les métriques de performance et effectue les ajustements nécessaires.
+          </li>
+        </ul>
+
+        <H4>Outils</H4>
+        <ul>
+          <li><strong>Monitoring :</strong>
+            Prometheus, Grafana.
+          </li>
+          <li><strong>Gestion des Logs :</strong>
+            ELK Stack (Elasticsearch, Logstash, Kibana).
+          </li>
+        </ul>
+
+        <H4>Bonnes Pratiques</H4>
+        <ul>
+          <li> <strong>Alertes Proactives :</strong>
+            Configurer des alertes pour être informé immédiatement des problèmes critiques.
+          </li>
+          <li> <strong> Mises à Jour Régulières :</strong>
+            Planifier des mises à jour et des correctifs pour améliorer continuellement l'application.
+          </li>
+        </ul>
+      </div>
+    </article>
+
+
+    <article id="conclusion">
+
+      <h2>Conclusion</h2>
       <div class="icon-container">
-        <img src="./img/img-deploy/rollback.png" alt="icon preparation" class="img-fluid" width="60" height="60">
-        <h3>7. Rollback : Gestion des Incidents</h3>
+        <img src="./img/img-deploy/theatre.png" alt="icon preparation" class="img-fluid" width="60" height="60">
+        <h4>Ce qu’il faut retenir :</h4>
       </div>
       <div class="paragraph-container">
-        <p>En cas de problème après le déploiement, un <strong>rollback</strong> permet de restaurer la version
-          précédente. <br>
-          Cela garantit la stabilité du site.
+        <p>"Un bon déploiement, c’est comme une pièce de théâtre : tout doit être prêt en coulisses avant le lever de
+          rideau.
+          <br>Le public ne voit que le résultat final, mais tout repose sur une organisation en amont."
         </p>
-        <p>
-          <strong>Annulation de la mise à jour</strong>Annulation de la mise à jour si un problème critique est détecté.
-          <br>
-          <strong>Restauration des fichiers et bases de données sauvegardées.</strong> <br>
-          <strong>Analyse des erreurs et correction avant un nouveau déploiement.</strong>
-        </p>
+        <ul>
+          <li>
+            Un déploiement bien organisé garantit une expérience utilisateur fluide.
+          </li>
+          <li>
+            Les tests et la préproduction sont des étapes incontournables.
+          </li>
+          <li>
+            Automatiser avec CI/CD permet d'éviter les erreurs humaines.
+          </li>
+          <li>
+            Surveiller en continu pour détecter les incidents à temps.
+          </li>
+          <li>
+            Avoir toujours un plan de rollback en cas de problème critique.
+          </li>
+        </ul>
+        <p>Clé du succès : Tester, automatiser, surveiller, corriger !</p>
       </div>
-
-    </section>
-
-
-    <section id="conclusion">
-      <h2>Conclusion</h2>
-      <p><strong>Ce qu’il faut retenir :</strong> <br>
-        1- Un déploiement bien organisé garantit une expérience utilisateur fluide. <br>
-        2- Les tests et la préproduction sont des étapes incontournables. <br>
-        3- Automatiser avec CI/CD permet d'éviter les erreurs humaines. <br>
-        4- Surveiller en continu pour détecter les incidents à temps. <br>
-        5- Avoir toujours un plan de rollback en cas de problème critique. <br>
-      </p>
-      <p><strong>Clé du succès :</strong> Tester, automatiser, surveiller, corriger !</p>
-    </section>
+    </article>
   </main>
 
   <!-- BACK TO TOP -->
