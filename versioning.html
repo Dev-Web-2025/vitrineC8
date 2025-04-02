@@ -127,20 +127,64 @@
   <article id="types-versioning">
     <h2>Les deux grands types de versioning</h2>
     <ul>
-      <li><strong>Centralisé :</strong> un seul dépôt central (ex: SVN). Tous les développeurs doivent se connecter à un
-        serveur central pour accéder ou sauvegarder leur travail.</li>
-      <li><strong>Distribué :</strong> chaque développeur possède une copie complète du projet (ex: Git). Cela permet de
-        travailler hors ligne, d’expérimenter plus librement et de gérer les versions localement.</li>
+      <li>
+        <strong>Centralisé :</strong> un seul dépôt central (ex: SVN, CVS). Tous les développeurs doivent se connecter à un serveur central pour accéder ou sauvegarder leur travail.
+        <ul>
+          <li><strong>Fonctionnement :</strong> Le serveur central contient l’unique version officielle du code. Chaque développeur agit comme un « client » qui extrait (checkout) la dernière version du code depuis ce serveur et y envoie ses modifications (commit) une fois le travail terminé.</li>
+          <li><strong>Exemples d’outils :</strong> CVS (Concurrent Versions System), Subversion (SVN), Team Foundation Version Control (TFVC).</li>
+          <li><strong>Avantages :</strong>
+            <ul>
+              <li>Gestion centralisée et simple à administrer.</li>
+              <li>Contrôle clair des accès et des autorisations.</li>
+              <li>Facile à comprendre pour les débutants grâce à son architecture linéaire.</li>
+            </ul>
+          </li>
+          <li><strong>Inconvénients :</strong>
+            <ul>
+              <li>Forte dépendance au serveur central : s’il est indisponible, les développeurs ne peuvent ni récupérer ni enregistrer leur travail.</li>
+              <li>Difficile de travailler hors ligne, ce qui peut ralentir la productivité en cas de coupure réseau.</li>
+              <li>Historique et versionnage limités au serveur.</li>
+            </ul>
+          </li>
+          <li><strong>Cas d’usage typiques :</strong> Utilisé dans les grandes entreprises avec une infrastructure réseau solide, où les workflows sont très contrôlés et où les projets n’ont pas besoin d’un travail parallèle intensif.</li>
+        </ul>
+      </li>
+  
+      <li>
+        <strong>Distribué :</strong> chaque développeur possède une copie complète du projet (ex: Git). Cela permet de travailler hors ligne, d’expérimenter plus librement et de gérer les versions localement.
+        <ul>
+          <li><strong>Fonctionnement :</strong> Contrairement au modèle centralisé, chaque utilisateur clone l’intégralité du dépôt (y compris l’historique complet) sur sa machine. Les modifications sont validées (commit) localement, puis partagées via un dépôt distant (ex: GitHub, GitLab, Bitbucket).</li>
+          <li><strong>Exemples d’outils :</strong> Git (le plus populaire), Mercurial, Darcs.</li>
+          <li><strong>Avantages :</strong>
+            <ul>
+              <li>Travail hors ligne possible : toutes les commandes (commit, historique, branches) fonctionnent localement.</li>
+              <li>Flexibilité avec les branches : chaque développeur peut créer, tester et fusionner des fonctionnalités sans affecter le code principal.</li>
+              <li>Meilleure résilience : chaque copie du dépôt est une sauvegarde complète du projet.</li>
+              <li>Favorise les bonnes pratiques modernes comme l’intégration continue (CI) et le développement collaboratif.</li>
+            </ul>
+          </li>
+          <li><strong>Inconvénients :</strong>
+            <ul>
+              <li>Courbe d’apprentissage plus complexe, notamment pour les commandes avancées et la gestion des conflits.</li>
+              <li>Nécessite une bonne organisation d’équipe pour éviter les conflits lors de la fusion de branches.</li>
+              <li>Peut devenir difficile à suivre sur de très gros projets mal structurés.</li>
+            </ul>
+          </li>
+          <li><strong>Cas d’usage typiques :</strong> Idéal pour les projets open-source, les équipes distribuées ou agiles, les startups, ou encore les environnements de développement modernes avec plusieurs contributeurs.</li>
+        </ul>
+      </li>
     </ul>
+  
     <!-- Image comparative -->
     <figure>
-      <img src="./img/img-version/versioning-compare.png" alt="Comparaison entre versioning centralisé et distribué"
-        class="img-big">
+      <img src="./img/img-version/versioning-compare.png" alt="Comparaison entre versioning centralisé et distribué" class="img-big">
       <figcaption style="text-align: center; font-style: italic; margin-top: 10px;">
         Schéma comparatif : Centralisé (CVS/SVN) vs Distribué (Git)
       </figcaption>
     </figure>
   </article>
+  
+  
   <article id="Versionning">
     <h2>Le Versionning</h2>
     <p>
