@@ -45,7 +45,7 @@
       <div class="container d-flex justify-content-center">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link text-white" href="#introduction">Introduction au Déploiement</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#etapes">Les Étapes du Déploiement</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#etapes">Les 6 Étapes du Déploiement</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#conclusion">Conclusion</a></li>
         </ul>
       </div>
@@ -62,79 +62,197 @@
     </section>
 
     <section id="etapes">
-      <h2>Les Étapes du Déploiement</h2>
-      <img src="./img/img-deploy/deploiement.jpeg" alt="Schéma des étapes du déploiement" class="img-fluid">
+      <h2>Les 6 Étapes du Déploiement</h2>
+      <img src="./img/img-deploy/Les étapes de déploiement.png" alt="Schéma des étapes du déploiement"
+        class="img-fluid">
 
-      <h3>1. Pré-déploiement</h3>
-      <p>Avant de mettre en ligne, le code est mis à jour et validé via un <strong>commit Git</strong>.
-        Cette étape assure que le projet est prêt pour le déploiement.</p>
-      <p>
-        <strong>Outils :</strong> GitHub, GitLab.
-      </p>
+      <div class="icon-container">
+        <img src="./img/img-deploy/preparation.png" alt="icon preparation" class="img-fluid" width="60" height="60">
+        <h3>1. Préparation - Pré-déploiement</h3>
+      </div>
 
-      <h3>2. Étape de Build</h3>
-      <p>Installation des dépendances et compilation du code, assurant qu'il fonctionne avec les bibliothèques et
-        frameworks utilisés.</p>
-      <p>
-        <strong>Outils :</strong> Docker, Webpack, Babel.
+      <div class="paragraph-container">
+        <p>La phase de Pré-déploiement est cruciale pour assurer le succès du déploiement d'une application web ou
+          mobile.
+          <br>Elle consiste à préparer minutieusement tous les aspects techniques et organisationnels avant la mise en
+          production.
+          <br>Cette étape permet d'identifier et de résoudre les éventuels obstacles, garantissant ainsi un déploiement
+          fluide et sans accroc.
+        </p>
 
-      </p>
+        <H4>Objectifs du Pré-déploiement</H4>
+        <ul>
+          <li><strong>Analyse des Besoins :</strong>
+            Comprendre les exigences de l'entreprise et des utilisateurs pour s'assurer que l'application répond aux
+            attentes.
+          </li>
+          <li><strong>Planification Stratégique :</strong>
+            Élaborer un plan détaillé du déploiement, incluant les ressources nécessaires, les échéances et les
+            responsabilités de chacun.
+          </li>
 
-      <h3>3. Tests</h3>
-      <p>Les tests unitaires, d'intégration et de performance sont exécutés pour détecter d'éventuels bugs avant la mise
-        en production.</p>
-      <p>
-        <strong>Outils :</strong> PHPUnit, Jest, Cypress, Selenium.
-      </p>
+          <li><strong>Évaluation de l'Infrastructure :</strong>
+            Vérifier que l'infrastructure existante peut supporter la nouvelle application et prévoir les ajustements
+            si nécessaire.
+          </li>
 
-      <h3>4. Préproduction</h3>
-      <p>Le code est déployé sur un environnement de test permettant de valider le bon fonctionnement en conditions
-        réelles.</p>
-      <p>
-        <strong>Outils :</strong> Docker, Kubernetes, Netlify.
-      </p>
+          <li><strong>Gestion des Risques :</strong>
+            Identifier les risques potentiels liés au déploiement et élaborer des stratégies pour les atténuer.
+          </li>
+        </ul>
 
-      <h3>5. Déploiement en Production</h3>
-      <p>Si toutes les étapes précédentes sont validées, le code est déployé en production. Le déploiement peut être
-        <strong>progressif</strong> pour éviter les risques.
-      </p>
-      <p>
-        <strong>Stratégies de Déploiement</strong>
-      </p>
-      <p>
-        <strong>1 - Déploiement progressif :</strong> Mise en ligne par palier (10% → 50% → 100%). <br>
-        <strong>2 - Blue-Green Deployment :</strong> Deux versions tournent en parallèle pour éviter les
-        interruptions.<br>
-        <strong>3 - Rolling Update :</strong> Mise à jour progressive sans downtime.
-      </p>
-      <p><strong>Outils :</strong>
-        CI/CD : GitHub Actions, GitLab CI/CD, Jenkins.
-        Hébergement : AWS, Google Cloud, OVH, Netlify.
-      </p>
+        <H4>Parties Prenantes</H4>
+        <ul>
+          <li><strong>Développeurs :</strong>
+            Finalisent le code, s'assurent de sa stabilité et de sa conformité aux spécifications.
+          </li>
+          <li><strong>Équipe DevOps :</strong>
+            Prépare l'environnement de déploiement, automatise les processus et veille à la cohérence
+            entre les différents environnements
+            <br> (développement, test, production).
+          </li>
+          <li><strong>Chefs de Projet :</strong>
+            Coordonnent les différentes équipes, assurent le respect des délais et communiquent sur
+            l'avancement du projet.
+          </li>
+          <li><strong>Équipe Qualité (QA) :</strong>
+            Définit les plans de test et prépare les scénarios pour valider le bon fonctionnement de
+            l'application.
+          </li>
+        </ul>
 
-      <h3>6. Surveillance et Maintenance</h3>
-      <p>Une fois l’application en ligne, il est crucial de surveiller ses performances. <br>
-        Des outils comme <strong>New Relic</strong> et <strong>Datadog</strong> permettent d'identifier les erreurs et
-        d’optimiser le site.</p>
-      <p>
-        Vérifier <strong>la stabilité et la rapidité</strong> du site. <br>
-        <strong>Surveiller les logs</strong> pour détecter les anomalies. <br>
-        <strong>Effectuer des tests de charge</strong> (ex: JMeter).
-      </p>
+        <H4>Outils</H4>
+        <ul>
+          <li><strong>Gestion de Projet :</strong>
+            Outils comme Trello, Jira ou Asana pour planifier les tâches, suivre l'avancement et
+            faciliter la collaboration entre les équipes.
+          </li> <strong>Contrôle de Version :</strong>
+          Git pour gérer les versions du code source, faciliter la collaboration entre
+          développeurs
+          et assurer un historique clair des modifications.
+          </li><strong>Intégration Continue :</strong>
+          Plateformes telles que Jenkins, GitLab CI/CD ou GitHub Actions pour automatiser les
+          tests
+          et les builds, garantissant ainsi la qualité du code à chaque modification.
+          </li>
+        </ul>
 
+        <H4>Bonnes Pratiques</H4>
+        <ul>
+          <li> <strong>Communication Transparente :</strong>
+            Maintenir une communication ouverte entre toutes les parties prenantes pour
+            s'assurer que chacun est informé des avancées et des éventuels problèmes.
+          </li>
+          <li> <strong> Documentation Complète :</strong>
+            Documenter chaque étape du processus de pré-déploiement, y compris les configurations,
+            les plans de test et les procédures d'urgence.
+          </li>
+          <li> <strong> Environnements de Test :</strong>
+            Mettre en place des environnements de test qui reproduisent fidèlement l'environnement
+            de production pour détecter les problèmes avant le déploiement réel.
+          </li>
+          <li> <strong>Revues de Code :</strong>
+            Organiser des sessions de relecture de code pour identifier les erreurs potentielles et
+            partager les connaissances au sein de l'équipe.
+          </li>
+        </ul>
 
-      <h3>7. Rollback : Gestion des Incidents</h3>
-      <p>En cas de problème après le déploiement, un <strong>rollback</strong> permet de restaurer la version
-        précédente. <br>
-        Cela garantit la stabilité du site.
-      </p>
-      <p>
-        <strong>Annulation de la mise à jour</strong>Annulation de la mise à jour si un problème critique est détecté.
-        <br>
-        <strong>Restauration des fichiers et bases de données sauvegardées.</strong> <br>
-        <strong>Analyse des erreurs et correction avant un nouveau déploiement.</strong>
-      </p>
+        <br><p>En suivant ces directives lors de la phase de Pré-déploiement, les équipes s'assurent que l'application est
+          prête pour une mise en production réussie, minimisant ainsi les risques d'échec et garantissant une expérience
+          utilisateur optimale.</p>
+      </div>
 
+      <div class="icon-container">
+        <img src="./img/img-deploy/build.png" alt="icon preparation" class="img-fluid" width="60" height="60">
+        <h3>2. Étape de Build</h3>
+      </div>
+      <div class="paragraph-container">
+        <p>Installation des dépendances et compilation du code, assurant qu'il fonctionne avec les bibliothèques et
+          frameworks utilisés.</p>
+        <p>
+          <strong>Outils :</strong> Docker, Webpack, Babel.
+        </p>
+      </div>
+
+      <div class="icon-container">
+        <img src="./img/img-deploy/test.png" alt="icon preparation" class="img-fluid" width="60" height="60">
+        <h3>3. Tests</h3>
+      </div>
+      <div class="paragraph-container">
+        <p>Les tests unitaires, d'intégration et de performance sont exécutés pour détecter d'éventuels bugs avant la
+          mise
+          en production.</p>
+        <p>
+          <strong>Outils :</strong> PHPUnit, Jest, Cypress, Selenium.
+        </p>
+      </div>
+
+      <div class="icon-container">
+        <img src="./img/img-deploy/preproduction.png" alt="icon preparation" class="img-fluid" width="60" height="60">
+        <h3>4. Préproduction</h3>
+      </div>
+      <div class="paragraph-container">
+        <p>Le code est déployé sur un environnement de test permettant de valider le bon fonctionnement en conditions
+          réelles.</p>
+        <p>
+          <strong>Outils :</strong> Docker, Kubernetes, Netlify.
+        </p>
+      </div>
+
+      <div class="icon-container">
+        <img src="./img/img-deploy/deploiement.png" alt="icon preparation" class="img-fluid" width="60" height="60">
+        <h3>5. Déploiement en Production</h3>
+      </div>
+      <div class="paragraph-container">
+        <p>Si toutes les étapes précédentes sont validées, le code est déployé en production. Le déploiement peut être
+          <strong>progressif</strong> pour éviter les risques.
+        </p>
+        <p>
+          <strong>Stratégies de Déploiement</strong>
+        </p>
+        <p>
+          <strong>1 - Déploiement progressif :</strong> Mise en ligne par palier (10% → 50% → 100%). <br>
+          <strong>2 - Blue-Green Deployment :</strong> Deux versions tournent en parallèle pour éviter les
+          interruptions.<br>
+          <strong>3 - Rolling Update :</strong> Mise à jour progressive sans downtime.
+        </p>
+        <p><strong>Outils :</strong>
+          CI/CD : GitHub Actions, GitLab CI/CD, Jenkins.
+          Hébergement : AWS, Google Cloud, OVH, Netlify.
+        </p>
+      </div>
+
+      <div class="icon-container">
+        <img src="./img/img-deploy/surveillance.png" alt="icon preparation" class="img-fluid" width="60" height="60">
+        <h3>6. Surveillance et Maintenance</h3>
+      </div>
+      <div class="paragraph-container">
+        <p>Une fois l’application en ligne, il est crucial de surveiller ses performances. <br>
+          Des outils comme <strong>New Relic</strong> et <strong>Datadog</strong> permettent d'identifier les erreurs et
+          d’optimiser le site.</p>
+        <p>
+          Vérifier <strong>la stabilité et la rapidité</strong> du site. <br>
+          <strong>Surveiller les logs</strong> pour détecter les anomalies. <br>
+          <strong>Effectuer des tests de charge</strong> (ex: JMeter).
+        </p>
+      </div>
+
+      <div class="icon-container">
+        <img src="./img/img-deploy/rollback.png" alt="icon preparation" class="img-fluid" width="60" height="60">
+        <h3>7. Rollback : Gestion des Incidents</h3>
+      </div>
+      <div class="paragraph-container">
+        <p>En cas de problème après le déploiement, un <strong>rollback</strong> permet de restaurer la version
+          précédente. <br>
+          Cela garantit la stabilité du site.
+        </p>
+        <p>
+          <strong>Annulation de la mise à jour</strong>Annulation de la mise à jour si un problème critique est détecté.
+          <br>
+          <strong>Restauration des fichiers et bases de données sauvegardées.</strong> <br>
+          <strong>Analyse des erreurs et correction avant un nouveau déploiement.</strong>
+        </p>
+      </div>
 
     </section>
 
