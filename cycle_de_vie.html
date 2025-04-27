@@ -288,12 +288,21 @@
 <section id="item1b" class="section my-5">
     <h2>Processus transverses & bonnes pratiques</h2>
     <div class="roles-grid">
-      <div class="role-card clickable"
-           data-title="DevSecOps"
-           data-content="Intégrez l’analyse de vulnérabilités dès le dev (SAST/DAST), automatisez les scans de dépendances (Dependabot, Snyk) et shift-left la sécurité.">
-        <h3>DevSecOps</h3>
-        <p>Intégrez l’analyse de vulnérabilités dès le dev (SAST/DAST)…</p>
-      </div>
+
+        <div class="role-card clickable"
+        data-title="DevSecOps"
+        data-content="
+          <p>DevSecOps (contraction de <strong>Development</strong>, <strong>Security</strong> et <strong>Operations</strong>) désigne une approche et une culture qui intègrent la sécurité dès le début et de façon continue dans le cycle de vie du développement logiciel.</p>
+          <p><strong>Principe « shift-left »</strong> : au lieu de traiter la sécurité uniquement en fin de projet (phase « validation »), on la déplace vers la phase de conception et de développement.</p>
+          <p><strong>Automatisation des contrôles</strong> : on intègre des outils de sécurité (SAST, DAST, analyse de dépendances, scans d’infrastructure as code) directement dans le pipeline CI/CD afin de détecter et corriger les vulnérabilités en continu.</p>
+          <p><strong>Collaboration transversale</strong> : développeurs, équipes sécurité et opérations travaillent de concert, partagent des responsabilités et des indicateurs, et adoptent des processus communs (revues de code, tests de penetration automatisés, gestion des secrets, etc.).</p>
+        ">
+     <h3>DevSecOps</h3>
+     <p>DevSecOps : une culture qui intègre la sécurité dès le début du cycle de vie…</p>
+   </div>
+   
+
+
       <div class="role-card clickable"
            data-title="Observabilité"
            data-content="Mettez en place des logs structurés (ELK), du tracing distribué (OpenTelemetry), des dashboards Grafana et un alerting SLO/SLA pour piloter en continu.">
@@ -765,17 +774,19 @@
             });
         });
     </script>
-    <script>
-        document.querySelectorAll('.role-card').forEach(card => {
-          card.addEventListener('click', () => {
-            const title = card.getAttribute('data-title')
-            const content = card.getAttribute('data-content')
-            document.getElementById('processModalLabel').textContent = title
-            document.getElementById('processModalContent').textContent = content
-            new bootstrap.Modal(document.getElementById('processModal')).show()
-          })
-        })
-      </script>
+<script>
+    document.querySelectorAll('.role-card.clickable').forEach(card => {
+      card.addEventListener('click', () => {
+        const title   = card.getAttribute('data-title');
+        const content = card.getAttribute('data-content');
+        document.getElementById('processModalLabel').textContent   = title;
+        // <-- on passe innerHTML plutôt que textContent
+        document.getElementById('processModalContent').innerHTML   = content;
+        new bootstrap.Modal(document.getElementById('processModal')).show();
+      });
+    });
+  </script>
+  
 </body>
 
 </html>
