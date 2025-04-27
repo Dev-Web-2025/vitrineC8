@@ -583,74 +583,113 @@
       • <strong>AMOA</strong> (Assistance à Maîtrise d’Ouvrage) : accompagne la MOA dans les ateliers, la rédaction du cahier des charges et la priorisation.<br>
       • <strong>MOE</strong> (Maîtrise d’Œuvre) : évalue la faisabilité technique et planifie la réalisation.<br>
       • <strong>UX/UI Designers</strong>, <strong>Business Analyst</strong>, <strong>Développeurs</strong>.
-    </p>
+    </p><br>
+      <!-- Intégration de la vidéo complémentaire -->
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/oySR_jZOok8?si=v9ioKnYyzqo6UR64"
+            title="Analyse des besoins - complément vidéo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
   </section>
   
   
 
 <!-- Conception et planification -->
 <section id="conception" class="my-5">
-    <h2>
-      <img src="img/img-cycle/time-and-calendar.png" alt="icon conception" class="img-fluid"
-           style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
-      Conception et planification
-    </h2>
-  
-    <p>
-      Après avoir validé les besoins, la phase de conception formalise la solution technique et organise le travail à venir. On y crée des maquettes, on choisit les technologies, et on définit l’architecture logicielle et infrastructurelle pour garantir performance, évolutivité et maintenabilité.
-    </p>
-  
-    <h3>Objectifs de la phase</h3>
-    <ul>
-      <li><strong>Valider l’ergonomie</strong> : prototypes basse et haute fidélité pour tester le parcours utilisateur.</li>
-      <li><strong>Choisir la stack technique</strong> : langages, frameworks, bases de données, services tiers.</li>
-      <li><strong>Définir l’architecture</strong> : micro-services vs monolithe, schéma de bases, API, sécurité.</li>
-      <li><strong>Planifier les sprints</strong> : découpage en itérations, jalons, points de contrôle.</li>
-    </ul>
-  
-    <h3>Méthodologie</h3>
-    <ul>
-      <li><strong>Workshops UX</strong> avec MOA/AMOA et UX Designers pour valider les wireframes et prototypes.</li>
-      <li><strong>Sessions d’architecture</strong> avec MOE et architectes pour définir les composants et leurs interactions.</li>
-      <li><strong>Backlog grooming</strong> : affiner et estimer les user stories en équipe pluridisciplinaire.</li>
-      <li><strong>Planification Agile</strong> (Sprint Planning, Definition of Done) pour organiser les itérations.</li>
-    </ul>
-  
-    <h3>Outils recommandés</h3>
-    <ul>
-      <li><strong>Figma</strong> ou <strong>Sketch</strong> pour les maquettes et prototypes interactifs.</li>
-      <li><strong>Lucidchart</strong> ou <strong>Draw.io</strong> pour les diagrammes d’architecture et flux de données.</li>
-      <li><strong>Jira</strong> / <strong>Azure DevOps</strong> pour gérer le backlog et suivre l’avancement.</li>
-      <li><strong>Confluence</strong> ou <strong>Notion</strong> pour centraliser la documentation et les décisions techniques.</li>
-    </ul>
-  
-    <h3>Livrables clés</h3>
-    <ul>
-      <li><strong>Prototypes UI/UX</strong> validés par les parties prenantes.</li>
-      <li><strong>Schémas d’architecture</strong> (UML, C4) et diagrammes de séquence.</li>
-      <li><strong>Backlog priorisé</strong> avec user stories, tâches et estimations.</li>
-      <li><strong>Plan de release</strong> et roadmap projet.</li>
-      <li><strong>Spécifications techniques</strong> (API contracts, contraintes non-fonctionnelles, SLAs).</li>
-    </ul>
-  
-    <h3>Bonnes pratiques</h3>
-    <ul>
-      <li>Impliquer MOA/AMOA et MOE dès le début pour aligner vision fonctionnelle et contraintes techniques.</li>
-      <li>Prototyper rapidement pour tester les hypothèses UX avant d’investir dans le développement.</li>
-      <li>Documenter les décisions d’architecture et mettre à jour en cas de changement.</li>
-      <li>Utiliser un design system pour homogénéiser les composants et gagner en cohérence.</li>
-      <li>Réévaluer régulièrement le backlog et ajuster la planification en fonction des retours terrain.</li>
-    </ul>
-  
-    <p>
-      <strong>Acteurs :</strong><br>
-      • <strong>MOA</strong> (Maîtrise d’Ouvrage) & <strong>AMOA</strong> : valident la conception fonctionnelle et le planning.<br>
-      • <strong>MOE</strong> (Maîtrise d’Œuvre) & <strong>Architectes logiciels</strong> : définissent la faisabilité et l’architecture.<br>
-      • <strong>Chefs de projet</strong> : orchestrent la planification et les jalons.<br>
-      • <strong>UX/UI Designers</strong> : élaborent et testent les prototypes.<br>
-      • <strong>Développeurs</strong> : estiment les efforts et préparent les futurs sprints.
-    </p>
-  </section>
+  <h2>
+    <img src="img/img-cycle/time-and-calendar.png" alt="icon conception" class="img-fluid"
+         style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
+    Conception et planification
+  </h2>
+
+  <p>
+    Après avoir validé les besoins, la phase de conception formalise la solution technique et organise le travail à venir. On y crée des maquettes, on choisit les technologies, et on définit l’architecture logicielle et infrastructurelle pour garantir performance, évolutivité, sécurité et maintenabilité.
+  </p>
+
+  <h3>Objectifs de la phase</h3>
+  <ul>
+    <li><strong>Valider l’ergonomie</strong> : prototypes basse et haute fidélité pour tester le parcours utilisateur.</li>
+    <li><strong>Choisir la stack technique</strong> : évaluer frameworks existants (COTS, open-source) vs développement maison.</li>
+    <li><strong>Définir l’architecture</strong> : monolithe ou micro-services, schéma de base de données, API et sécurité des flux.</li>
+    <li><strong>Planifier les sprints</strong> : découpage en itérations, jalons et points de contrôle DevOps intégré.</li>
+  </ul>
+
+  <h3>Sécurité &amp; DevOps</h3>
+  <ul>
+    <li><strong>Shift-left security</strong> : intégrer dès la conception les exigences de chiffrement, authentification et audits SAST/DAST.</li>
+    <li><strong>Pipelines CI/CD</strong> : définir les étapes de build, tests automatiques et déploiement, avec rollback et canary releases.</li>
+    <li><strong>Infrastructure as Code</strong> : décrire et versionner l’infrastructure (Terraform, Ansible) pour garantir reproductibilité et auditabilité.</li>
+    <li><strong>Monitoring &amp; alerting</strong> : prévoir dès la conception les métriques clés (SLA/SLO) et les outils d’alerte (Prometheus, ELK, Grafana).</li>
+  </ul>
+
+  <h3>Choix de l’hébergement</h3>
+  <ul>
+    <li><strong>Critères géographiques</strong> : proximité des utilisateurs, régulations locales, latence réseau.</li>
+    <li><strong>Cloud public vs privé</strong> : flexibilité et scalabilité versus contrôle et coûts prévisibles.</li>
+    <li><strong>Multi-cloud / hybride</strong> : tolérance aux pannes, évitement du vendor-lock-in.</li>
+    <li><strong>Serveurs dédiés</strong> : performance garantie et personnalisation hardware, mais coûts fixes plus élevés.</li>
+    <li><strong>Edge &amp; CDN</strong> : distribution du contenu près de l’utilisateur pour réduire la latence.</li>
+    <li><strong>Conformité data</strong> : localisation des données (RGPD), certifications (ISO 27001), exigences sectorielles.</li>
+  </ul>
+
+  <h3>Méthodologie</h3>
+  <ul>
+    <li><strong>Workshops UX &amp; sécurité</strong> avec MOA/AMOA, UX Designers et équipes SecOps pour valider cadrages fonctionnels et contraintes SI.</li>
+    <li><strong>Sessions d’architecture</strong> avec MOE, architectes logiciels et DevOps pour définir la topologie et le pipeline de déploiement.</li>
+    <li><strong>Proof of Concept (PoC)</strong> : tester en amont une technologie ou un service tiers avant de s’engager.</li>
+    <li><strong>Backlog grooming</strong> : affiner et estimer les user stories, y compris tâches DevOps et sécurité.</li>
+    <li><strong>Planification Agile</strong> (Sprint Planning, Definition of Done) pour organiser les itérations et intégrer DevOps/sécurité.</li>
+  </ul>
+
+  <h3>Outils recommandés</h3>
+  <ul>
+    <li><strong>Prototypage</strong> : Figma, Sketch.</li>
+    <li><strong>Diagrammes</strong> : Lucidchart, Draw.io, C4 model.</li>
+    <li><strong>Gestion de backlog</strong> : Jira, Azure DevOps, Trello.</li>
+    <li><strong>Documentation</strong> : Confluence, Notion ou Markdown en dépôt Git.</li>
+    <li><strong>CI/CD &amp; IaC</strong> : GitHub Actions, GitLab CI, Jenkins, Terraform, Ansible.</li>
+  </ul>
+
+  <h3>Livrables clés</h3>
+  <ul>
+    <li><strong>Prototypes UI/UX</strong> validés par MOA et utilisateurs.</li>
+    <li><strong>Diagrammes d’architecture</strong> (C4, séquence, sécurité).</li>
+    <li><strong>PoC technologiques</strong> documentés (tests de perf. et de sécurité).</li>
+    <li><strong>Backlog priorisé</strong> intégrant user stories, DevOps et critères sécurité.</li>
+    <li><strong>Roadmap &amp; plan de release</strong> incluant CI/CD et monitoring.</li>
+  </ul>
+
+  <h3>Bonnes pratiques</h3>
+  <ul>
+    <li>Comparer systématiquement solutions existantes vs développement maison pour réduire risques.</li>
+    <li>Impliquer dès le début DevOps et SecOps dans les choix technologiques.</li>
+    <li>Automatiser tests de sécurité et performance dans le pipeline CI.</li>
+    <li>Versionner toute décision d’architecture et configuration d’infrastructure.</li>
+    <li>Adopter un design system pour accélérer et unifier les livrables.</li>
+  </ul>
+
+  <p>
+    <strong>Acteurs :</strong><br>
+    • <strong>MOA</strong> &amp; <strong>AMOA</strong> : valident la conception fonctionnelle et les exigences SI.<br>
+    • <strong>MOE</strong> &amp; <strong>Architectes logiciels</strong> : définissent l’architecture et la sécurité.<br>
+    • <strong>DevOps</strong> : conçoivent les pipelines CI/CD et l’IaC.<br>
+    • <strong>Chefs de projet</strong> : orchestrent coordination et planning.<br>
+    • <strong>UX/UI Designers</strong> : élaborent et testent les prototypes.<br>
+    • <strong>Développeurs</strong> : estiment et implémentent les PoC.
+  </p><br>
+      <!-- Intégration de la vidéo complémentaire -->
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/IkoT43-YtDY?si=pToAhttnkP0yQhTH"
+                title="Analyse des besoins - complément vidéo"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+      </section>
+</section>
+
   
 <!-- Développement -->
 <section id="developpement" class="my-5">
@@ -779,7 +818,15 @@
       • <strong>Administrateurs système</strong> : gèrent la configuration serveurs et réseaux.<br>
       • <strong>Chefs de projet</strong> : coordonnent la planification et la communication des mises en production.<br>
       • <strong>Testeurs QA</strong> : exécutent les smoke tests et valident la version déployée.
-    </p>
+    </p><br>
+          <!-- Intégration de la vidéo complémentaire -->
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/o843Zl8vWp4?si=dBlNRhX7OZXse9Fx"
+                    title="Analyse des besoins - complément vidéo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
   </section>
   
 <!-- Maintenance et évolutions -->
