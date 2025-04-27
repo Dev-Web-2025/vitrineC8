@@ -969,93 +969,482 @@
 
         </div>
 
-        <article id="item3">
-            <h2>Illustrations et cas pratiques
-            </h2><br>
-            <h3>3.a Exemple concret du cycle de vie d’un site e-commerce</h3>
-
-            <p><strong>Après les phases de recherche de contenus (textes et visuels) puis l’élaboration d’un plan de
-                    site avec sa structure :</strong></p><br>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <ol>
-                        <li>Choisir un nom de domaine et un hébergeur de qualité</li><br>
-                        <li>Développement & Conception du site</li><br>
-                        <li>Phases de test en développement</li><br>
-                        <li>Mise en ligne du site</li><br>
-                        <li>Nouveaux tests après la mise en production du site</li><br>
-                        <li>Faire connaître son site dans les moteurs de recherche (SEO)</li><br>
-                        <li>Lier son site aux réseaux sociaux</li><br>
-                    </ol>
-                </div>
-                <div class="col-md-6">
-                    <ol start="8">
-                        <li>Actualiser son site, faire vivre son site, ajouter de nouveaux contenus régulièrement</li>
-                        <br>
-                        <li>Faire la maintenance de son site : mises à jour techniques et suivi rigoureux</li><br>
-                        <li>Après deux ans, faire des évolutions sur son site Internet</li><br>
-                        <li>Mettre à jour les contenus, toujours travailler son référencement</li><br>
-                        <li>Après trois ans, faire une mise à jour majeure du site</li><br>
-                        <li>Après quatre ans, penser à la refonte du site Internet</li><br>
-                        <li>À 5 ans, un nouveau cycle de vie commence après la refonte</li><br>
-                    </ol>
-                </div>
+        <article id="item3" class="my-5">
+          <h2>Illustrations et cas pratiques</h2>
+        
+          <!-- 3.a Exemple concret -->
+          <h3 class="mt-4">3.a Exemple concret du cycle de vie d’un site e-commerce</h3>
+          <p class="mb-4"><strong>Après les phases de recherche de contenus et la définition du plan de site :</strong></p>
+        
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+<!-- Étapes 1–7 détaillées avec accordéon -->
+<div class="col">
+  <div class="card h-100">
+    <div class="card-header bg-primary text-white">Étapes 1–7</div>
+    <div class="card-body p-0">
+      <div class="accordion accordion-flush" id="accordionSteps1to7">
+        <!-- 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading1">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse1"
+                    aria-expanded="false" aria-controls="collapse1">
+              1. Choisir un nom de domaine et un hébergeur de qualité
+            </button>
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionSteps1to7">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Nom de domaine</strong> : court, mémorisable, extension adaptée (.<em>com</em>, .<em>fr</em>…), mots-clés SEO.</li>
+                <li><strong>Hébergeur</strong> : SLA ≥ 99,9 %, support 24/7, scalabilité (CPU, RAM), sauvegardes automatisées.</li>
+                <li><strong>Localisation des serveurs</strong> : latence, conformité RGPD, redondance multi-zone.</li>
+              </ul>
             </div>
-            <div class="container text-center mt-5">
-                <p><strong>Cycle de vie d'un site e-commerce</strong></p>
-                <div class="d-flex justify-content-center mt-4">
-                    <img src="img/img-cycle/cycledevie.webp" class="img-thumbnail" alt="Cycle de vie"
-                        style="max-width: 50vw; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal">
-                </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse2"
+                    aria-expanded="false" aria-controls="collapse2">
+              2. Développement & conception du site
+            </button>
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionSteps1to7">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Front-end</strong> : HTML5, CSS3/SCSS, JavaScript (framework si besoin).</li>
+                <li><strong>Back-end</strong> : choix langage (PHP, Node.js, Python…), API REST/GraphQL.</li>
+                <li><strong>Design system</strong> : composants réutilisables pour homogénéité UX/UI.</li>
+              </ul>
             </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading3">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse3"
+                    aria-expanded="false" aria-controls="collapse3">
+              3. Phases de tests en environnement de développement
+            </button>
+          </h2>
+          <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionSteps1to7">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Unitaires</strong> : TDD, couverture ≥ 80 %.</li>
+                <li><strong>Intégration</strong> : API, base de données, services externes.</li>
+                <li><strong>Charges légères</strong> : smoke tests, contrôles de performance.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading4">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse4"
+                    aria-expanded="false" aria-controls="collapse4">
+              4. Mise en ligne initiale (Go-Live)
+            </button>
+          </h2>
+          <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionSteps1to7">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Checklist Go-Live</strong> : DNS, certificats SSL, variables d’environnement.</li>
+                <li><strong>Smoke tests</strong> : pages critiques, formulaires, paiements.</li>
+                <li><strong>Plan de rollback</strong> : snapshot base, reversion de code.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading5">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse5"
+                    aria-expanded="false" aria-controls="collapse5">
+              5. Tests post-production (smoke tests, monitoring)
+            </button>
+          </h2>
+          <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionSteps1to7">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Monitoring actif</strong> : CPU, mémoire, erreurs HTTP, SLO/SLA.</li>
+                <li><strong>Alerting</strong> : email, Slack, SMS pour incidents critiques.</li>
+                <li><strong>Smoke tests automatisés</strong> chaque heure pour garantir la santé de la prod.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading6">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse6"
+                    aria-expanded="false" aria-controls="collapse6">
+              6. Optimisation SEO (indexation, balises, contenu)
+            </button>
+          </h2>
+          <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionSteps1to7">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Balises META</strong> : titre, description, Open Graph.</li>
+                <li><strong>Performance</strong> : Core Web Vitals (LCP, FID, CLS).</li>
+                <li><strong>Plan de site & robots.txt</strong> pour bots et indexation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 7 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading7">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse7"
+                    aria-expanded="false" aria-controls="collapse7">
+              7. Lien aux réseaux sociaux & webmarketing
+            </button>
+          </h2>
+          <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionSteps1to7">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Intégration Open Graph</strong> pour partage social optimisé.</li>
+                <li><strong>Pixel & tracking</strong> (Facebook, Google Analytics) pour mesurer le ROI.</li>
+                <li><strong>Campagnes</strong> : SEO/SEA, newsletters, réseaux sociaux.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-            <!-- Modale pour zoomer en plein écran -->
-            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                        <div class="modal-header border-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Fermer"></button>
-                        </div>
-                        <div class="modal-body d-flex justify-content-center align-items-center p-0">
-                            <img src="img/img-cycle/cycledevie.webp" class="img-fluid" alt="Cycle de vie"
-                                style="width: 100vw; height: 100vh; object-fit: contain;">
-                        </div>
-                    </div>
-                </div>
+<!-- Étapes 8–14 détaillées avec accordéon -->
+<div class="col">
+  <div class="card h-100">
+    <div class="card-header bg-success text-white">Étapes 8–14</div>
+    <div class="card-body p-0">
+      <div class="accordion accordion-flush" id="accordionSteps8to14">
+        <!-- 8 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading8">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse8"
+                    aria-expanded="false" aria-controls="collapse8">
+              8. Actualisation régulière des contenus et promotions
+            </button>
+          </h2>
+          <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionSteps8to14">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Calendrier éditorial</strong> : planifier publications, articles de blog, offres.</li>
+                <li><strong>Rich media</strong> : intégrer visuels, vidéos, infographies pour dynamiser l’engagement.</li>
+                <li><strong>A/B testing</strong> : tester titres, visuels et promotions pour optimiser le taux de conversion.</li>
+              </ul>
             </div>
-            <br><br>
-            <h3>3b. Les principaux écueils d’un cycle de vie mal maîtrisé</h3><br><br>
+          </div>
+        </div>
+        <!-- 9 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading9">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse9"
+                    aria-expanded="false" aria-controls="collapse9">
+              9. Maintenance technique et mises à jour de sécurité
+            </button>
+          </h2>
+          <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionSteps8to14">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Patching</strong> : appliquer régulièrement correctifs OS et dépendances.</li>
+                <li><strong>Vulnérabilités</strong> : scans SAST/DAST, suivi des CVE et mise à jour rapide.</li>
+                <li><strong>Sauvegardes</strong> : tests de restauration, rotation et conservation selon SLA.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 10 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading10">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse10"
+                    aria-expanded="false" aria-controls="collapse10">
+              10. Évolutions fonctionnelles au bout de 2 ans
+            </button>
+          </h2>
+          <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionSteps8to14">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Analyse ROI</strong> : mesurer l’impact des fonctionnalités existantes et proposer améliorations.</li>
+                <li><strong>Nouvelles intégrations</strong> : API de partenaires, outils marketing, systèmes de paiement.</li>
+                <li><strong>Refactoring</strong> : revoir les modules critiques pour améliorer performance et maintenabilité.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 11 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading11">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse11"
+                    aria-expanded="false" aria-controls="collapse11">
+              11. Travail continu du référencement (SEO)
+            </button>
+          </h2>
+          <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionSteps8to14">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Audit technique</strong> : corriger erreurs 404, maillage interne, sitemap.</li>
+                <li><strong>Contenu evergreen</strong> : mises à jour d’articles phares et enrichissement sémantique.</li>
+                <li><strong>Netlinking</strong> : partenariats, backlinks de qualité pour renforcer l’autorité du domaine.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 12 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading12">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse12"
+                    aria-expanded="false" aria-controls="collapse12">
+              12. Mise à jour majeure après 3 ans
+            </button>
+          </h2>
+          <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionSteps8to14">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Refonte UX/UI</strong> : adapter aux nouvelles tendances et feedback utilisateurs.</li>
+                <li><strong>Migration tech</strong> : upgrader framework, passer à la dernière version de la stack.</li>
+                <li><strong>Replatforming</strong> : envisager PWA, headless CMS ou architecture micro-frontends.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 13 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading13">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse13"
+                    aria-expanded="false" aria-controls="collapse13">
+              13. Réflexion sur la refonte après 4 ans
+            </button>
+          </h2>
+          <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionSteps8to14">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Benchmark</strong> : analyse concurrentielle et innovations du marché.</li>
+                <li><strong>Ateliers stratégiques</strong> : définir nouveaux objectifs et périmètre de refonte.</li>
+                <li><strong>Budget & planning</strong> : estimer coûts, ressources et calendrier sur 6–12 mois.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 14 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading14">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse14"
+                    aria-expanded="false" aria-controls="collapse14">
+              14. Lancement d’un nouveau cycle post-refonte (5 ans)
+            </button>
+          </h2>
+          <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#accordionSteps8to14">
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Retour d’expérience</strong> : documenter les succès et points d’amélioration.</li>
+                <li><strong>Planification future</strong> : mettre à jour roadmap et KPIs pour le prochain cycle.</li>
+                <li><strong>Veille technologique</strong> : intégrer les nouvelles tendances (AI, PWA avancée, headless commerce).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <ol>
-                        <li>Isoler un projet Web de la stratégie de l’entreprise le condamne à l’échec, car celui-ci est
-                            l’extension de la stratégie de l’entreprise.</li><br>
-                        <li>Un projet informatique est très souvent sous-estimé et dérive quasi systématiquement. C’est
-                            pourquoi il est indispensable de planifier la conception d’un vrai MVP (Minimum Viable
-                            Product) pour éprouver le cœur du projet. Cela permet par exemple d’éviter de développer de
-                            grandes fonctionnalités qui se révèlent être inutiles.</li><br>
-                        <li>Le manque de tests est un autre écueil en matière de développement. Ils sont souvent mis de
-                            côté en raison de contraintes de temps ou de budget. Selon une étude de Google, environ 60 %
-                            des utilisateurs supprimeront une application mobile ou quitteront un site web mobile après
-                            une seule expérience décevante.</li><br>
-                    </ol>
-                </div>
-                <div class="col-md-6">
-                    <ol start="4">
-                        <li>Il faut savoir terminer un projet : on peut être tenté de vouloir avoir le « site parfait »
-                            pour la mise en ligne. Pourtant, en faisant cela, on ne fait que retarder cette mise en
-                            ligne. Il vaut mieux phaser l’implémentation de nouvelles fonctionnalités et profiter d’une
-                            présence en ligne plus tôt.</li><br>
-                        <li>Une mauvaise communication entre les équipes de développement peut être préjudiciable : on
-                            peut ainsi assister au cloisonnement des équipes en charge des applications, du réseau et de
-                            la sécurité.</li>
-                    </ol>
-                </div>
-            </div>
-            <br><br>
+</div>       
+<!-- Illustration graphique -->
+
+<figure class="figure my-5 w-100 text-center">
+  <img src="img/img-cycle/cycledevie.webp"
+       class="figure-img img-fluid rounded shadow-sm"
+       style="max-width:50vw; display:block; margin:0 auto; cursor:pointer;"
+       data-bs-toggle="modal"
+       data-bs-target="#imageModal"
+       alt="Cycle de vie e-commerce">
+  <figcaption class="figure-caption fw-bold">
+    Cycle de vie d'un site e-commerce
+  </figcaption>
+</figure>
+
+<!-- Modale plein écran -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="img/img-cycle/cycledevie.webp"
+             class="img-fluid"
+             style="width:100vw; height:100vh; object-fit:contain;"
+             alt="Cycle de vie e-commerce">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 3.b Principaux écueils d’un cycle de vie mal maîtrisé -->
+<h3 class="mt-5">3.b Principaux écueils d’un cycle de vie mal maîtrisé</h3>
+<div class="accordion mt-3" id="pitfallsAccordion">
+
+  <!-- 1. Déconnexion stratégie – projet -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="ecueilOne">
+      <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="false" aria-controls="collapseOne">
+        1. Déconnexion stratégie – projet
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse"
+         aria-labelledby="ecueilOne" data-bs-parent="#pitfallsAccordion">
+      <div class="accordion-body">
+        <p>Lorsque les objectifs métiers et la planification technique ne sont pas alignés, on crée un fossé qui peut mener à :</p>
+        <ul>
+          <li><strong>Dérive du périmètre</strong> : fonctionnalités développées hors de la vision globale.</li>
+          <li><strong>Priorités floues</strong> : l’équipe ne sait pas où concentrer ses efforts (qualité vs. rapidité).</li>
+          <li><strong>Échec KPI</strong> : absence d’indicateurs partagés empêche de mesurer la valeur réelle générée.</li>
+        </ul>
+        <p><strong>Comment l’éviter :</strong></p>
+        <ul>
+          <li>Impliquer dès le départ le COMEX ou le comité de pilotage pour valider la roadmap.</li>
+          <li>Définir un <em>Business Value Canvas</em> ou un <em>OKR</em> pour chaque sprint.</li>
+          <li>Réunions de revue de KPI hebdomadaires pour réajuster vite les priorités.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Sous-estimation & dérive -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="ecueilTwo">
+      <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+        2. Sous-estimation & dérive
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse"
+         aria-labelledby="ecueilTwo" data-bs-parent="#pitfallsAccordion">
+      <div class="accordion-body">
+        <p>Sans un MVP clairement défini, le projet peut rapidement s’étoffer de fonctionnalités inutiles :</p>
+        <ul>
+          <li><strong>Scope creep</strong> : ajout continu de demandes non priorisées.</li>
+          <li><strong>Surcoût et retard</strong> : dépassement de budget et de planning.</li>
+          <li><strong>Complexité accrue</strong> : accumulation de code et de dépendances sans réelle valeur ajoutée.</li>
+        </ul>
+        <p><strong>Comment l’éviter :</strong></p>
+        <ul>
+          <li>Appliquer la méthode MoSCoW pour classer chaque user story.</li>
+          <li>Mettre en place un <em>Product Backlog Refinement</em> bi-hebdomadaire.</li>
+          <li>Bloquer toute nouvelle fonctionnalité tant que le MVP n’est pas livré et validé.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Manque de tests -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="ecueilThree">
+      <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+        3. Manque de tests
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse"
+         aria-labelledby="ecueilThree" data-bs-parent="#pitfallsAccordion">
+      <div class="accordion-body">
+        <p>En l’absence d’une stratégie de tests robuste, les bugs remontent en production :</p>
+        <ul>
+          <li><strong>Régressions fréquentes</strong> : un correctif peut casser des fonctionnalités existantes.</li>
+          <li><strong>Expérience utilisateur dégradée</strong> : lenteurs, erreurs JS, formulaires non fonctionnels.</li>
+          <li><strong>Perte de confiance</strong> : clients insatisfaits et résiliation de service.</li>
+        </ul>
+        <p><strong>Comment l’éviter :</strong></p>
+        <ul>
+          <li>Automatiser les <em>unit tests</em>, <em>integration tests</em> et <em>E2E</em> (Cypress, Playwright).</li>
+          <li>Intégrer les tests de performance (k6, JMeter) et de sécurité (SAST/DAST) dans la CI.</li>
+          <li>Mettre en place un <em>Test Coverage</em> minimal (≥ 80 %) et surveiller avec SonarQube.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Poursuite de la perfection -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="ecueilFour">
+      <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+        4. Poursuite de la perfection
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse"
+         aria-labelledby="ecueilFour" data-bs-parent="#pitfallsAccordion">
+      <div class="accordion-body">
+        <p>Vouloir un produit « parfait » avant toute mise en ligne peut être fatal :</p>
+        <ul>
+          <li><strong>Time to market trop long</strong> : opportunités perdues face à la concurrence.</li>
+          <li><strong>Coût d’opportunité élevé</strong> : ressources immobilisées sur des détails.</li>
+          <li><strong>Manque de feedback réel</strong> : on ne valide pas avec les utilisateurs finaux.</li>
+        </ul>
+        <p><strong>Comment l’éviter :</strong></p>
+        <ul>
+          <li>Adopter des livraisons incrémentales et un backlog de refinements.</li>
+          <li>Recueillir du feedback dès la première version (alpha, bêta).</li>
+          <li>Mesurer les métriques d’usage (heatmaps, analytics) pour guider l’évolution.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Mauvaise communication inter-équipes -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="ecueilFive">
+      <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseFive"
+              aria-expanded="false" aria-controls="collapseFive">
+        5. Mauvaise communication inter-équipes
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse"
+         aria-labelledby="ecueilFive" data-bs-parent="#pitfallsAccordion">
+      <div class="accordion-body">
+        <p>Un cloisonnement entre développement, opérations et sécurité entraîne :</p>
+        <ul>
+          <li><strong>Délais allongés</strong> : attentes longues pour validations ou mises à jour d’infra.</li>
+          <li><strong>Incohérences</strong> : configurations divergentes entre dev/staging/prod.</li>
+          <li><strong>Risque de sécurité accru</strong> : process non uniformes, trous dans la chaîne CI/CD.</li>
+        </ul>
+        <p><strong>Comment l’éviter :</strong></p>
+        <ul>
+          <li>Organiser des <em>daily stand-ups</em> et <em>sync meetings</em> cross-fonctionnels.</li>
+          <li>Utiliser un <em>Confluence</em> ou <em>Notion</em> partagé, mis à jour en temps réel.</li>
+          <li>Mettre en place un canal Slack/Teams dédié au projet pour partages instantanés.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+        
 
 
 
