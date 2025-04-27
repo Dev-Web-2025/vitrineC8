@@ -1,545 +1,781 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Le cycle de vie</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-cycle.css">
 </head>
+
 <body>
-<header class="fixed-top">
-    <!-- Barre de navigation principale -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
-        <div class="container-fluid d-flex align-items-center">
-            <!-- Logo -->
-            <a class="navbar-brand" href="index.html">Vitrine C8</a>
+    <header class="fixed-top">
+        <!-- Barre de navigation principale -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+            <div class="container-fluid d-flex align-items-center">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">Vitrine C8</a>
 
-            <!-- Texte "INTRODUCTION" aligné à gauche avec un espace de 50px -->
-            <span class="text-white fw-bold fs-4 ms-4">CYCLE DE VIE</span>
+                <!-- Texte "INTRODUCTION" aligné à gauche avec un espace de 50px -->
+                <span class="text-white fw-bold fs-4 ms-4">CYCLE DE VIE</span>
 
-            <!-- Bouton Burger -->
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Bouton Burger -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Menu principal -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="documentation.html">Documentation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cycle_de_vie.html">Cycle de vie</a></li>
-                    <li class="nav-item"><a class="nav-link" href="versioning.html">Versioning</a></li>
-                    <li class="nav-item"><a class="nav-link" href="deploiement.html">Déploiement</a></li>
-                    <li class="nav-item"><a class="nav-link" href="conclusion.html">Conclusion</a></li>
+                <!-- Menu principal -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="documentation.html">Documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cycle_de_vie.html">Cycle de vie</a></li>
+                        <li class="nav-item"><a class="nav-link" href="versioning.html">Versioning</a></li>
+                        <li class="nav-item"><a class="nav-link" href="deploiement.html">Déploiement</a></li>
+                        <li class="nav-item"><a class="nav-link" href="conclusion.html">Conclusion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Seconde barre de navigation plus mince (fixe, sans interaction avec le burger) -->
+        <nav class="sub-navbar navbar navbar-expand bg-secondary py-1">
+            <div class="container d-flex justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#item1">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#item1b">Processus transverses</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#item1c">Métiers</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#item2">Grandes étapes</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#item3">Cas pratique</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#item4">Conclusion</a></li>
                 </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Seconde barre de navigation plus mince (fixe, sans interaction avec le burger) -->
+    <main class="container mt-5">
+
+        <article aria-label="headings">
+            <h1>Cycle de vie d'une application web</h1>
+        </article>
+        <br id="item1"><br>
+
+        <!-- Section Contexte et enjeux -->
+        <section id="contexte-enjeux" class="section">
+            <h2>Introduction : Contexte et enjeux</h2>
+
+            <p>
+                Dans un environnement numérique en constante évolution, la réussite d’une application web ne se limite
+                pas à la qualité de son code : elle dépend avant tout de la manière dont on envisage et pilote chaque
+                étape de son existence, depuis la compréhension des besoins jusqu’à son éventuel retrait de service. Le
+                cycle de vie d’une application web constitue ainsi un cadre méthodologique essentiel, qui garantit non
+                seulement une conception robuste et sécurisée, mais aussi une évolutivité maîtrisée et une rentabilité
+                maximale.
+            </p>
+            <p>
+                Ce document s’adresse aux équipes de projet — chefs de produit, architectes, développeurs, DevOps,
+                testeurs et UX/UI designers — souhaitant disposer d’une vision complète et intégrée des différentes
+                phases du cycle de vie, ainsi que des bonnes pratiques et des indicateurs à suivre pour piloter
+                efficacement leur projet. Nous y définissons le périmètre fonctionnel (front-end, back-end,
+                infrastructure, qualité), le périmètre organisationnel (parties prenantes, livrables), et nous
+                illustrons comment aligner les objectifs métiers et les indicateurs clés de performance (KPI) avec les
+                exigences non-fonctionnelles (scalabilité, performance, sécurité, observabilité).
+            </p>
+            <p>
+                Cette introduction pose les fondations :
+            </p>
+
+            <h3>1. Définition et périmètre</h3>
+            <h4>Définition</h4>
+            <p>
+                Le cycle de vie d’une application web regroupe l’ensemble des étapes, de la conception initiale à la
+                mise hors service, nécessaires pour garantir qu’un service en ligne répond durablement aux besoins
+                métiers et utilisateurs.
+            </p>
+            <!-- Périmètre fonctionnel en cards -->
+            <h4>Périmètre fonctionnel</h4>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <h3>Front-end</h3>
+                    <p>Expérience utilisateur, interfaces graphiques, accessibilité.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Back-end</h3>
+                    <p>API, logique métier, persistance des données.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Infrastructure</h3>
+                    <p>Serveurs, conteneurs, plateformes cloud.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Qualité</h3>
+                    <p>Tests (unitaires, fonctionnels, performance), sécurité.</p>
+                </div>
+            </div>
+            <br>
+            <!-- Périmètre organisationnel en cards -->
+            <h4>Périmètre organisationnel</h4>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <h3>Parties prenantes</h3>
+                    <p>Chefs de projet, product owners, équipes design, développement, DevOps et support.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Artefacts clés</h3>
+                    <p>Cahier des charges, user stories, schémas d’architecture, pipelines CI/CD, documentation vivante.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <p>
+                <strong>Exemple illustratif :</strong> pour un portail e‑commerce, le périmètre couvre le parcours
+                visiteur (catalogue, panier), l’admin‑panel (gestion des produits), l’API de paiement, l’infrastructure
+                (load‑balancer, base de données répliquée) et la conformité RGPD.
+            </p>
+
+            <h3>2. Objectifs métiers et KPI associés</h3>
+            <p>
+                Pour chaque projet, formaliser les objectifs métier et définir des indicateurs de performance (<abbr
+                    title="Key Performance Indicator">KPI</abbr>) permet un pilotage transparent et orienté résultats.
+            </p>
+            <p>
+                Un KPI (Key Performance Indicator) est une métrique quantifiable qui permet de mesurer l’efficacité
+                d’une action, d’un projet ou d’un processus par rapport à un objectif défini.
+            </p><br>
+
+            <!-- Bloc vidéo responsive -->
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Hag78PCXn9Y" title="Le Key Performance Indicator (KPI)"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <br>
+            <p>
+                Ci‑dessous un tableau de KPIs généraux, applicable à tout type d’application web :
+            </p>
+
+            <div class="table-responsive">
+                <table class="kpi-table">
+                    <thead>
+                        <tr>
+                            <th>Objectif métier</th>
+                            <th>KPI principal</th>
+                            <th>Commentaire</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Améliorer l’engagement utilisateur</td>
+                            <td>Taux d’utilisateurs actifs (DAU/MAU)</td>
+                            <td>Ratio utilisateurs quotidiens / mensuels, indicateur de rétention</td>
+                        </tr>
+                        <tr>
+                            <td>Optimiser la performance</td>
+                            <td>Temps de chargement moyen (TTFB ou FCP)</td>
+                            <td>Doit rester &lt; 300 ms pour le TTFB et &lt; 1 s pour le FCP</td>
+                        </tr>
+                        <tr>
+                            <td>Garantir la fiabilité</td>
+                            <td>Taux de disponibilité (uptime)</td>
+                            <td>&ge; 99,9 % (SLA), suivi continu via monitoring</td>
+                        </tr>
+                        <tr>
+                            <td>Réduire les erreurs</td>
+                            <td>Nombre d’erreurs critiques (5xx, JS)</td>
+                            <td>MTTR (Mean Time To Repair) : objectif &lt; 30 min</td>
+                        </tr>
+                        <tr>
+                            <td>Assurer la sécurité</td>
+                            <td>Nombre de vulnérabilités critiques</td>
+                            <td>Scanner SAST/DAST mensuel, objectif 0 critiques ouvertes</td>
+                        </tr>
+                        <tr>
+                            <td>Optimiser les coûts</td>
+                            <td>Coût infra par utilisateur</td>
+                            <td>Suivi via facturation cloud, comparer €/DAU</td>
+                        </tr>
+                        <tr>
+                            <td>Améliorer la qualité du code</td>
+                            <td>Taux de couverture de tests (%)</td>
+                            <td>Cible &ge; 80 % (unitaires + intégration)</td>
+                        </tr>
+                        <tr>
+                            <td>Renforcer l’accessibilité</td>
+                            <td>Score de conformité WCAG (%)</td>
+                            <td>Audit trimestriel, viser &ge; 90 %</td>
+                        </tr>
+                        <tr>
+                            <td>Accélérer le déploiement</td>
+                            <td>Lead time for changes</td>
+                            <td>Temps médian entre commit et prod, objectif &lt; 1 h</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="astuce">
+                <strong>Astuce :</strong> pour chaque KPI, définissez un seuil chiffré clair (ex. uptime &ge; 99,9 %,
+                couverture &ge; 80 %) et une fréquence de suivi (quotidien, hebdomadaire, mensuel).
+            </p>
+
+            <h3>3. Enjeux techniques (scalabilité, performance, sécurité…)</h3>
+            <p>
+                Les défis techniques garantissent que l’application reste fiable et maintenable face à la croissance et
+                aux menaces.
+            </p>
+
+            <h4>Scalabilité</h4>
+            <ul>
+                <li><strong>Horizontale</strong> : ajouter des instances de service (containers, VM) derrière un
+                    load-balancer.</li>
+                <li><strong>Verticale</strong> : renforcer les ressources (CPU, RAM) d’un serveur.</li>
+            </ul>
+            <p><strong>Exemple :</strong> passer de 2 à 20 nœuds Docker avec Kubernetes pour absorber un pic de trafic
+                pendant les soldes.</p>
+
+            <h4>Performance</h4>
+            <ul>
+                <li><strong>Temps de chargement</strong> : optimiser les assets (minification JS/CSS, lazy-loading
+                    images).</li>
+                <li><strong>Caching</strong> : front-end (Service Workers), back-end (Redis, Varnish).</li>
+                <li><strong>Tests de charge</strong> : utiliser JMeter ou k6 pour simuler 1 000 utilisateurs simultanés.
+                </li>
+            </ul>
+
+            <h4>Sécurité</h4>
+            <ul>
+                <li><strong>Authentification & autorisation</strong> : OAuth2, JWT, RBAC.</li>
+                <li><strong>Protection des API</strong> : rate-limiting, WAF (Web Application Firewall).</li>
+                <li><strong>Chiffrement</strong> : TLS 1.2+, chiffrement des données au repos (AES-256).</li>
+                <li><strong>Audit & compliance</strong> : scans automatisés de vulnérabilités (SAST/DAST), revue
+                    périodique des dépendances (Dependabot).</li>
+            </ul>
+
+            <h4>Résilience et robustesse</h4>
+            <ul>
+                <li><strong>Haute disponibilité (HA)</strong> : déploiement multi-zone / multi-région, failover
+                    automatique.</li>
+                <li><strong>Tolérance aux pannes</strong> : stratégies de retry, circuit breaker pattern.</li>
+            </ul>
+
+            <h4>Observabilité</h4>
+            <ul>
+                <li><strong>Logging structuré</strong> : JSON logs centralisés (ELK Stack).</li>
+                <li><strong>Metric gathering</strong> : Prometheus + Grafana pour KPIs système et applicatifs.</li>
+                <li><strong>Tracing distribué</strong> : OpenTelemetry, Jaeger pour diagnostiquer les latences en
+                    production.</li>
+            </ul>
+
+            <p>
+                À l’issue de cette mise en contexte, nous détaillerons les <strong>grandes étapes du cycle de vie. Mais
+                    voyons d'abord quels sont les métiers impliqués dans le cycle de vie.</strong>.
+            </p>
+        </section>
+
+
+
+
+
+
+<!-- juste après la fin de la section #contexte-enjeux -->
+<section id="item1b" class="section my-5">
+    <h2>Processus transverses & bonnes pratiques</h2>
+    <div class="roles-grid">
+      <div class="role-card clickable"
+           data-title="DevSecOps"
+           data-content="Intégrez l’analyse de vulnérabilités dès le dev (SAST/DAST), automatisez les scans de dépendances (Dependabot, Snyk) et shift-left la sécurité.">
+        <h3>DevSecOps</h3>
+        <p>Intégrez l’analyse de vulnérabilités dès le dev (SAST/DAST)…</p>
+      </div>
+      <div class="role-card clickable"
+           data-title="Observabilité"
+           data-content="Mettez en place des logs structurés (ELK), du tracing distribué (OpenTelemetry), des dashboards Grafana et un alerting SLO/SLA pour piloter en continu.">
+        <h3>Observabilité</h3>
+        <p>Logs structurés (ELK), tracing distribué (OpenTelemetry)…</p>
+      </div>
+      <div class="role-card clickable"
+           data-title="Qualité & tests"
+           data-content="Tests unitaires, end-to-end (Cypress), performance (k6) et linting en pipeline CI pour garantir fiabilité et non-régression.">
+        <h3>Qualité & tests</h3>
+        <p>Tests unitaires, E2E (Cypress), performance (k6)…</p>
+      </div>
+      <div class="role-card clickable"
+           data-title="Dette technique"
+           data-content="La dette technique (ou technical debt) désigne l’ensemble des compromis faits volontairement (ou non) pendant le développement : code non-optimisé, absence de tests ou de documentation… Ces raccourcis génèrent un ‘intérêt’ qui nécessite du refactoring ultérieur.">
+        <h3>Dette technique</h3>
+        <p>Mesurez-la via SonarQube, planifiez des sprints de refactoring…</p>
+      </div>
+      <div class="role-card clickable"
+           data-title="Cloud & Scalabilité"
+           data-content="Infrastructure as Code (Terraform), autoscaling, multi-région, CDN et stratégies blue/green ou canary pour des déploiements fiables et élastiques.">
+        <h3>Cloud & Scalabilité</h3>
+        <p>IaC (Terraform), autoscaling, multi-région…</p>
+      </div>
+      <div class="role-card clickable"
+           data-title="Accessibilité & UX"
+           data-content="Audits WCAG, score Lighthouse, A/B testing et heatmaps pour optimiser parcours et conformité aux normes d’accessibilité.">
+        <h3>Accessibilité & UX</h3>
+        <p>Audits WCAG, score Lighthouse, A/B testing…</p>
+      </div>
+      <div class="role-card clickable"
+           data-title="SEO & PWA"
+           data-content="SSR/SSG (Gatsby, Next.js), optimisation des métadonnées, Core Web Vitals et service workers pour un site rapide et offline-friendly.">
+        <h3>SEO & PWA</h3>
+        <p>SSR/SSG (Gatsby, Next.js), métadonnées, Core Web Vitals…</p>
+      </div>
+      <div class="role-card clickable"
+           data-title="Feedback & Support"
+           data-content="Mettez en place SLA/support, base de connaissances, sondages in-app et chatbots pour collecter le feedback et améliorer l’expérience utilisateur.">
+        <h3>Feedback & Support</h3>
+        <p>SLA/support, base de connaissances, sondages in-app…</p>
+      </div>
+      <div class="role-card clickable"
+           data-title="Fin de vie"
+           data-content="Préparez un plan de migration, archivez les données en toute sécurité, réalisez un audit post-mortem et définissez la stratégie de transition ou de décommissionnement.">
+        <h3>Fin de vie</h3>
+        <p>Plan de migration, archivage sécurisé, audit post-mortem…</p>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+<!-- Modale unique pour les définitions -->
+<div class="modal fade" id="processModal" tabindex="-1" aria-labelledby="processModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="processModalLabel">Titre</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <p id="processModalContent">Contenu …</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- ROLES ET RESPONSABILITES -->
+        <section id="item1c" class="section my-5">
+            <h2>Métiers : Rôles et Responsabilités</h2><br>
+
+            <!-- illustration -->
+            <div class="role-illustration">
+                <img src="img/img-cycle/brainStorming.jpg" alt="Brainstorming cycle de vie" class="img-fluid" />
+            </div>
+            <br>
+            <!-- grille de cards -->
+            <div class="roles-grid">
+                <div class="role-card">
+                    <h3>Chef de projet</h3>
+                    <p>Responsable de la gestion des coûts et de l’efficacité des ressources, il veille à ce que les
+                        projets contribuent positivement au CA en respectant délais et budgets.</p>
+                </div>
+                <div class="role-card">
+                    <h3>UX Designer</h3>
+                    <p>Améliore l’expérience utilisateur pour augmenter la satisfaction, la fidélisation et les
+                        conversions, réduisant le taux d’abandon.</p>
+                </div>
+                <div class="role-card">
+                    <h3>UI Designer</h3>
+                    <p>Optimise l’esthétique et l’ergonomie de l’interface, encourage l’engagement et influence la
+                        perception de valeur du produit.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Architecte logiciel</h3>
+                    <p>Conçoit des architectures performantes et évolutives, réduisant les coûts de maintenance et
+                        améliorant la rentabilité.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Développeur</h3>
+                    <p>Implémente les fonctionnalités et optimise les performances, garantissant un produit solide
+                        susceptible de générer des revenus.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Testeur QA</h3>
+                    <p>Assure la qualité et la fiabilité via tests, réduisant les coûts de correction de bugs et
+                        protégeant le CA.</p>
+                </div>
+                <div class="role-card">
+                    <h3>DevOps</h3>
+                    <p>Automatise les déploiements et gère l’infrastructure pour améliorer disponibilité et rapidité des
+                        mises à jour.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Administrateur système</h3>
+                    <p>Garantit la sécurité et la stabilité des serveurs et bases de données pour éviter les
+                        interruptions de service.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Support technique</h3>
+                    <p>Fournit une assistance client efficace, améliorant la fidélisation et réduisant le churn.</p>
+                </div>
+                <div class="role-card">
+                    <h3>Équipes légales</h3>
+                    <p>Veillent à la conformité RGPD et aux contrats, protégeant l’entreprise des risques juridiques et
+                        amendes.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <div class="scrollable-container" id="item2">
+
+            <article>
+                <br>
+                <h2>Les grandes étapes du cycle de vie</h2><br>
+                <div class="timeline">
+                    <div class="timeline-item" data-target="analyse">Analyse des besoins</div>
+                    <div class="timeline-item" data-target="conception">Conception et planification</div>
+                    <div class="timeline-item" data-target="developpement">Développement</div>
+                    <div class="timeline-item" data-target="deploiement">Déploiement</div>
+                    <div class="timeline-item" data-target="maintenance">Maintenance et évolutions</div>
+                    <div class="timeline-item" data-target="decommissionnement">Décommissionnement<div class="triangle">
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- Analyse des besoins -->
+                <section id="analyse" class="my-5">
+                    <h2>
+                        <img src="img/img-cycle/microscope.png" alt="icon analyse" class="img-fluid"
+                            style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
+                        Analyse des besoins
+                    </h2>
+                    <p>La première étape du cycle de vie consiste à analyser les besoins des utilisateurs et à définir
+                        les objectifs
+                        de l'application. Cette phase implique la compréhension du public cible, des exigences métiers
+                        et des contraintes
+                        techniques. L'objectif est de poser les bases du projet en identifiant les fonctionnalités clés
+                        et en précisant
+                        les attentes des utilisateurs finaux. Une bonne analyse permet d’éviter des erreurs de
+                        conception et de s’assurer
+                        que le produit final répondra aux attentes.
+                    </p>
+                    <p><b>Acteurs : Chefs de projet, UX/UI designers.</b></p>
+                </section>
+
+                <!-- Conception et planification -->
+                <section id="conception" class="my-5">
+                    <h2>
+                        <img src="img/img-cycle/time-and-calendar.png" alt="icon conception" class="img-fluid"
+                            style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
+                        Conception et planification
+                    </h2>
+                    <p>Une fois les besoins définis, on passe à la conception du projet. Cette étape inclut la création
+                        des maquettes
+                        visuelles, le choix des technologies à utiliser et la définition de l’architecture du système.
+                        L'architecture
+                        logicielle et le design technique sont planifiés pour s'assurer que l'application soit
+                        performante et évolutive.
+                        La planification détaillée permet de structurer le travail à venir et de coordonner efficacement
+                        l'équipe.</p>
+                    <p><b> Acteurs : Chefs de projet, UX/UI designers, architectes logiciels, développeurs.</b> </p>
+                </section>
+
+                <!-- Développement -->
+                <section id="developpement" class="my-5">
+                    <h2>
+                        <img src="img/img-cycle/marteau.png" alt="icon developpement" class="img-fluid"
+                            style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
+                        Développement
+                    </h2>
+                    <p>Le développement consiste à transformer les maquettes et les spécifications en un produit
+                        fonctionnel.
+                        Les développeurs écrivent le code source pour implémenter les fonctionnalités, tout en
+                        garantissant la qualité
+                        du code par des tests unitaires et fonctionnels. L'intégration continue est souvent utilisée
+                        pour automatiser
+                        le processus de tests et de mise à jour du code. Cette étape est essentielle pour s'assurer que
+                        le produit
+                        respecte les exigences fonctionnelles et qu’il est stable.</p>
+                    <p><b>Acteurs : Développeurs, testeurs QA, DevOps.</b></p>
+                </section>
+                <!-- Déploiement -->
+                <section id="deploiement" class="my-5">
+                    <h2>
+                        <img src="img/img-cycle/lancement-du-projet.png" alt="icon déploiement" class="img-fluid"
+                            style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
+                        Déploiement
+                    </h2>
+                    <p>Une fois l’application développée, elle doit être mise en production. Cela inclut la
+                        configuration des serveurs,
+                        la gestion des bases de données et le suivi des performances en temps réel. Les outils de
+                        monitoring permettent
+                        de détecter rapidement tout problème après la mise en ligne. Le déploiement se fait souvent en
+                        plusieurs étapes
+                        pour s’assurer que l’application fonctionne correctement dans l’environnement de production sans
+                        interruptions pour
+                        les utilisateurs.</p>
+                    <p><b> Acteurs : DevOps, administrateurs système, chefs de projet.</b> </p>
+                </section>
+
+                <!-- Maintenance et évolutions -->
+                <section id="maintenance" class="my-5">
+                    <h2>
+                        <img src="img/img-cycle/maintenance.png" alt="icon maintenance" class="img-fluid"
+                            style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
+                        Maintenance et évolutions
+                    </h2>
+                    <p>Après le déploiement, il est important d’assurer une maintenance continue pour corriger les bugs,
+                        effectuer des
+                        mises à jour de sécurité et optimiser les performances. Les feedbacks utilisateurs sont
+                        collectés pour améliorer
+                        l'application, en ajoutant de nouvelles fonctionnalités ou en ajustant les fonctionnalités
+                        existantes.
+                        Cette phase permet de garantir la pérennité et l’évolution de l’application tout au long de sa
+                        vie. </p>
+                    <p><b> Acteurs : Développeurs, testeurs QA, support technique.</b> </p>
+                </section>
+
+                <!-- Décommissionnement -->
+                <section id="decommissionnement" class="my-5">
+                    <h2>
+                        <img src="img/img-cycle/corbeille-a-papier.png" alt="icon decommissionnement" class="img-fluid"
+                            style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
+                        Décommissionnement
+                    </h2>
+                    <p>Le décommissionnement intervient lorsque l'application arrive à la fin de sa vie ou lorsque son
+                        service n’est
+                        plus nécessaire. Cette phase comprend l'arrêt progressif des services, la migration des
+                        utilisateurs vers une nouvelle
+                        solution et la suppression sécurisée des données. Il est essentiel de respecter les normes
+                        légales et les exigences
+                        de sécurité, comme le RGPD, pour garantir que toutes les données sensibles sont correctement
+                        supprimées.</p>
+                    <p><b>Acteurs : Chefs de projet, administrateurs système, équipes légales.</b> </p>
+                </section>
+
+
+        </div>
+
+
+
+
+        </div>
+
+        <article id="item3">
+            <h2>Illustrations et cas pratiques
+            </h2><br>
+            <h3>3.a Exemple concret du cycle de vie d’un site e-commerce</h3>
+
+            <p><strong>Après les phases de recherche de contenus (textes et visuels) puis l’élaboration d’un plan de
+                    site avec sa structure :</strong></p><br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <ol>
+                        <li>Choisir un nom de domaine et un hébergeur de qualité</li><br>
+                        <li>Développement & Conception du site</li><br>
+                        <li>Phases de test en développement</li><br>
+                        <li>Mise en ligne du site</li><br>
+                        <li>Nouveaux tests après la mise en production du site</li><br>
+                        <li>Faire connaître son site dans les moteurs de recherche (SEO)</li><br>
+                        <li>Lier son site aux réseaux sociaux</li><br>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <ol start="8">
+                        <li>Actualiser son site, faire vivre son site, ajouter de nouveaux contenus régulièrement</li>
+                        <br>
+                        <li>Faire la maintenance de son site : mises à jour techniques et suivi rigoureux</li><br>
+                        <li>Après deux ans, faire des évolutions sur son site Internet</li><br>
+                        <li>Mettre à jour les contenus, toujours travailler son référencement</li><br>
+                        <li>Après trois ans, faire une mise à jour majeure du site</li><br>
+                        <li>Après quatre ans, penser à la refonte du site Internet</li><br>
+                        <li>À 5 ans, un nouveau cycle de vie commence après la refonte</li><br>
+                    </ol>
+                </div>
+            </div>
+            <div class="container text-center mt-5">
+                <p><strong>Cycle de vie d'un site e-commerce</strong></p>
+                <div class="d-flex justify-content-center mt-4">
+                    <img src="img/img-cycle/cycledevie.webp" class="img-thumbnail" alt="Cycle de vie"
+                        style="max-width: 50vw; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+            </div>
+
+            <!-- Modale pour zoomer en plein écran -->
+            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fermer"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center align-items-center p-0">
+                            <img src="img/img-cycle/cycledevie.webp" class="img-fluid" alt="Cycle de vie"
+                                style="width: 100vw; height: 100vh; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <h3>3b. Les principaux écueils d’un cycle de vie mal maîtrisé</h3><br><br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <ol>
+                        <li>Isoler un projet Web de la stratégie de l’entreprise le condamne à l’échec, car celui-ci est
+                            l’extension de la stratégie de l’entreprise.</li><br>
+                        <li>Un projet informatique est très souvent sous-estimé et dérive quasi systématiquement. C’est
+                            pourquoi il est indispensable de planifier la conception d’un vrai MVP (Minimum Viable
+                            Product) pour éprouver le cœur du projet. Cela permet par exemple d’éviter de développer de
+                            grandes fonctionnalités qui se révèlent être inutiles.</li><br>
+                        <li>Le manque de tests est un autre écueil en matière de développement. Ils sont souvent mis de
+                            côté en raison de contraintes de temps ou de budget. Selon une étude de Google, environ 60 %
+                            des utilisateurs supprimeront une application mobile ou quitteront un site web mobile après
+                            une seule expérience décevante.</li><br>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <ol start="4">
+                        <li>Il faut savoir terminer un projet : on peut être tenté de vouloir avoir le « site parfait »
+                            pour la mise en ligne. Pourtant, en faisant cela, on ne fait que retarder cette mise en
+                            ligne. Il vaut mieux phaser l’implémentation de nouvelles fonctionnalités et profiter d’une
+                            présence en ligne plus tôt.</li><br>
+                        <li>Une mauvaise communication entre les équipes de développement peut être préjudiciable : on
+                            peut ainsi assister au cloisonnement des équipes en charge des applications, du réseau et de
+                            la sécurité.</li>
+                    </ol>
+                </div>
+            </div>
+            <br><br>
+
+
+
+            <article id="item4">
+                <h2>Conclusion</h2><br>
+                <h3>Synthèse et importance de chaque phase</h3>
+                <p><strong>Le cycle de vie d’une application web est composé d’étapes distinctes et complémentaires,
+                        chacune essentielle à la réussite globale du projet.</strong></p>
+                <div class="row">
+                    <ul class="col-md-6">
+                        <li><strong>Analyse des besoins :</strong> permet de cerner précisément les attentes et les
+                            contraintes, constituant la base solide du projet.</li>
+                        <li><strong>Conception et planification :</strong> garantit que l’architecture et les choix
+                            technologiques soient adaptés et viables à long terme.</li>
+                        <li><strong>Développement :</strong> renforcé par des tests et une intégration continue, assure
+                            la qualité et la robustesse du produit.</li>
+                    </ul>
+                    <ul class="col-md-6">
+                        <li><strong>Déploiement :</strong> doit être minutieusement exécuté afin d’assurer la stabilité
+                            et la sécurité de l’application en production.</li>
+                        <li><strong>Maintenance et évolutions :</strong> permettent d’adapter continuellement
+                            l’application aux besoins changeants et d'assurer sa pérennité.</li>
+                        <li><strong>Décommissionnement :</strong> joue un rôle crucial dans la gestion responsable des
+                            ressources et la sécurité des données.</li>
+                    </ul>
+                </div>
+                <p>La négligence d'une seule de ces phases peut avoir des conséquences graves sur la qualité finale de
+                    l’application, sur l’expérience utilisateur, mais aussi sur la viabilité économique du projet.</p>
+                <br>
+
+                <h3>Meilleures pratiques pour optimiser le cycle de vie</h3>
+                <p><strong>Pour optimiser le cycle de vie d'une application web, il est conseillé d'adopter les
+                        meilleures pratiques suivantes :</strong></p>
+                <div class="row">
+                    <ol class="col-md-6">
+                        <li><strong>Gestion rigoureuse du projet :</strong> Utiliser des méthodologies telles qu’Agile
+                            ou Scrum pour faciliter la flexibilité et améliorer la réactivité face aux changements.</li>
+                        <li><strong>Documentation exhaustive :</strong> Maintenir une documentation claire et actualisée
+                            à chaque phase pour faciliter la communication entre équipes et assurer la continuité des
+                            connaissances.</li>
+                        <li><strong>Automatisation et intégration continue (CI/CD) :</strong> Mettre en place des
+                            processus automatisés de tests et de déploiement pour réduire les erreurs humaines et
+                            accélérer les mises en production.</li>
+                    </ol>
+                    <ol class="col-md-6">
+                        <li><strong>Monitoring et veille technique :</strong> Surveiller régulièrement les performances
+                            et la sécurité de l’application pour identifier rapidement les problèmes et anticiper les
+                            risques.</li>
+                        <li><strong>Approche centrée utilisateur :</strong> Impliquer les utilisateurs finaux tout au
+                            long du cycle, particulièrement lors des phases de conception et de validation, pour
+                            s’assurer que l’application répond efficacement à leurs attentes.</li>
+                        <li><strong>Planification stratégique du décommissionnement :</strong> Préparer dès le départ
+                            une stratégie de sortie ou de migration afin d’assurer une transition fluide et sécurisée en
+                            fin de vie de l'application.</li>
+                    </ol>
+                </div>
+                <p>En suivant ces bonnes pratiques, les équipes peuvent garantir une meilleure maîtrise du cycle de vie
+                    de leurs applications, maximiser leur valeur ajoutée et assurer leur succès à long terme.</p>
+            </article>
+    </main>
+    <!-- BACK TO TOP -->
     <nav class="sub-navbar navbar navbar-expand bg-secondary py-1">
         <div class="container d-flex justify-content-center">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="#item1">Introduction</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#item12">Métiers</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#item2">Grandes étapes</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#item3">Cas pratique</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#item4">Conclusion</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#top">Début de page</a></li>
             </ul>
         </div>
     </nav>
-</header>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script>
+        const container = document.querySelector('.scrollable-container');
+        const timeline = container.querySelector('.timeline');
+        // on récupère dynamiquement la hauteur + margin + top
+        const topOffset = timeline.offsetHeight
+            + parseFloat(getComputedStyle(timeline).marginBottom)
+            + parseFloat(getComputedStyle(timeline).top);
 
-<main class="container mt-5">
+        container.querySelectorAll('.timeline-item').forEach(item => {
+            item.addEventListener('click', e => {
+                e.preventDefault();
+                const targetEl = document.getElementById(item.dataset.target);
+                if (!targetEl) return;
 
-    <article aria-label="headings">
-        <h1>Cycle de vie d'une application web</h1>
-      </article>
-      <br id="item1"><br>
+                const containerRect = container.getBoundingClientRect();
+                const targetRect = targetEl.getBoundingClientRect();
 
-<!-- Section Contexte et enjeux -->
-<section id="contexte-enjeux" class="section">
-    <h2>Introduction : Contexte et enjeux</h2>
+                // position brute dans le conteneur
+                const scrollY = (targetRect.top - containerRect.top) + container.scrollTop;
 
-    <p>
-      Dans un environnement numérique en constante évolution, la réussite d’une application web ne se limite pas à la qualité de son code : elle dépend avant tout de la manière dont on envisage et pilote chaque étape de son existence, depuis la compréhension des besoins jusqu’à son éventuel retrait de service. Le cycle de vie d’une application web constitue ainsi un cadre méthodologique essentiel, qui garantit non seulement une conception robuste et sécurisée, mais aussi une évolutivité maîtrisée et une rentabilité maximale.
-    </p>
-    <p>
-      Ce document s’adresse aux équipes de projet — chefs de produit, architectes, développeurs, DevOps, testeurs et UX/UI designers — souhaitant disposer d’une vision complète et intégrée des différentes phases du cycle de vie, ainsi que des bonnes pratiques et des indicateurs à suivre pour piloter efficacement leur projet. Nous y définissons le périmètre fonctionnel (front-end, back-end, infrastructure, qualité), le périmètre organisationnel (parties prenantes, livrables), et nous illustrons comment aligner les objectifs métiers et les indicateurs clés de performance (KPI) avec les exigences non-fonctionnelles (scalabilité, performance, sécurité, observabilité).
-    </p>
-    <p>
-      Cette introduction pose les fondations :
-    </p>
-
-    <h3>1. Définition et périmètre</h3>
-    <h4>Définition</h4>
-    <p>
-      Le cycle de vie d’une application web regroupe l’ensemble des étapes, de la conception initiale à la mise hors service, nécessaires pour garantir qu’un service en ligne répond durablement aux besoins métiers et utilisateurs.
-    </p>
-
-    <h4>Périmètre fonctionnel</h4>
-    <ul>
-      <li><strong>Front-end</strong> : expérience utilisateur, interfaces graphiques, accessibilité.</li>
-      <li><strong>Back-end</strong> : API, logique métier, persistance des données.</li>
-      <li><strong>Infrastructure</strong> : serveurs, conteneurs, plateformes cloud.</li>
-      <li><strong>Qualité</strong> : tests (unitaires, fonctionnels, performance), sécurité.</li>
-    </ul>
-
-    <h4>Périmètre organisationnel</h4>
-    <ul>
-      <li><strong>Parties prenantes</strong> : chefs de projet, product owners, équipes design, développement, DevOps et support.</li>
-      <li><strong>Artefacts clés</strong> : cahier des charges, user stories, schémas d’architecture, pipelines CI/CD, documentation vivante.</li>
-    </ul>
-    <p>
-      <strong>Exemple illustratif :</strong> pour un portail e‑commerce, le périmètre couvre le parcours visiteur (catalogue, panier), l’admin‑panel (gestion des produits), l’API de paiement, l’infrastructure (load‑balancer, base de données répliquée) et la conformité RGPD.
-    </p>
-
-    <h3>2. Objectifs métiers et KPI associés</h3>
-    <p>
-      Pour chaque projet, formaliser les objectifs métier et définir des indicateurs de performance (<abbr title="Key Performance Indicator">KPI</abbr>) permet un pilotage transparent et orienté résultats.
-    </p>
-    <p>
-      Un KPI (Key Performance Indicator) est une métrique quantifiable qui permet de mesurer l’efficacité d’une action, d’un projet ou d’un processus par rapport à un objectif défini.
-    </p><br>
-
-<!-- Bloc vidéo responsive -->
-<div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/Hag78PCXn9Y"
-      title="Le Key Performance Indicator (KPI)"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-  
-  <br>
-    <p>
-      Ci‑dessous un tableau de KPIs généraux, applicable à tout type d’application web :
-    </p>
-
-    <div class="table-responsive">
-      <table class="kpi-table">
-        <thead>
-          <tr>
-            <th>Objectif métier</th>
-            <th>KPI principal</th>
-            <th>Commentaire</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Améliorer l’engagement utilisateur</td>
-            <td>Taux d’utilisateurs actifs (DAU/MAU)</td>
-            <td>Ratio utilisateurs quotidiens / mensuels, indicateur de rétention</td>
-          </tr>
-          <tr>
-            <td>Optimiser la performance</td>
-            <td>Temps de chargement moyen (TTFB ou FCP)</td>
-            <td>Doit rester &lt; 300 ms pour le TTFB et &lt; 1 s pour le FCP</td>
-          </tr>
-          <tr>
-            <td>Garantir la fiabilité</td>
-            <td>Taux de disponibilité (uptime)</td>
-            <td>&ge; 99,9 % (SLA), suivi continu via monitoring</td>
-          </tr>
-          <tr>
-            <td>Réduire les erreurs</td>
-            <td>Nombre d’erreurs critiques (5xx, JS)</td>
-            <td>MTTR (Mean Time To Repair) : objectif &lt; 30 min</td>
-          </tr>
-          <tr>
-            <td>Assurer la sécurité</td>
-            <td>Nombre de vulnérabilités critiques</td>
-            <td>Scanner SAST/DAST mensuel, objectif 0 critiques ouvertes</td>
-          </tr>
-          <tr>
-            <td>Optimiser les coûts</td>
-            <td>Coût infra par utilisateur</td>
-            <td>Suivi via facturation cloud, comparer €/DAU</td>
-          </tr>
-          <tr>
-            <td>Améliorer la qualité du code</td>
-            <td>Taux de couverture de tests (%)</td>
-            <td>Cible &ge; 80 % (unitaires + intégration)</td>
-          </tr>
-          <tr>
-            <td>Renforcer l’accessibilité</td>
-            <td>Score de conformité WCAG (%)</td>
-            <td>Audit trimestriel, viser &ge; 90 %</td>
-          </tr>
-          <tr>
-            <td>Accélérer le déploiement</td>
-            <td>Lead time for changes</td>
-            <td>Temps médian entre commit et prod, objectif &lt; 1 h</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p class="astuce">
-      <strong>Astuce :</strong> pour chaque KPI, définissez un seuil chiffré clair (ex. uptime &ge; 99,9 %, couverture &ge; 80 %) et une fréquence de suivi (quotidien, hebdomadaire, mensuel).
-    </p>
-
-    <h3>3. Enjeux techniques (scalabilité, performance, sécurité…)</h3>
-    <p>
-      Les défis techniques garantissent que l’application reste fiable et maintenable face à la croissance et aux menaces.
-    </p>
-
-    <h4>Scalabilité</h4>
-    <ul>
-      <li><strong>Horizontale</strong> : ajouter des instances de service (containers, VM) derrière un load-balancer.</li>
-      <li><strong>Verticale</strong> : renforcer les ressources (CPU, RAM) d’un serveur.</li>
-    </ul>
-    <p><strong>Exemple :</strong> passer de 2 à 20 nœuds Docker avec Kubernetes pour absorber un pic de trafic pendant les soldes.</p>
-
-    <h4>Performance</h4>
-    <ul>
-      <li><strong>Temps de chargement</strong> : optimiser les assets (minification JS/CSS, lazy-loading images).</li>
-      <li><strong>Caching</strong> : front-end (Service Workers), back-end (Redis, Varnish).</li>
-      <li><strong>Tests de charge</strong> : utiliser JMeter ou k6 pour simuler 1 000 utilisateurs simultanés.</li>
-    </ul>
-
-    <h4>Sécurité</h4>
-    <ul>
-      <li><strong>Authentification & autorisation</strong> : OAuth2, JWT, RBAC.</li>
-      <li><strong>Protection des API</strong> : rate-limiting, WAF (Web Application Firewall).</li>
-      <li><strong>Chiffrement</strong> : TLS 1.2+, chiffrement des données au repos (AES-256).</li>
-      <li><strong>Audit & compliance</strong> : scans automatisés de vulnérabilités (SAST/DAST), revue périodique des dépendances (Dependabot).</li>
-    </ul>
-
-    <h4>Résilience et robustesse</h4>
-    <ul>
-      <li><strong>Haute disponibilité (HA)</strong> : déploiement multi-zone / multi-région, failover automatique.</li>
-      <li><strong>Tolérance aux pannes</strong> : stratégies de retry, circuit breaker pattern.</li>
-    </ul>
-
-    <h4>Observabilité</h4>
-    <ul>
-      <li><strong>Logging structuré</strong> : JSON logs centralisés (ELK Stack).</li>
-      <li><strong>Metric gathering</strong> : Prometheus + Grafana pour KPIs système et applicatifs.</li>
-      <li><strong>Tracing distribué</strong> : OpenTelemetry, Jaeger pour diagnostiquer les latences en production.</li>
-    </ul>
-
-    <p>
-      À l’issue de cette mise en contexte, nous détaillerons les <strong>grandes étapes du cycle de vie. Mais voyons d'abord quels sont les métiers impliqués dans le cycle de vie.</strong>.
-    </p>
-  </section>
-
-<!-- ROLES ET RESPONSABILITES -->
-<section id="item12" class="section my-5">
-    <h2>Métiers : Rôles et Responsabilités</h2><br>
-  
-    <!-- illustration -->
-    <div class="role-illustration">
-      <img src="img/img-cycle/brainStorming.jpg"
-           alt="Brainstorming cycle de vie"
-           class="img-fluid" />
-    </div>
-  <br>
-    <!-- grille de cards -->
-    <div class="roles-grid">
-      <div class="role-card">
-        <h3>Chef de projet</h3>
-        <p>Responsable de la gestion des coûts et de l’efficacité des ressources, il veille à ce que les projets contribuent positivement au CA en respectant délais et budgets.</p>
-      </div>
-      <div class="role-card">
-        <h3>UX Designer</h3>
-        <p>Améliore l’expérience utilisateur pour augmenter la satisfaction, la fidélisation et les conversions, réduisant le taux d’abandon.</p>
-      </div>
-      <div class="role-card">
-        <h3>UI Designer</h3>
-        <p>Optimise l’esthétique et l’ergonomie de l’interface, encourage l’engagement et influence la perception de valeur du produit.</p>
-      </div>
-      <div class="role-card">
-        <h3>Architecte logiciel</h3>
-        <p>Conçoit des architectures performantes et évolutives, réduisant les coûts de maintenance et améliorant la rentabilité.</p>
-      </div>
-      <div class="role-card">
-        <h3>Développeur</h3>
-        <p>Implémente les fonctionnalités et optimise les performances, garantissant un produit solide susceptible de générer des revenus.</p>
-      </div>
-      <div class="role-card">
-        <h3>Testeur QA</h3>
-        <p>Assure la qualité et la fiabilité via tests, réduisant les coûts de correction de bugs et protégeant le CA.</p>
-      </div>
-      <div class="role-card">
-        <h3>DevOps</h3>
-        <p>Automatise les déploiements et gère l’infrastructure pour améliorer disponibilité et rapidité des mises à jour.</p>
-      </div>
-      <div class="role-card">
-        <h3>Administrateur système</h3>
-        <p>Garantit la sécurité et la stabilité des serveurs et bases de données pour éviter les interruptions de service.</p>
-      </div>
-      <div class="role-card">
-        <h3>Support technique</h3>
-        <p>Fournit une assistance client efficace, améliorant la fidélisation et réduisant le churn.</p>
-      </div>
-      <div class="role-card">
-        <h3>Équipes légales</h3>
-        <p>Veillent à la conformité RGPD et aux contrats, protégeant l’entreprise des risques juridiques et amendes.</p>
-      </div>
-    </div>
-  </section>
-  
-
-
-  
-
-
-<div class="scrollable-container" id="item2">
-
-    <article>
-      <br>
-        <h2>Les grandes étapes du cycle de vie</h2><br>
-        <div class="timeline">
-            <div class="timeline-item" data-target="analyse">Analyse des besoins</div>
-            <div class="timeline-item" data-target="conception">Conception et planification</div>
-            <div class="timeline-item" data-target="developpement">Développement</div>
-            <div class="timeline-item" data-target="deploiement">Déploiement</div>
-            <div class="timeline-item" data-target="maintenance">Maintenance et évolutions</div>
-            <div class="timeline-item" data-target="decommissionnement">Décommissionnement<div class="triangle"></div>
-            </div>
-          </div>
-
-      <br>
-    
-        <!-- Analyse des besoins -->
-        <section id="analyse" class="my-5">
-            <h2>
-                <img src="img/img-cycle/microscope.png" alt="icon analyse" class="img-fluid" style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
-                Analyse des besoins
-            </h2>
-            <p>La première étape du cycle de vie consiste à analyser les besoins des utilisateurs et à définir les objectifs 
-                de l'application. Cette phase implique la compréhension du public cible, des exigences métiers et des contraintes 
-                techniques. L'objectif est de poser les bases du projet en identifiant les fonctionnalités clés et en précisant 
-                les attentes des utilisateurs finaux. Une bonne analyse permet d’éviter des erreurs de conception et de s’assurer 
-                que le produit final répondra aux attentes.
-            </p>
-            <p><b>Acteurs : Chefs de projet, UX/UI designers.</b></p>
-        </section>
-    
-        <!-- Conception et planification -->
-        <section id="conception" class="my-5">
-            <h2>
-                <img src="img/img-cycle/time-and-calendar.png" alt="icon conception" class="img-fluid" style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
-                Conception et planification</h2>
-            <p>Une fois les besoins définis, on passe à la conception du projet. Cette étape inclut la création des maquettes
-                 visuelles, le choix des technologies à utiliser et la définition de l’architecture du système. L'architecture 
-                 logicielle et le design technique sont planifiés pour s'assurer que l'application soit performante et évolutive.
-                  La planification détaillée permet de structurer le travail à venir et de coordonner efficacement l'équipe.</p>
-                  <p><b> Acteurs : Chefs de projet, UX/UI designers, architectes logiciels, développeurs.</b> </p>
-        </section>
-    
-        <!-- Développement -->
-        <section id="developpement" class="my-5">
-            <h2>
-                <img src="img/img-cycle/marteau.png" alt="icon developpement" class="img-fluid" style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
-                Développement
-            </h2>
-            <p>Le développement consiste à transformer les maquettes et les spécifications en un produit fonctionnel.
-                 Les développeurs écrivent le code source pour implémenter les fonctionnalités, tout en garantissant la qualité 
-                 du code par des tests unitaires et fonctionnels. L'intégration continue est souvent utilisée pour automatiser 
-                 le processus de tests et de mise à jour du code. Cette étape est essentielle pour s'assurer que le produit 
-                 respecte les exigences fonctionnelles et qu’il est stable.</p>
-              <p><b>Acteurs : Développeurs, testeurs QA, DevOps.</b></p>
-        </section>
-          <!-- Déploiement -->
-    <section id="deploiement" class="my-5">
-      <h2>
-        <img src="img/img-cycle/lancement-du-projet.png" alt="icon déploiement" class="img-fluid" style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
-        Déploiement
-    </h2>
-      <p>Une fois l’application développée, elle doit être mise en production. Cela inclut la configuration des serveurs,
-         la gestion des bases de données et le suivi des performances en temps réel. Les outils de monitoring permettent 
-         de détecter rapidement tout problème après la mise en ligne. Le déploiement se fait souvent en plusieurs étapes 
-         pour s’assurer que l’application fonctionne correctement dans l’environnement de production sans interruptions pour 
-         les utilisateurs.</p>
-        <p><b>  Acteurs : DevOps, administrateurs système, chefs de projet.</b> </p>
-  </section>
-
-  <!-- Maintenance et évolutions -->
-  <section id="maintenance" class="my-5">
-      <h2>
-        <img src="img/img-cycle/maintenance.png" alt="icon maintenance" class="img-fluid" style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
-        Maintenance et évolutions
-    </h2>
-      <p>Après le déploiement, il est important d’assurer une maintenance continue pour corriger les bugs, effectuer des 
-        mises à jour de sécurité et optimiser les performances. Les feedbacks utilisateurs sont collectés pour améliorer 
-        l'application, en ajoutant de nouvelles fonctionnalités ou en ajustant les fonctionnalités existantes. 
-        Cette phase permet de garantir la pérennité et l’évolution de l’application tout au long de sa vie. </p>
-        <p><b>   Acteurs : Développeurs, testeurs QA, support technique.</b> </p>
-  </section>
-
-  <!-- Décommissionnement -->
-  <section id="decommissionnement" class="my-5">
-      <h2>
-        <img src="img/img-cycle/corbeille-a-papier.png" alt="icon decommissionnement" class="img-fluid" style="width: 64px; height: auto; margin-right: 20px; vertical-align: middle;">
-        Décommissionnement
-    </h2>
-      <p>Le décommissionnement intervient lorsque l'application arrive à la fin de sa vie ou lorsque son service n’est 
-        plus nécessaire. Cette phase comprend l'arrêt progressif des services, la migration des utilisateurs vers une nouvelle 
-        solution et la suppression sécurisée des données. Il est essentiel de respecter les normes légales et les exigences
-         de sécurité, comme le RGPD, pour garantir que toutes les données sensibles sont correctement supprimées.</p>
-        <p><b>Acteurs : Chefs de projet, administrateurs système, équipes légales.</b> </p>
-  </section>
-
-
-</div>  
-
-
-
-
-</div>
-
-  <article id="item3">
-    <h2>Illustrations et cas pratiques
-      </h2><br>
-      <h3>3.a Exemple concret du cycle de vie d’un site e-commerce</h3>
-
-      <p><strong>Après les phases de recherche de contenus (textes et visuels) puis l’élaboration d’un plan de site avec sa structure :</strong></p><br>
-      
-      <div class="row">
-        <div class="col-md-6">
-            <ol>
-                <li>Choisir un nom de domaine et un hébergeur de qualité</li><br>
-                <li>Développement & Conception du site</li><br>
-                <li>Phases de test en développement</li><br>
-                <li>Mise en ligne du site</li><br>
-                <li>Nouveaux tests après la mise en production du site</li><br>
-                <li>Faire connaître son site dans les moteurs de recherche (SEO)</li><br>
-                <li>Lier son site aux réseaux sociaux</li><br>
-            </ol>
-        </div>
-        <div class="col-md-6">
-            <ol start="8">
-                <li>Actualiser son site, faire vivre son site, ajouter de nouveaux contenus régulièrement</li><br>
-                <li>Faire la maintenance de son site : mises à jour techniques et suivi rigoureux</li><br>
-                <li>Après deux ans, faire des évolutions sur son site Internet</li><br>
-                <li>Mettre à jour les contenus, toujours travailler son référencement</li><br>
-                <li>Après trois ans, faire une mise à jour majeure du site</li><br>
-                <li>Après quatre ans, penser à la refonte du site Internet</li><br>
-                <li>À 5 ans, un nouveau cycle de vie commence après la refonte</li><br>
-            </ol>
-        </div>
-    </div>
-      <div class="container text-center mt-5">
-        <p><strong>Cycle de vie d'un site e-commerce</strong></p>
-        <div class="d-flex justify-content-center mt-4">
-            <img src="img/img-cycle/cycledevie.webp" class="img-thumbnail" alt="Cycle de vie" style="max-width: 50vw; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal">
-        </div>
-    </div>
-    
-<!-- Modale pour zoomer en plein écran -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-fullscreen">
-  <div class="modal-content">
-      <div class="modal-header border-0">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-      </div>
-      <div class="modal-body d-flex justify-content-center align-items-center p-0">
-          <img src="img/img-cycle/cycledevie.webp" class="img-fluid" alt="Cycle de vie"
-               style="width: 100vw; height: 100vh; object-fit: contain;">
-      </div>
-  </div>
-</div>
-</div>
-      <br><br>
-      <h3>3b. Les principaux écueils d’un cycle de vie mal maîtrisé</h3><br><br>
-
-      <div class="row">
-        <div class="col-md-6">
-            <ol>
-                <li>Isoler un projet Web de la stratégie de l’entreprise le condamne à l’échec, car celui-ci est l’extension de la stratégie de l’entreprise.</li><br>
-                <li>Un projet informatique est très souvent sous-estimé et dérive quasi systématiquement. C’est pourquoi il est indispensable de planifier la conception d’un vrai MVP (Minimum Viable Product) pour éprouver le cœur du projet. Cela permet par exemple d’éviter de développer de grandes fonctionnalités qui se révèlent être inutiles.</li><br>
-                <li>Le manque de tests est un autre écueil en matière de développement. Ils sont souvent mis de côté en raison de contraintes de temps ou de budget. Selon une étude de Google, environ 60 % des utilisateurs supprimeront une application mobile ou quitteront un site web mobile après une seule expérience décevante.</li><br>
-            </ol>
-        </div>
-        <div class="col-md-6">
-            <ol start="4">
-                <li>Il faut savoir terminer un projet : on peut être tenté de vouloir avoir le « site parfait » pour la mise en ligne. Pourtant, en faisant cela, on ne fait que retarder cette mise en ligne. Il vaut mieux phaser l’implémentation de nouvelles fonctionnalités et profiter d’une présence en ligne plus tôt.</li><br>
-                <li>Une mauvaise communication entre les équipes de développement peut être préjudiciable : on peut ainsi assister au cloisonnement des équipes en charge des applications, du réseau et de la sécurité.</li>
-            </ol>
-        </div>
-    </div>
-<br><br>
-
-
-
-<article id="item4">
-    <h2>Conclusion</h2><br>
-    <h3>Synthèse et importance de chaque phase</h3>
-    <p><strong>Le cycle de vie d’une application web est composé d’étapes distinctes et complémentaires, chacune essentielle à la réussite globale du projet.</strong></p>
-    <div class="row">
-        <ul class="col-md-6">
-            <li><strong>Analyse des besoins :</strong> permet de cerner précisément les attentes et les contraintes, constituant la base solide du projet.</li>
-            <li><strong>Conception et planification :</strong> garantit que l’architecture et les choix technologiques soient adaptés et viables à long terme.</li>
-            <li><strong>Développement :</strong> renforcé par des tests et une intégration continue, assure la qualité et la robustesse du produit.</li>
-        </ul>
-        <ul class="col-md-6">
-            <li><strong>Déploiement :</strong> doit être minutieusement exécuté afin d’assurer la stabilité et la sécurité de l’application en production.</li>
-            <li><strong>Maintenance et évolutions :</strong> permettent d’adapter continuellement l’application aux besoins changeants et d'assurer sa pérennité.</li>
-            <li><strong>Décommissionnement :</strong> joue un rôle crucial dans la gestion responsable des ressources et la sécurité des données.</li>
-        </ul>
-    </div>
-    <p>La négligence d'une seule de ces phases peut avoir des conséquences graves sur la qualité finale de l’application, sur l’expérience utilisateur, mais aussi sur la viabilité économique du projet.</p><br>
-    
-    <h3>Meilleures pratiques pour optimiser le cycle de vie</h3>
-    <p><strong>Pour optimiser le cycle de vie d'une application web, il est conseillé d'adopter les meilleures pratiques suivantes :</strong></p>
-    <div class="row">
-        <ol class="col-md-6">
-            <li><strong>Gestion rigoureuse du projet :</strong> Utiliser des méthodologies telles qu’Agile ou Scrum pour faciliter la flexibilité et améliorer la réactivité face aux changements.</li>
-            <li><strong>Documentation exhaustive :</strong> Maintenir une documentation claire et actualisée à chaque phase pour faciliter la communication entre équipes et assurer la continuité des connaissances.</li>
-            <li><strong>Automatisation et intégration continue (CI/CD) :</strong> Mettre en place des processus automatisés de tests et de déploiement pour réduire les erreurs humaines et accélérer les mises en production.</li>
-        </ol>
-        <ol class="col-md-6">
-            <li><strong>Monitoring et veille technique :</strong> Surveiller régulièrement les performances et la sécurité de l’application pour identifier rapidement les problèmes et anticiper les risques.</li>
-            <li><strong>Approche centrée utilisateur :</strong> Impliquer les utilisateurs finaux tout au long du cycle, particulièrement lors des phases de conception et de validation, pour s’assurer que l’application répond efficacement à leurs attentes.</li>
-            <li><strong>Planification stratégique du décommissionnement :</strong> Préparer dès le départ une stratégie de sortie ou de migration afin d’assurer une transition fluide et sécurisée en fin de vie de l'application.</li>
-        </ol>
-    </div>
-    <p>En suivant ces bonnes pratiques, les équipes peuvent garantir une meilleure maîtrise du cycle de vie de leurs applications, maximiser leur valeur ajoutée et assurer leur succès à long terme.</p>
-</article> 
-</main>
-<!-- BACK TO TOP -->
-<nav class="sub-navbar navbar navbar-expand bg-secondary py-1">
-<div class="container d-flex justify-content-center">
-  <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link text-white" href="#top">Début de page</a></li>
-  </ul>
-</div>
-</nav>
-<!-- Bootstrap Bundle JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="main.js"></script>
-<script>
-    const container = document.querySelector('.scrollable-container');
-    const timeline  = container.querySelector('.timeline');
-    // on récupère dynamiquement la hauteur + margin + top
-    const topOffset = timeline.offsetHeight
-                    + parseFloat(getComputedStyle(timeline).marginBottom)
-                    + parseFloat(getComputedStyle(timeline).top);
-  
-    container.querySelectorAll('.timeline-item').forEach(item => {
-      item.addEventListener('click', e => {
-        e.preventDefault();
-        const targetEl = document.getElementById(item.dataset.target);
-        if (!targetEl) return;
-  
-        const containerRect = container.getBoundingClientRect();
-        const targetRect    = targetEl.getBoundingClientRect();
-  
-        // position brute dans le conteneur
-        const scrollY = (targetRect.top - containerRect.top) + container.scrollTop;
-  
-        // on enlève le topOffset pour que le titre n’aille pas sous la frise
-        container.scrollTo({
-          top: scrollY - topOffset,
-          behavior: 'smooth'
+                // on enlève le topOffset pour que le titre n’aille pas sous la frise
+                container.scrollTo({
+                    top: scrollY - topOffset,
+                    behavior: 'smooth'
+                });
+            });
         });
-      });
-    });
-  </script>
+    </script>
+    <script>
+        document.querySelectorAll('.role-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const title = card.getAttribute('data-title')
+            const content = card.getAttribute('data-content')
+            document.getElementById('processModalLabel').textContent = title
+            document.getElementById('processModalContent').textContent = content
+            new bootstrap.Modal(document.getElementById('processModal')).show()
+          })
+        })
+      </script>
 </body>
+
 </html>
