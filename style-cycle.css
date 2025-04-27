@@ -1,0 +1,208 @@
+/* Conteneur scrollable */
+.scrollable-container {
+    max-height: 70vh;
+    overflow-y: auto;
+    position: relative;    /* nécessaire pour le ::after */
+    scroll-behavior: smooth;
+  }
+  .scrollable-container .timeline {
+    /* votre CSS existant… */
+    position: sticky;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: white;
+    padding: 10px 0;
+    height: 50px;
+    margin: 0 0 10px;
+  }
+  
+  /* 3) Le pseudo-élément qui étend le fond blanc au-dessus */
+  .scrollable-container .timeline::before {
+    content: '';
+    position: absolute;
+    top: -10px;     /* exactement 10px au-dessus de la frise */
+    left: 0;
+    right: 0;
+    height: 10px;   /* la même valeur que votre top */
+    background: white;
+  }
+  
+  /* on ajoute un ::after qui va couvrir les premiers pixels de texte sous la frise */
+  .scrollable-container .timeline::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;   /* étend le gradient 20px sous la frise */
+    left: 0;
+    right: 0;
+    height: 20px;    /* hauteur du gradient */
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,0) 100%
+    );
+    pointer-events: none; /* laisse passer les clics au contenu en dessous */
+    z-index: 0;         /* au même niveau que la frise */
+  }
+          .timeline {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              position: relative;
+              margin: 20px 0;
+              padding: 30px 20px 20px 20px;
+              height: 50px; /* Hauteur de la frise */
+              background: white;      /* ou la couleur de votre choix */
+              z-index: 100;            /* pour qu’elle reste au-dessus du contenu */
+          }
+          .timeline-item {
+              flex: 1; /* Prend une part égale de l'espace */
+              text-align: center;
+              position: relative;
+              background: #007bff; /* Couleur par défaut */
+              color: white;
+              padding: 10px 0;
+              transition: background 0.3s, transform 0.3s; /* Ajoute une transition douce */
+              border: none; /* Enlève les bordures */
+              cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */  
+              z-index: 100;
+          }
+          .timeline-item:hover {
+              background: #0056b3; /* Couleur au survol */
+              transform: scale(1.05); /* Agrandit légèrement le bouton au survol */
+          }
+          .timeline-item:nth-child(1) {
+              background: #28a745; /* Couleur pour Analyse des besoins */
+          }
+          .timeline-item:nth-child(2) {
+              background: #ffc107; /* Couleur pour Conception et planification */
+          }
+          .timeline-item:nth-child(3) {
+              background: #17a2b8; /* Couleur pour Développement */
+          }
+          .timeline-item:nth-child(4) {
+              background: #dc3545; /* Couleur pour Déploiement */
+          }
+          .timeline-item:nth-child(5) {
+              background: #6f42c1; /* Couleur pour Maintenance et évolutions */
+          }
+          .timeline-item:nth-child(6) {
+              background: #fd7e14; /* Couleur pour Décommissionnement */
+              position: relative; /* Nécessaire pour le triangle */
+          }
+          .triangle {
+              content: '';
+              position: absolute;
+              right: -15px; /* Ajustez cette valeur si nécessaire */
+              top: 50%;
+              transform: translateY(-50%);
+              width: 0;
+              height: 0;
+              border-left: 20px solid #fd7e14; /* Largeur du triangle */
+              border-top: 35px solid transparent;
+              border-bottom: 35px solid transparent;
+              z-index: 100;
+          }
+  
+          .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .kpi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+  
+    th, td {
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+  
+    th {
+      border-bottom: 2px solid #333;
+    }
+  }
+  
+  /* Styles pour intégrer proprement vidéo YouTube */
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* ratio 16:9 */
+    margin: 1em 0;
+  }
+  
+  /* Conteneur responsive pour les iframes YouTube */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    margin: 1em 0;
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+
+/* ===== roles grid & cards ===== */
+.role-illustration {
+    text-align: center;
+    margin-bottom: 2rem;
+  
+    img {
+      max-width: 70vw;
+      max-height: 70vh;
+      object-fit: contain;
+    }
+  }
+  
+  .roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .role-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+  
+    p {
+      margin: 0;
+      line-height: 1.5;
+      color: #555;
+    }
+  
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+  }
+  .role-illustration {
+    width: 100%;          /* prend la largeur du container parent */
+    margin: 0 auto;       /* centré si le container a une max-width */
+    overflow: hidden;
+  }
+  
+  .role-illustration img {
+    display: block;
+    width: 100%;          /* 100% de .role-illustration, donc aligné avec le texte */
+    height: 40vh;         /* hauteur fixe */
+    object-fit: cover;    /* remplit sans déformation */
+  }
