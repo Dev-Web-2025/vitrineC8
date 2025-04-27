@@ -12,6 +12,84 @@
 </head>
 
 <body>
+
+  <!-- Templates pour modales -->
+  <template id="tmpl-devsecops">
+    <p>DevSecOps (contraction de <strong>Development</strong>, <strong>Security</strong> et <strong>Operations</strong>) désigne une approche et une culture qui intègrent la sécurité dès le début et de façon continue dans le cycle de vie du développement logiciel.</p>
+    <p><strong>Principe « shift-left »</strong> : au lieu de traiter la sécurité uniquement en fin de projet (phase « validation »), on la déplace vers la phase de conception et de développement.</p>
+    <p><strong>Automatisation des contrôles</strong> : on intègre des outils de sécurité (SAST, DAST, analyse de dépendances, scans d’infrastructure as code) directement dans le pipeline CI/CD afin de détecter et corriger les vulnérabilités en continu.</p>
+    <p><strong>Collaboration transversale</strong> : développeurs, équipes sécurité et opérations travaillent de concert, partagent des responsabilités et des indicateurs, et adoptent des processus communs (revues de code, tests de penetration automatisés, gestion des secrets, etc.).</p>
+  </template>
+  <template id="tmpl-observabilite">
+    <p><strong>Logging structuré</strong> : JSON logs centralisés (ELK Stack).</p>
+    <p><strong>Metric gathering</strong> : Prometheus + Grafana pour KPIs système et applicatifs.</p>
+    <p><strong>Tracing distribué</strong> : OpenTelemetry, Jaeger pour diagnostiquer les latences en production.</p>
+  </template>
+  <template id="tmpl-qualite-tests">
+    <p>La qualité logicielle désigne l’ensemble des pratiques et contrôles mis en œuvre pour garantir que l’application répond aux exigences fonctionnelles et non fonctionnelles, tout en restant fiable, maintenable et performante.</p>
+    <p><strong>Tests unitaires</strong> : vérifient chaque unité de code (fonctions, méthodes) isolément pour s’assurer qu’elles se comportent comme prévu.</p>
+    <p><strong>Tests d’intégration</strong> : valident la coopération entre plusieurs composants ou modules (API, bases de données, services externes).</p>
+    <p><strong>Tests end-to-end (E2E)</strong> : simulent des parcours utilisateur complets (avec Cypress, Playwright…) pour s’assurer de la cohérence fonctionnelle de bout en bout.</p>
+    <p><strong>Tests de performance</strong> : utilisent des outils comme k6 ou JMeter pour mesurer la charge, la latence et l’évolutivité sous stress.</p>
+    <p><strong>Tests de non-régression</strong> : s’exécutent automatiquement à chaque changement (CI) pour détecter les effets secondaires indésirables.</p>
+    <p>En intégrant ces tests dans un pipeline CI/CD, on s’assure d’une livraison continue sans régression et d’une montée en charge maîtrisée.</p>
+  </template>
+  <template id="tmpl-dette-technique">
+    <p>La <strong>dette technique</strong> (ou <em>technical debt</em>) désigne l’ensemble des compromis faits volontairement (ou non) pendant le développement : choix rapides, raccourcis architecturaux, code non-optimisé ou absence de tests et documentation.</p>
+    <p>Ces raccourcis permettent des livraisons plus rapides à court terme, mais génèrent un « intérêt » sous forme de complexité accrue, de bugs fréquents et de coûts de maintenance plus élevés.</p>
+    <p><strong>Exemples :</strong></p>
+    <ul>
+      <li>Code dupliqué sans factorisation, nécessitant des correctifs multiples.</li>
+      <li>Absence de tests automatisés, augmentant le risque de régression.</li>
+      <li>Documentation incomplète, ralentissant l’onboarding de nouveaux développeurs.</li>
+    </ul>
+    <p><strong>Comment la gérer ?</strong> Mesurer avec SonarQube, allouer un pourcentage de chaque sprint au refactoring, maintenir une documentation vivante et pratiquer la revue de code.</p>
+  </template>
+  <template id="tmpl-cloud-scalabilite">
+    <p>La <strong>cloud-native architecture</strong> permet de déployer et gérer vos applications de façon élastique et résiliente.</p>
+    <p><strong>Infrastructure as Code (IaC)</strong> : décrivez et versionnez votre infrastructure comme du code (Terraform, Ansible, Pulumi).</p>
+    <p><strong>Autoscaling</strong> : configurez des règles (CPU, RAM, queue length) pour ajuster le nombre de nœuds selon la demande.</p>
+    <p><strong>Multi-région &amp; CDN</strong> : répartissez vos services pour garantir disponibilité et latence minimale.</p>
+    <p><strong>Stratégies de déploiement</strong> (blue/green, canary) : minimise les interruptions et permet un rollback rapide.</p>
+  </template>
+  <template id="tmpl-accessibilite-ux">
+    <p><strong>Audits WCAG</strong> : évalue la conformité aux standards A, AA, AAA via axe-core, Lighthouse.</p>
+    <p><strong>Référentiel RGAA 4.1</strong> : norme française pour les services publics, alignée sur WCAG.</p>
+    <p><strong>Loi n° 2005-102</strong> : impose l’accessibilité aux organisations publiques.</p>
+    <p><strong>Score Lighthouse</strong> : audit automatisé en CI pour accessibilité et performance.</p>
+    <p><strong>A/B testing &amp; heatmaps</strong> : valide UX et détecte zones d’abandon (Hotjar).</p>
+  </template>
+  <template id="tmpl-seo-pwa">
+    <p><strong>SEO</strong> regroupe les techniques d’optimisation pour les moteurs de recherche : balises &lt;title&gt;, &lt;meta description&gt;, données structurées (JSON-LD), HTTPS, sitemap.xml, robots.txt et Core Web Vitals (LCP, FID, CLS).</p>
+    <p><strong>PWA</strong> (Progressive Web App) offre une expérience native : manifest.json pour Add to Home Screen, Service Worker pour offline-first et push, stratégies de caching, HTTPS requis.</p>
+    <p>Combiner SEO et PWA maximise votre portée organique et l’engagement utilisateur.</p>
+  </template>
+  <template id="tmpl-feedback-support">
+    <p>Le <strong>feedback</strong> et le <strong>support</strong> constituent le lien direct avec vos utilisateurs finaux pour recueillir leurs retours et garantir leur satisfaction :</p>
+    <ul>
+      <li><strong>SLA & support dédié</strong> : définissez des niveaux de service (temps de réponse, heures de disponibilité) et mettez en place une équipe de support (helpdesk, chat, ticketing).</li>
+      <li><strong>Base de connaissances & FAQ</strong> : centralisez guides, tutoriels, et bonnes pratiques pour permettre aux utilisateurs de résoudre eux-mêmes leurs problèmes.</li>
+      <li><strong>Sondages in-app & NPS</strong> : intégrez des enquêtes de satisfaction (CSAT, NPS) directement dans l’application pour mesurer la fidélité et identifier les points d’amélioration.</li>
+      <li><strong>Chatbots & assistance automatisée</strong> : déployez des assistants virtuels pour répondre aux questions fréquentes et orienter les utilisateurs vers le support humain si nécessaire.</li>
+      <li><strong>Analytics & verbatim</strong> : analysez les données de tickets, les logs de chat et les commentaires pour détecter tendances, problèmes récurrents et opportunités d’optimisation.</li>
+    </ul>
+    <p>En structurant votre boucle de feedback et en automatisant les premiers niveaux de support, vous améliorez l’expérience utilisateur tout en réduisant les coûts de maintenance et de support.</p>
+  </template>
+  <template id="tmpl-fin-vie">
+    <p>La <strong>phase de fin de vie</strong> intervient lorsque l’application ou un service n’est plus maintenu ou doit être remplacé :</p>
+    <ul>
+      <li><strong>Plan de migration</strong> : élaborez un chemin de transition pour déplacer utilisateurs et données vers la nouvelle solution sans interruption de service.</li>
+      <li><strong>Archivage sécurisé</strong> : définissez une politique de rétention des données, cryptez et stockez les archives dans un système conforme aux normes légales (RGPD, ISO 27001).</li>
+      <li><strong>Audit post-mortem</strong> : analysez le projet (succès, échecs, enseignements) pour capitaliser sur les bonnes pratiques et éviter les erreurs futures.</li>
+      <li><strong>Communication</strong> : informez les parties prenantes et utilisateurs finaux des échéances, modalités de transition et points de contact.</li>
+      <li><strong>Nettoyage des ressources</strong> : supprimez les environnements de test et de production obsolètes pour libérer les ressources et réduire les coûts.</li>
+    </ul>
+    <p>En prévoyant dès la conception une stratégie de fin de vie, vous garantissez une transition fluide, une conformité réglementaire et une optimisation des ressources.</p>
+  </template>
+
+
+
+
     <header class="fixed-top">
         <!-- Barre de navigation principale -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
@@ -265,100 +343,64 @@
                 <li><strong>Tolérance aux pannes</strong> : stratégies de retry, circuit breaker pattern.</li>
             </ul>
 
-            <h4>Observabilité</h4>
-            <ul>
-                <li><strong>Logging structuré</strong> : JSON logs centralisés (ELK Stack).</li>
-                <li><strong>Metric gathering</strong> : Prometheus + Grafana pour KPIs système et applicatifs.</li>
-                <li><strong>Tracing distribué</strong> : OpenTelemetry, Jaeger pour diagnostiquer les latences en
-                    production.</li>
-            </ul>
 
-            <p>
-                À l’issue de cette mise en contexte, nous détaillerons les <strong>grandes étapes du cycle de vie. Mais
-                    voyons d'abord quels sont les métiers impliqués dans le cycle de vie.</strong>.
-            </p>
         </section>
 
-
-
-
-
-
-<!-- juste après la fin de la section #contexte-enjeux -->
+<!-- Section Processus transverses -->
 <section id="item1b" class="section my-5">
-    <h2>Processus transverses & bonnes pratiques</h2>
+    <h2>Processus transverses & bonnes pratiques</h2><br>
     <div class="roles-grid">
-
-        <div class="role-card clickable"
-        data-title="DevSecOps"
-        data-content="
-          <p>DevSecOps (contraction de <strong>Development</strong>, <strong>Security</strong> et <strong>Operations</strong>) désigne une approche et une culture qui intègrent la sécurité dès le début et de façon continue dans le cycle de vie du développement logiciel.</p>
-          <p><strong>Principe « shift-left »</strong> : au lieu de traiter la sécurité uniquement en fin de projet (phase « validation »), on la déplace vers la phase de conception et de développement.</p>
-          <p><strong>Automatisation des contrôles</strong> : on intègre des outils de sécurité (SAST, DAST, analyse de dépendances, scans d’infrastructure as code) directement dans le pipeline CI/CD afin de détecter et corriger les vulnérabilités en continu.</p>
-          <p><strong>Collaboration transversale</strong> : développeurs, équipes sécurité et opérations travaillent de concert, partagent des responsabilités et des indicateurs, et adoptent des processus communs (revues de code, tests de penetration automatisés, gestion des secrets, etc.).</p>
-        ">
-     <h3>DevSecOps</h3>
-     <p>DevSecOps : une culture qui intègre la sécurité dès le début du cycle de vie…</p>
-   </div>
-   
-
-
-      <div class="role-card clickable"
-           data-title="Observabilité"
-           data-content="Mettez en place des logs structurés (ELK), du tracing distribué (OpenTelemetry), des dashboards Grafana et un alerting SLO/SLA pour piloter en continu.">
+      <div class="role-card clickable" data-title="DevSecOps" data-template="devsecops">
+        <h3>DevSecOps</h3>
+        <p>Culture sécurité continue…</p>
+      </div>
+      <div class="role-card clickable" data-title="Observabilité" data-template="observabilite">
         <h3>Observabilité</h3>
-        <p>Logs structurés (ELK), tracing distribué (OpenTelemetry)…</p>
+        <p>Logs, métriques, tracing…</p>
       </div>
-      <div class="role-card clickable"
-           data-title="Qualité & tests"
-           data-content="Tests unitaires, end-to-end (Cypress), performance (k6) et linting en pipeline CI pour garantir fiabilité et non-régression.">
+      <div class="role-card clickable" data-title="Qualité & tests" data-template="qualite-tests">
         <h3>Qualité & tests</h3>
-        <p>Tests unitaires, E2E (Cypress), performance (k6)…</p>
+        <p>Unitaires, E2E, performance…</p>
       </div>
-      <div class="role-card clickable"
-           data-title="Dette technique"
-           data-content="La dette technique (ou technical debt) désigne l’ensemble des compromis faits volontairement (ou non) pendant le développement : code non-optimisé, absence de tests ou de documentation… Ces raccourcis génèrent un ‘intérêt’ qui nécessite du refactoring ultérieur.">
+      <div class="role-card clickable" data-title="Dette technique" data-template="dette-technique">
         <h3>Dette technique</h3>
-        <p>Mesurez-la via SonarQube, planifiez des sprints de refactoring…</p>
+        <p>Compromis, refactoring…</p>
       </div>
-      <div class="role-card clickable"
-           data-title="Cloud & Scalabilité"
-           data-content="Infrastructure as Code (Terraform), autoscaling, multi-région, CDN et stratégies blue/green ou canary pour des déploiements fiables et élastiques.">
+      <div class="role-card clickable" data-title="Cloud & Scalabilité" data-template="cloud-scalabilite">
         <h3>Cloud & Scalabilité</h3>
-        <p>IaC (Terraform), autoscaling, multi-région…</p>
+        <p>IaC, autoscaling…</p>
       </div>
-      <div class="role-card clickable"
-           data-title="Accessibilité & UX"
-           data-content="Audits WCAG, score Lighthouse, A/B testing et heatmaps pour optimiser parcours et conformité aux normes d’accessibilité.">
+      <div class="role-card clickable" data-title="Accessibilité & UX" data-template="accessibilite-ux">
         <h3>Accessibilité & UX</h3>
-        <p>Audits WCAG, score Lighthouse, A/B testing…</p>
+        <p>WCAG, RGAA, heatmaps…</p>
       </div>
-      <div class="role-card clickable"
-           data-title="SEO & PWA"
-           data-content="SSR/SSG (Gatsby, Next.js), optimisation des métadonnées, Core Web Vitals et service workers pour un site rapide et offline-friendly.">
-        <h3>SEO & PWA</h3>
-        <p>SSR/SSG (Gatsby, Next.js), métadonnées, Core Web Vitals…</p>
+      <div class="role-card clickable" data-title="SEO & PWA" data-template="seo-pwa">
+        <h3>SEO &amp; PWA</h3>
+        <p>SEO, PWA…</p>
       </div>
-      <div class="role-card clickable"
-           data-title="Feedback & Support"
-           data-content="Mettez en place SLA/support, base de connaissances, sondages in-app et chatbots pour collecter le feedback et améliorer l’expérience utilisateur.">
+      <div class="role-card clickable" data-title="Feedback & Support" data-template="feedback-support">
         <h3>Feedback & Support</h3>
-        <p>SLA/support, base de connaissances, sondages in-app…</p>
+        <p>SLA, chatbots…</p>
       </div>
-      <div class="role-card clickable"
-           data-title="Fin de vie"
-           data-content="Préparez un plan de migration, archivez les données en toute sécurité, réalisez un audit post-mortem et définissez la stratégie de transition ou de décommissionnement.">
+      <div class="role-card clickable" data-title="Fin de vie" data-template="fin-vie">
         <h3>Fin de vie</h3>
-        <p>Plan de migration, archivage sécurisé, audit post-mortem…</p>
+        <p>Migration, archivage…</p>
       </div>
     </div>
+  </section>
+
+
+    </div>
+    <p> À l’issue de cette mise en contexte, nous détaillerons les <strong>grandes étapes du cycle de vie. Mais
+            voyons d'abord quels sont les métiers impliqués dans le cycle de vie.</strong>.
+    </p>
   </section>
   
   
 
 
-<!-- Modale unique pour les définitions -->
-<div class="modal fade" id="processModal" tabindex="-1" aria-labelledby="processModalLabel" aria-hidden="true">
+  <!-- Modale unique -->
+  <div class="modal fade" id="processModal" tabindex="-1" aria-labelledby="processModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -366,7 +408,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
         </div>
         <div class="modal-body">
-          <p id="processModalContent">Contenu …</p>
+          <div id="processModalContent"></div>
         </div>
       </div>
     </div>
@@ -774,14 +816,14 @@
             });
         });
     </script>
-<script>
+  <script>
     document.querySelectorAll('.role-card.clickable').forEach(card => {
       card.addEventListener('click', () => {
-        const title   = card.getAttribute('data-title');
-        const content = card.getAttribute('data-content');
-        document.getElementById('processModalLabel').textContent   = title;
-        // <-- on passe innerHTML plutôt que textContent
-        document.getElementById('processModalContent').innerHTML   = content;
+        const title = card.getAttribute('data-title');
+        const tmpl = document.getElementById(`tmpl-${card.getAttribute('data-template')}`);
+        if (!tmpl) return;
+        document.getElementById('processModalLabel').textContent = title;
+        document.getElementById('processModalContent').innerHTML = tmpl.innerHTML;
         new bootstrap.Modal(document.getElementById('processModal')).show();
       });
     });
